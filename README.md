@@ -14,14 +14,8 @@
 ### Entidad principal 
 #### Marca 
 #### Atributos
-- ID: Identificador único de la prenda
-- Nombre: Nombre de la prenda
-- Descripción: Detalle sobre la prenda
-- Precio: Precio de venta
-- Tallas: Tallas disponibles (S, X, M, L...)
-- Color: Color de la prenda
-- Imagen: Imagen de la Prenda
-- Disponibilidad: Estado del stock ( Disponible / Agotado )
+- ID: Identificador único de la marca
+- Nombre: Nombre de la marca
 
 #### Entidades secundarias
 #### Productos Textiles

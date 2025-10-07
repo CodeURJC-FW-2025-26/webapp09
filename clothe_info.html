@@ -3,10 +3,10 @@
     <head>
         <title>Clothe Page</title>
     </head>
-    <link type="text/css" rel="stylesheet" href = "styles.css">
+    <link type="text/css" rel="stylesheet" href = "clothe_info.css">
     
     <body>
-        <main class = "product">
+        <!--<main class = "product">
             <div id = "text-description"> 
                 <header> Zapatillas Genéricas </header>
                 <p class = "price"> Precio: 59,99€</p>
@@ -25,7 +25,64 @@
                 <img src = "images/products/zapatilla.png" alt = "zapatillas" height = "500">
             </div>
         </main>
+    -->
+        <header>
+            <div id="header">
+                <div id="imagen">
+                    <a href="main_page.html"><img src="logo.png" alt="" id="cabecera"></a>
+                
+                </div>
+            
+                <div id="contenedorCabecera">
+                    <ul id="cab">
+                        <li><a href="#">TIENDA</a></li>
+                        <li><a href="#">INICIAR SESIÓN</a></li>
+                        <li><a href="#">AYUDA</a></li>
+                        <li><a href="#">OFERTAS</a></li>
+                        <li><a href="#">SALIR</a></li>
+                    </ul>
+                </div>
+                <div id="contenedorIconos">
+                    <ul id="cabIconos">
+                        <li><a href="https://www.youtube.com/?gl=ES&hl=es"><img src="images/icons/iconoUser.jpg" alt="" id="iconoUser"></a></li>
+                        <li><a href="#"><img src="images/icons/iconInstagram.png" alt="" id="iconoInstagram"></a></li>
+                        <li><a href="#"><img src="images/icons/iconCarrito.jpg" alt="" id="iconoInstagram"></a></li>
+                        <li><a href="#"><img src="images/icons/iconInstagram.png" alt="" id="iconoInstagram"></a></li>
 
+                    </ul>
+                </div>
+
+
+            </div>
+        </header>
+
+        <main class = "product">
+            <div id = "image-description">
+                <img src = "images/products/zapatilla.png" alt = "zapatillas" height = "500">
+            </div>
+
+            <div id = "text-description"> 
+                <div id="title"> Zapatillas Genéricas </div>
+                <p class = "price"> Precio: 59,99€</p>
+                <p class = "color"> Color: <em>beige</em> </p>
+                <h2> Descripción del producto </h2>
+                <p class = "description">Estas zapatillas combinan comodidad, estilo y versatilidad <br>
+                para acompañarte en tu día a día. Su diseño moderno y ligero <br>
+                se adapta tanto a looks casuales como deportivos, mientras <br>
+                que la suela resistente y flexible ofrece una pisada segura y <br>
+                 confortable. Con materiales transpirables y acabados de <br>
+                 calidad, son el aliado perfecto para mantenerte activo sin <br>
+                 renunciar al estilo. </p>
+            </div>
+
+            
+
+
+        </main>
+        
+        <div id="Footer">
+            {% include 'footer.html' %}
+        </div>
     </body>
 
 </html>

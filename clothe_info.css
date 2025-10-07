@@ -41,6 +41,11 @@ main.product {
     grid-row: 3;
 }
 
+#title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
 
 
 /* Parte de estilos del header */

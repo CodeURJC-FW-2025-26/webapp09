@@ -12,20 +12,21 @@
 ## 𝐅𝐮𝐧𝐜𝐢𝐨𝐧𝐚𝐥𝐢𝐝𝐚𝐝:
 
 ### Entidad principal 
-#### Marca (Brand)
+#### Producto (product)
 #### Atributos
-- ID: Identificador único de la marca
-- Nombre (name): Nombre de la marca
-- AñoCreacion (year_created): Año de creacion de la marca
-- Procedencia (origin): De donde es la marca
+- ID: Identificador único del producto
+- Nombre (name): Nombre del producto
+- Descripción del producto (description): Descripción del producto
+- Precio (price): precio del producto
+- Tallas: (S, M, L, XL)
+- Categoría: (camiseta, pantalón, zapatillas)
 
 #### Entidades secundarias
-#### Productos Textiles
+#### Reseña
 #### Atributos
-- IDPrenda (clothe_id): Identificador único de la prenda
-- TipoPrenda (clothe_type): Tipo de prenda ( Calzado / Pantalones / Camisetas / Sudaderas)
-- Color (colour): Color de la prenda ( Rojo, Azul, Amarillo, Naranja, Negro, Verde)
-- Talla (size): Talla de la prenda 
-- Stock (stock): Buleano (Disponible)
+- id_reseña: identificador único
+- id_producto: referencia al producto
+- usuario: nombre del usuario
+- calificación: puntuación del producto
 
 

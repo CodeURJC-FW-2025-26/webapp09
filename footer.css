@@ -3,11 +3,11 @@ body{
     background-color: #86868669;
 }
 
-#footter{
+#footer{
     margin-top: auto;
 }
 
-#footter{
+#footer{
     background-color: #dcdcdc69;
     color: black;
     padding: 50px 80px 20px;
@@ -26,30 +26,30 @@ body{
     flex: 1 1 100px;
 }
 
-#footter h3{
+#footer h3{
     font-size: 16px;
     margin-bottom: 15px;
     color: solid black;
 }
 
-#footter ul{
+#footer ul{
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#footter ul, li{
+#footer ul, li{
     margin-bottom: 8px;
 }
 
-#footter ul li a{
+#footer a{
     text-decoration: none;
     color: #464646;
     font-size: 14px;
 }
 
-#footter ul li a:hover{
-    color: solid black;
+#footer a:hover{
+    color: rgb(0, 0, 0);
 }
 
 .icons img{

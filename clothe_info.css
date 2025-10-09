@@ -1,11 +1,37 @@
 #main{
-    margin-top:80px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#title{
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 #image-description img{
-    max-width: 70%;
+    max-width: 100%;
     height: auto;
 }
+
+#title-brand{
+    color:black;
+    text-decoration:none;
+}
+
+#title-brand:hover{
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.mini-image{
+    border: thick grey;
+}
+
+.mini-image:hover{
+    box-shadow: 0rem 0rem 2rem 0.5rem gray;
+}
+
+
 
 
 

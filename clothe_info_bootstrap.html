@@ -11,7 +11,8 @@
 <body>
     <main class = "container">
         <div class = "row"> 
-            <header>
+            <div class = "col-12">
+                <header>
                 <div id="header">
                     <div id="imagen">
                         <a href="main_page.html"><img src="logo.png" alt="" id="cabecera"></a>
@@ -40,24 +41,84 @@
 
                 </div>
             </header>
+
+            </div>          
+        </div>
+
+        <div class = "row">
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
+            <div class = "col-1 border text-center"> 1 </div>
         </div>
         <div class = "row", id = "main">
-            <div class = "col-md-6 d-flex justify-content-end" id = "image-description">
-                <img src = "images/products/zapatilla.png" alt = "zapatillas" class="img-fluid">
+            <div class = "col-md-5 text-center text-md-end" id = "image-description">
+                <div class = "container">
+                    
+                    <!-- REGLA TEMPORAL 
+                    <div class = "row">
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                            <div class = "col-1 border text-center"> 1 </div>
+                    </div>
+                    -->
+
+                    <div class = "row">
+                        <div class = "col-3 text-center mt-1">
+                            <div> <img src = "images/products/zapatilla.png" class = "p-0 mb-2 img-fluid mini-image rounded"></div>
+                            <div> <img src = "images/products/zapatilla.png" class = "p-0 mb-2 fluid mini-image rounded"> </div>
+                            <div> <img src = "images/products/zapatilla.png" class = "p-0 mb-2 img-fluid mini-image rounded"> </div>
+                        </div>
+                        <div class = "col-9 mt-0">
+                            <img src = "images/products/zapatilla.png" alt = "zapatillas" class="img-fluid pt-0 mt-0 rounded">
+                        </div>
+                    </div>
+                </div>
             </div>    
             <div class = "col-md-6" id = "text-description">  
+                <a id="title-brand" class="p-0 m-0" href="#"> Nike </a>
                 <div id="title"> Zapatillas Genéricas </div>
-                <p class = "price"> Precio: 59,99€</p>
-                <p class = "color"> Color: <em>beige</em> </p>
-                <h2> Descripción del producto </h2>
-                <p class = "description">Estas zapatillas combinan comodidad, estilo y versatilidad <br>
-                para acompañarte en tu día a día. Su diseño moderno y ligero <br>
-                se adapta tanto a looks casuales como deportivos, mientras <br>
-                que la suela resistente y flexible ofrece una pisada segura y <br>
-                 confortable
+                <p id = "price"> Precio: 59,99€</p>
+                <p id = "color"> Color: <em>beige</em> </p>
+                <h3> Descripción del producto </h3>
+                <p id = "description">Estas zapatillas combinan comodidad, estilo y versatilidad 
+                para acompañarte en tu día a día. Su diseño moderno y ligero 
+                se adapta tanto a looks casuales como deportivos, mientras 
+                que la suela resistente y flexible ofrece una pisada segura y 
+                 confortable </p>
+                <p> Tallas: </p>
+                
+    
+                <button type = "button" class = "btn btn-dark mb-2">39</button>
+                <button type = "button" class = "btn btn-dark mb-2">40</button>
+                <button type = "button" class = "btn btn-dark mb-2">41.5</button>
+                <button type = "button" class = "btn btn-dark mb-2">42</button>
+                <button type = "button" class = "btn btn-dark mb-2">44</button>
+                
             </div>
         </div>
-        <div class = "row"> </div>
+        <div class = "row">
+            <footer>
+                {% include 'footer.html' %}
+            </footer>
+        </div>
     </main>
 </body>
 </html>

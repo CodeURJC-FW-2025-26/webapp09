@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>NOMORETRASH</title>
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>NOMORETRASH</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="headerBs.css">
+
+  <link rel="icon" href="logo.ico" type="image/x-icon">
 </head>
 
 <body>
-    <!-- <header> Anterior HEADER
-            <nav>
-                <a href="https://google.com"><img src="logo.png" height="45"/></a>
-                <p>Bienvenido a <b>NOMORETRASH</b></p>
-            </nav>
-        </header> -->
-
-
-    <div id="header">
-        <div id="imagen">
-            <a href="main_page.html"><img src="logo.png" alt="" id="cabecera"></a>
-            
-        </div>
-        <!-- <div><a href="main_page.html"><img src="images/icons/iconoUser.jpg" id="iconUser" alt=""></a></div> -->
-        <div id="contenedorCabecera">
-            <ul id="cab">
-                <li><a href="#">TIENDA</a></li>
-                <li><a href="#">INICIAR SESIÓN</a></li>
-                <li><a href="#">AYUDA</a></li>
-                <li><a href="#">OFERTAS</a></li>
-                <li><a href="#">SALIR</a></li>
-            </ul>
-        </div>
-        <div id="contenedorIconos">
-            <ul id="cabIconos">
-                <li><a href="https://www.youtube.com/?gl=ES&hl=es"><img src="images/icons/iconoUser.jpg" alt="" id="iconoUser"></a></li>
-                <li><a href="#"><img src="images/icons/iconInstagram.png" alt="" id="iconoInstagram"></a></li>
-                <li><a href="#"><img src="images/icons/iconCarrito.jpg" alt="" id="iconoInstagram"></a></li>
-                <li><a href="#"><img src="images/icons/iconInstagram.png" alt="" id="iconoInstagram"></a></li>
-
-            </ul>
+   <!-- container fluid pa que pille todo el ancho  -->
+    <!-- quitar quiza el shadow-sm -->
+     <!-- el py-3 le mete un padding vertical (arriba y abajo) de 3px -->
+  <header class="container-fluid bg-light shadow-sm py-3">
+    <div class="container">
+      <!-- el row es el que mete una fila  -->
+      <div class="row align-items-center">
+        
+        <!-- columna del logo -->
+         <!-- el md implica a pantallas rollo medianas, no he metido configuracion para pantallas pequeñas -->
+        <div class="col-md-3 text-center text-md-start">
+          <!-- titulo -->
+          <a href="main_page.html" class="text-decoration-none fw-bold fs-4 text-dark">
+            NOMORETRASH
+          </a>
         </div>
 
+        <!--columna del menu -->
+        <div class=" col-md-6">
+          <!-- si le metes el nav ya identifica que es un menu de navegacion y le quita los estilos a los lis -->
+          <ul class="nav justify-content-center">
+            <!-- lo mismo que lo de nav a nav-link; le quita los estilos -->
+            <li class="nav-item"><a class="nav-link " href="#">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link " href="#">Iniciar sesión</a></li>
+            <li class="nav-item"><a class="nav-link " href="#">Ayuda</a></li>
+            <li class="nav-item"><a class="nav-link " href="#">Ofertas</a></li>
+            <li class="nav-item"><a class="nav-link " href="#">Salir</a></li>
+          </ul>
+        </div>
 
+        <!--columna de iconos -->
+        <div class=" col-md-3 text-center text-md-end">
+          <a href="#"><img src="images/icons/iconUser.png" width="30" alt="User" class="mx-1"></a>
+          <a href="#"><img src="images/icons/iconInstagram.png" width="30" alt="Instagram" class="mx-1"></a>
+          <a href="#"><img id="carrito" src="images\icons\iconCarrito.jpg" width="30" alt="Carrito" class="mx-1"></a>
+        </div>
+      </div>
     </div>
-
-    <div>
-
-    </div>
-    <footer>
-
-    </footer>
+  </header>
 </body>
-
 </html>

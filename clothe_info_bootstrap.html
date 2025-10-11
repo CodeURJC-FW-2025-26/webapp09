@@ -7,91 +7,81 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link type="text/css" rel="stylesheet" href = "clothe_info.css">
+    <link type="text/css" rel="stylesheet" href = "headerBs.css">
+    <link type="text/css" rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <main class = "container">
-        <div class = "row"> 
-            <div class = "col-12">
-                <header>
-                <div id="header">
-                    <div id="imagen">
-                        <a href="main_page.html"><img src="logo.png" alt="" id="cabecera"></a>
-                    
-                    </div>
-                
-                    <div id="contenedorCabecera">
-                        <ul id="cab">
-                            <li><a href="#">TIENDA</a></li>
-                            <li><a href="#">INICIAR SESIÓN</a></li>
-                            <li><a href="#">AYUDA</a></li>
-                            <li><a href="#">OFERTAS</a></li>
-                            <li><a href="#">SALIR</a></li>
-                        </ul>
-                    </div>
-                    <div id="contenedorIconos">
-                        <ul id="cabIconos">
-                            <li><a href="https://www.youtube.com/?gl=ES&hl=es"><img src="images/icons/iconoUser.jpg" alt="" id="iconoUser"></a></li>
-                            <li><a href="#"><img src="images/icons/iconInstagram.png" alt="" id="iconoInstagram"></a></li>
-                            <li><a href="#"><img src="images/icons/iconCarrito.jpg" alt="" id="iconoInstagram"></a></li>
-                            <li><a href="#"><img src="images/icons/iconInstagram.png" alt="" id="iconoInstagram"></a></li>
+    <header class="container-fluid bg-light shadow-sm py-3">
+        <div class="container">
+        <div class="row align-items-center">
 
-                        </ul>
-                    </div>
+            <!--logo -->
+            <div class="col-10 col-md-3 text-start">
+            <a href="main_page.html" class="text-decoration-none fw-bold fs-4 text-dark">
+                NOMORETRASH
+            </a>
+            </div>
 
+            <!-- boton hamburguesa solo para movil (por eso tiene lo de md-none)-->
+            <!-- con border 0 le quitas las aristas -->
+            <div class="col-2 d-md-none text-end">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
 
+            <!-- contenido colapsable -->
+            <!-- lo que hay dentro del div con id navMenu es lo que se contrae y despliega dependiendo del boton de arriba -->
+            <div class="collapse col-12 col-md-9 d-md-block" id="navMenu">
+            <div class="row align-items-center mt-3 mt-md-0">
+
+                <!-- Menú -->
+                <div class="col-12 col-md-8">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Iniciar sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Salir</a></li>
+                </ul>
                 </div>
-            </header>
 
-            </div>          
-        </div>
+                <!-- iconos -->
+                <div class="col-12 col-md-4 text-center text-md-end mt-3 mt-md-0">
+                <a href="#"><img src="images/icons/iconUser.png" width="30" alt="User" class="mx-1"></a>
+                <a href="#"><img src="images/icons/iconInstagram.png" width="30" alt="Instagram" class="mx-1"></a>
+                <a href="#"><img id="carrito" src="images/icons/iconCarrito.jpg" width="30" alt="Carrito" class="mx-1"></a>
+                </div>
 
-        <div class = "row">
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
-            <div class = "col-1 border text-center"> 1 </div>
+            </div>
+            </div>
+
         </div>
+        </div>
+    </header>
+
+
+    <main class = "container">
         <div class = "row", id = "main">
-            <div class = "col-md-5 text-center text-md-end" id = "image-description">
-                <div class = "container">
-                    
-                    <!-- REGLA TEMPORAL 
+            <!-- Columna para las imágenes -->
+            <div class = "col-md-6 text-center text-md-end" id = "image-description">
+                <!-- Contenedor para las imágenes -->
+                <div class = "container">  
                     <div class = "row">
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                            <div class = "col-1 border text-center"> 1 </div>
-                    </div>
-                    -->
-
-                    <div class = "row">
+                        <!-- Columna imágenes secundarias -->
                         <div class = "col-3 text-center mt-1">
                             <div> <img src = "images/products/zapatilla.png" class = "p-0 mb-2 img-fluid mini-image rounded"></div>
                             <div> <img src = "images/products/zapatilla.png" class = "p-0 mb-2 fluid mini-image rounded"> </div>
                             <div> <img src = "images/products/zapatilla.png" class = "p-0 mb-2 img-fluid mini-image rounded"> </div>
                         </div>
+                        <!-- Columna imagen principal -->
                         <div class = "col-9 mt-0">
                             <img src = "images/products/zapatilla.png" alt = "zapatillas" class="img-fluid pt-0 mt-0 rounded">
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>  
+            <!-- Columna para descripción, nombre...  -->
             <div class = "col-md-6" id = "text-description">  
                 <a id="title-brand" class="p-0 m-0" href="#"> Nike </a>
                 <div id="title"> Zapatillas Genéricas </div>
@@ -105,20 +95,142 @@
                  confortable </p>
                 <p> Tallas: </p>
                 
-    
-                <button type = "button" class = "btn btn-dark mb-2">39</button>
-                <button type = "button" class = "btn btn-dark mb-2">40</button>
-                <button type = "button" class = "btn btn-dark mb-2">41.5</button>
-                <button type = "button" class = "btn btn-dark mb-2">42</button>
-                <button type = "button" class = "btn btn-dark mb-2">44</button>
+                <!-- Tallas disponibles  -->
+                <section id="available-sizes">
+                    <button type = "button" class = "btn btn-dark mb-2">39</button>
+                    <button type = "button" class = "btn btn-dark mb-2">40</button>
+                    <button type = "button" class = "btn btn-dark mb-2">41.5</button>
+                    <button type = "button" class = "btn btn-dark mb-2">42</button>
+                    <button type = "button" class = "btn btn-dark mb-2">44</button>
+                </section>
                 
+                <!-- Formulario  -->
+                <form>
+                    <div class = "p-2 mt-4 rounded" id = "form-box">
+                        <h5> Deja tu reseña </h5>
+                        <hr class = "mt-0"/>
+                        <span class = "form-group">
+                            <input class = "form-control mb-2" placeholder="Introduce tu nombre de usuario">   
+                            
+                        </span>
+                        <span class = "form-group">
+                            <input class = "form-control mb-2" placeholder="Resume tu opinión en una línea">
+                        </span>
+                        <span class = "form-group">
+                            <textarea class = "form-control" rows="3" placeholder="Escribe tu reseña"></textarea>
+                        </span>
+                        <div class = "text-end">
+                            <button type = "submit" class = "btn btn-dark m-2 me-0"> Enviar </button>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
-        <div class = "row">
-            <footer>
-                {% include 'footer.html' %}
-            </footer>
-        </div>
+
+        <h3 clas> Reseñas </h3>
+        <hr/>
+
+        <!-- Reseñas  -->
+        <section class = "row">
+            <div class = "col-12 col-md-3 mb-3">
+                <div class = "card review shadow">
+                    <div class = "card-body">
+                        <h5 class = "card-title"> Muy Buen Producto </p>
+                        <h6 class = "card-subtitle"> John Doe </p>
+                        <p class = "card-text"> Reseña reseña reseña reseña</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-12 col-md-3 mb-3">
+                <div class = "card review shadow">
+                    <div class = "card-body">
+                        <h5 class = "card-title"> Muy Buen Producto </p>
+                        <h6 class = "card-subtitle"> Jane Doe </p>
+                        <p class = "card-text"> Reseña reseña reseña reseña</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-12 col-md-3 mb-3">
+                <div class = "card review shadow">
+                    <div class = "card-body">
+                        <h5 class = "card-title"> Muy Buen Producto </p>
+                        <h6 class = "card-subtitle"> Jane Doe </p>
+                        <p class = "card-text"> Reseña reseña reseña reseña</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-12 col-md-3 mb-3">
+                <div class = "card review shadow">
+                    <div class = "card-body">
+                        <h5 class = "card-title"> Muy Buen Producto </p>
+                        <h6 class = "card-subtitle"> Jane Doe </p>
+                        <p class = "card-text"> Reseña reseña reseña reseña</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-12 col-md-3 mb-3">
+                <div class = "card review shadow">
+                    <div class = "card-body">
+                        <h5 class = "card-title"> Muy Buen Producto </p>
+                        <h6 class = "card-subtitle"> Jane Doe </p>
+                        <p class = "card-text"> Reseña reseña reseña reseña</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="container-fluid bg-light border-top custom-footer mt-5 py-5">
+        <div class="container">
+            <div class="row text-center text-md-start justify-content-center">
+
+                <!-- Sobre nosotros -->
+                <div class="col-12 col-md-3 mb-4">
+                    <h6 class="fw-bold mb-3 title">Sobre nosotros</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link">Quiénes somos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ayuda -->
+                <div class="col-12 col-md-3 mb-4">
+                    <h6 class="fw-bold mb-3 title">Ayuda</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link">Devolución</a></li>
+                        <li><a href="#" class="link">Reembolso</a></li>
+                        <li><a href="#" class="link">Rastrear pedido</a></li>
+                    </ul>
+                </div>
+
+                <!-- Servicio al cliente -->
+                <div class="col-12 col-md-3 mb-4">
+                    <h6 class="fw-bold mb-3 title">Servicio al cliente</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link">Contáctenos</a></li>
+                        <li><a href="#" class="link">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Síguenos -->
+                <div class="col-12 col-md-3 mb-4">
+                    <h6 class="fw-bold mb-3 title">Síguenos</h6>
+                    <a href="#" class="icon"><i class="bi bi-instagram"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Todos los derechos reservados -->
+        <div class="text-center small text-muted">
+            ©2025 <span class="fw-bold text-dark">NOMORETRASH</span>. Todos los derechos reservados.
+        </div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </footer>
 </body>
 </html>

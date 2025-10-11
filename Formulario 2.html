@@ -55,12 +55,9 @@
             <input type="text" class="form-control" placeholder="Talla" aria-label="TallaZapatilla">
             </div>
             <h4>Añadir Imagen</h4>
-            <input type="radio" class="btn-check" name="valoracion" id="v-blue" value="blue" autocomplete="off"> <!--Esto sirve para meter el icono de añadir la imagen dentro de un boton, aqui estoy creando dicho boton-->
-            <label class="btn btn-outline-primary" for="v-blue" title="imagen"> <!--Por cierto ya lo sabreis pero lo pongo porque antes me ha costado, el boton esta de color azul porque en class he puesto "btn btn-outline-primary", si en vez de primary hubiese puesto succes el boton seria de color verde-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="330" height="100" fill="currentColor" class="bi bi-file-earmark-image-fill" viewBox="0 0 16 16"> <!--Estas lineas por si no las entendeis, sirven para poner el icono, estos comandos sirven para buscar los iconos en el directorio, al ser personalizados pongo la version extendida del comando de añadir iconos-->
-            <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707v5.586l-2.73-2.73a1 1 0 0 0-1.52.127l-1.889 2.644-1.769-1.062a1 1 0 0 0-1.222.15L2 12.292V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2zm-1.498 4a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
-            <path d="M10.564 8.27 14 11.708V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-.293l3.578-3.577 2.56 1.536 2.426-3.395z"/>
-            </svg>
-            </label>
+            <div class="form-group">
+            <label for="archivo">Archivo</label> <!--Esto se usa para añadir archivos, es casi igual que los formularios pero la diferencia principal es el "type = file"-->
+            <input type="file" class="form-control" id="archivo" name="archivo">
+            </div>
         </div>
 

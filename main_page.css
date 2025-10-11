@@ -23,7 +23,3 @@ section h3{
     font-size: 1.3rem;
     letter-spacing: 0.1rem;
 }
-
-h6:hover{
-    text-decoration: underline;
-}

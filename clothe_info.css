@@ -29,9 +29,6 @@
 }
 
 .mini-image:hover{
-<<<<<<< HEAD
-    box-shadow: 0rem 0rem 2rem 0.5rem gray;
-=======
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.25);
 }
 
@@ -48,7 +45,10 @@
 
 .review:hover{
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.25) !important;
->>>>>>> d27f989807b4f2e0ce671371ace87e54a500a066
+}
+
+.trash_icon{
+    color:red !important;
 }
 
 
@@ -56,124 +56,3 @@
 
 
 
-/* Parte de estilos del header */
-
-#header {
-    width: 100%;
-    margin: 0;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: fixed;
-    /* lo fija */
-    top: 0;
-    /* se pega arriba */
-    left: 0;
-    /* se alinea con el borde izquierdo */
-    z-index: 1000;
-    background-color: white;
-}
-
-#imagen {
-    flex: 0 0 25%;
-    /* 25% fijo */
-    display: flex;
-    justify-content: flex-start;
-    /* logo a la izquierda */
-
-    /* border: 2px solid red; */
-
-}
-
-#cabecera {
-    flex: 1;
-    /* Ocupa espacio proporcional */
-    /* border: 2px solid red; */
-    max-width: 200px;
-    height: auto;
-
-    /* border: 2px solid red; */
-}
-
-#contenedorCabecera {
-    flex: 0 0 50%;
-    /* 50% fijo */
-    display: flex;
-    justify-content: center;
-    /* centra el menú dentro */
-    /* border: 2px solid blue; */
-    opacity: 70%;
-}
-
-#contenedorIconos {
-    flex: 0 0 25%;
-    /* 25% fijo */
-    display: flex;
-    /* ahora sí usa flexbox */
-    align-items: center;
-    /* centra verticalmente */
-    /* border: 2px solid green; */
-}
-
-#cab a {
-    text-decoration: none;
-    color: black;
-    font-size: 80%;
-    transition: background 0.3s;
-}
-
-#cab {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-}
-
-li {
-    list-style: none;
-}
-
-#iconoUser {
-    width: 15%;
-    height: auto;
-}
-
-#iconoInstagram {
-    width: 15%;
-    height: auto;
-}
-
-#cab a:hover {
-    color: gray;
-    /* padding: 5px 10px; */
-    border-radius: 5px;
-}
-
-#cabIconos {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-
-
-}
-
-#cabIconos li {
-    list-style: none;
-}
-
-#iconoUser,
-#iconoInstagram {
-    width: 30px;
-    height: auto;
-    left: 10%;
-}

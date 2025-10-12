@@ -1,0 +1,25 @@
+.card img{
+    object-fit: cover;
+    height: 280px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+
+.card-title{
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.btn-primary{
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover{
+    background-color: black;
+    color: white;
+}
+
+section h3{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+}

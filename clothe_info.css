@@ -25,10 +25,30 @@
 
 .mini-image{
     border: thick grey;
+    transition: all 0.3s ease;
 }
 
 .mini-image:hover{
+<<<<<<< HEAD
     box-shadow: 0rem 0rem 2rem 0.5rem gray;
+=======
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.25);
+}
+
+#form-box{
+    background-color: bisque;
+    border-width: 1px;
+    border-color: black;
+    box-shadow: 0rem 0rem 10px 0.5px gray;
+}
+
+.review{
+    transition: all 0.3s ease;
+}
+
+.review:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.25) !important;
+>>>>>>> d27f989807b4f2e0ce671371ace87e54a500a066
 }
 
 

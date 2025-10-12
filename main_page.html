@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>NOMORETRASH</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" type="text/css" href="main_page.css">
+    <link type="text/css" rel="stylesheet" href="headerBs.css">
+    <link type="text/css" rel="stylesheet" href="footer.css">
+
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="container-fluid bg-light shadow-sm py-3">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!--logo -->
+                <div class="col-10 col-md-3 text-start">
+                    <a href="main_page.html" class="text-decoration-none fw-bold fs-4 text-dark">
+                        NOMORETRASH
+                    </a>
+                </div>
+
+                <!-- boton hamburguesa solo para movil (por eso tiene lo de md-none)-->
+                <!-- con border 0 le quitas las aristas -->
+                <div class="col-2 d-md-none text-end">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- contenido colapsable -->
+                <!-- lo que hay dentro del div con id navMenu es lo que se contrae y despliega dependiendo del boton de arriba -->
+                <div class="collapse col-12 col-md-9 d-md-block" id="navMenu">
+                    <div class="row align-items-center mt-3 mt-md-0">
+
+                        <!-- Menú -->
+                        <div class="col-12 col-md-8">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Iniciar sesión</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Salir</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- iconos -->
+                        <div class="col-12 col-md-4 text-center text-md-end mt-3 mt-md-0">
+                            <a href="#"><img src="images/icons/iconUser.png" width="30" alt="User" class="mx-1"></a>
+                            <a href="#"><img src="images/icons/iconInstagram.png" width="30" alt="Instagram"
+                                    class="mx-1"></a>
+                            <a href="#"><img id="carrito" src="images/icons/iconCarrito.jpg" width="30" alt="Carrito"
+                                    class="mx-1"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Search bar -->
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <input type="text" id="searchInput" class="form-control rounded-5 shadow-sm"
+                    placeholder="Buscar productos..." />
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to create a new product -->
+    <div class="container mt-4 mb-4">
+        <div class="d-flex justify-content-end mb-4">
+            <a href="Formulario 2.html" class="btn btn-primary btn-sm rounded-5" role="button">
+                <i class="bi bi-plus-circle"></i> Crear nuevo elemento
+            </a>
+        </div>
+    </div>
+
+    <!-- Men's clothing -->
+    <h2 class="fw-bold text-center mb-5">Ropa de hombre</h2>
+
+
+    <main class="container mt-5 mb-5">
+
+        <!-- Sneakers -->
+        <section class="mb-5 pt-1 pb-1">
+            <h3 class="fw-bold mb-4 border-bottom pb-2">Zapatillas</h3>
+
+            <!-- Products grid -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                <!-- Product 1 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="clothe_info_bootstrap.html" class="text-decoration-none text-dark">
+                            <img src="images/products/zapatilla.png" class="card-img-top rounded-3" alt="Zapatillas">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Replay Beige. Combinan comodidad, estilo y versat...</h6>
+                                <p class="fw-bold mb-2">59,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/zapatillaNB.jpeg" class="card-img-top rounded-3" alt="Zapatillas">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">New Balance. Descubre la fusión perfecta entre nost...</h6>
+                                <p class="fw-bold mb-2">59,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/campus00s.jpg" class="card-img-top rounded-3" alt="Zapatillas">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Adidas. Las adidas Campus 00s devuelven a las calles...</h6>
+                                <p class="fw-bold mb-2">89,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- T-Shirts -->
+        <section class="mb-5 pt-1 pb-1">
+            <h3 class="fw-bold mb-4 border-bottom pb-2">Camisetas</h3>
+
+            <!-- Products grid -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                <!-- Product 4 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/camiseta_van_gogh.png" class="card-img-top rounded-3"
+                                alt="Camisetas">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Lefties. Camiseta con estampado de una pintura d...</h6>
+                                <p class="fw-bold mb-2">24,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/c_basica_blanca.png" class="card-img-top rounded-3"
+                                alt="Camisetas">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Pull&Bear. Camiseta básica regular fit de manga cor...</h6>
+                                <p class="fw-bold mb-2">7,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/c_oscar_mayer.jpg" class="card-img-top rounded-3" alt="Camisetas">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Oscar Mayer. La camiseta tradicional de toda la vid...</h6>
+                                <p class="fw-bold mb-2">29,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Trousers -->
+        <section class="mb-5 pt-1 pb-1">
+            <h3 class="fw-bold mb-4 border-bottom pb-2">Pantalones</h3>
+
+            <!-- Products grid -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                <!-- Product 7 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/pant1.png" class="card-img-top rounded-3" alt="Pantalones">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Lefties. Pantalón de cintura elástica tipo jogger ...</h6>
+                                <p class="fw-bold mb-2">19,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/p_marrones.jpg" class="card-img-top rounded-3" alt="Pantalones">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Zara. Pantalón jogger de entrenamiento regular fit co...</h6>
+                                <p class="fw-bold mb-2">7,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <a href="#" class="text-decoration-none text-dark">
+                            <img src="images/products/cargo.png" class="card-img-top rounded-3" alt="Pantalones">
+                            <div class="card-body text-start">
+                                <h6 class="card-title">Primark. Vaqueros cargo holgados con un toque de e...</h6>
+                                <p class="fw-bold mb-2">29,99€</p>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-sm rounded-circle">
+                                        <i class="bi bi-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Women's clothing -->
+        <h2 class="fw-bold text-center mb-5">Ropa de mujer</h2>
+
+
+        <main class="container mt-5 mb-5">
+
+            <!-- Trousers -->
+            <section class="mb-5 pt-1 pb-1">
+                <h3 class="fw-bold mb-4 border-bottom pb-2">Pantalones</h3>
+
+                <!-- Products grid -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                    <!-- Product 10 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/p_m_1.jpg" class="card-img-top rounded-3" alt="Pantalones">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Zara. Pantalón de tiro medio y cintura con elástico e...</h6>
+                                    <p class="fw-bold mb-2">25,95€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/p_m_2.png" class="card-img-top rounded-3" alt="Pantalones">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Mango. Tejido de terciopelo. Diseño largo. Estilo fla...</h6>
+                                    <p class="fw-bold mb-2">39,99€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/p_m_3.png" class="card-img-top rounded-3" alt="Pantalones">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Primark. Vaqueros anchos con cinturilla parcialment...</h6>
+                                    <p class="fw-bold mb-2">22,00€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- T-Shirts -->
+            <section class="mb-5 pt-1 pb-1">
+                <h3 class="fw-bold mb-4 border-bottom pb-2">Camisetas y tops</h3>
+
+                <!-- Products grid -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                    <!-- Product 13 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/c_m_1.png" class="card-img-top rounded-3" alt="Camisetas">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Lefties. Camiseta de manga corta y cuello redondo....</h6>
+                                    <p class="fw-bold mb-2">24,99€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 14 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/t_m_1.png" class="card-img-top rounded-3" alt="Tops">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Primark. Top corto y entallado en suave algodón elá...</h6>
+                                    <p class="fw-bold mb-2">7,99€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 15 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/c_m_2.png" class="card-img-top rounded-3" alt="Camisetas">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Primark. Camiseta de manga larga con escote amp...</h6>
+                                    <p class="fw-bold mb-2">6,00€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Trousers -->
+            <section class="mb-5 pt-1 pb-1">
+                <h3 class="fw-bold mb-4 border-bottom pb-2">Vestidos</h3>
+
+                <!-- Products grid -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                    <!-- Product 7 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/v_m_1.png" class="card-img-top rounded-3" alt="Vestidos">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Zalando. Norma Kamali PICKLEBALL DIANA DRESS - ...</h6>
+                                    <p class="fw-bold mb-2">260,00€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/v_m_2.png" class="card-img-top rounded-3" alt="Vestidos">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Zalando. VINCENT SKATER DRESS - Vestido de cóctel...</h6>
+                                    <p class="fw-bold mb-2">44,99€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <img src="images/products/v_m_3.png" class="card-img-top rounded-3" alt="Vestidos">
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Zalando. STACEY SKATER DRESS - Vestido de cóctel -...</h6>
+                                    <p class="fw-bold mb-2">33,95€</p>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary btn-sm rounded-circle">
+                                            <i class="bi bi-bag"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </main>
+
+        <!-- Footer -->
+        <footer class="container-fluid bg-light border-top custom-footer mt-5 py-5">
+            <div class="container">
+                <div class="row text-center text-md-start justify-content-center">
+
+                    <!-- About us -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h6 class="fw-bold mb-3 title">Sobre nosotros</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="link">Quiénes somos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Help -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h6 class="fw-bold mb-3 title">Ayuda</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="link">Devolución</a></li>
+                            <li><a href="#" class="link">Reembolso</a></li>
+                            <li><a href="#" class="link">Rastrear pedido</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer service -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h6 class="fw-bold mb-3 title">Servicio al cliente</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="link">Contáctenos</a></li>
+                            <li><a href="#" class="link">Preguntas frecuentes</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Follow us -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h6 class="fw-bold mb-3 title">Síguenos</h6>
+                        <a href="#" class="icon"><i class="bi bi-instagram"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- All rights reserved -->
+            <div class="text-center small text-muted">
+                ©2025 <span class="fw-bold text-dark">NOMORETRASH</span>. Todos los derechos reservados.
+            </div>
+        </footer>
+
+</body>
+
+</html>

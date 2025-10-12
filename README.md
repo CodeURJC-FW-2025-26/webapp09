@@ -33,3 +33,5 @@
 
 Marcos Laorga Sagaseta de Ilurdoz: I created the footer, which will be used on the other pages. Additionally, I created the main page, adding the header, created by someone else, and the footer implemented by me. However, the search bar was implemented by someone else: I worked on the "create new item" button and the elements.
 My 5 most important commits have been: main_page_fffv, footer-final, footer (I had to redo it completely in the end), main_page_ffv, and main_page_fv.
+
+Javier Méndez Hernández: I was the responsible for creating the header that it had been implemented in all the pages. I helped to develope a search bar implemented in the main page. They were some mistakes made on the way, for example I had to delete the header.css and redo it all again. My 5 most important commits were "Implementación del header provisional", "Header con bootstrap implementado", "Header con bootstrap implementado", "Header con desplegable para moviles" and "Implementacion final del header e implementación de barra de busqueda en main_page.html". 

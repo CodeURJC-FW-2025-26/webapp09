@@ -25,6 +25,7 @@
 
 .mini-image{
     border: thick grey;
+    transition: all 0.3s ease;
 }
 
 .mini-image:hover{
@@ -36,6 +37,10 @@
     border-width: 1px;
     border-color: black;
     box-shadow: 0rem 0rem 10px 0.5px gray;
+}
+
+.review{
+    transition: all 0.3s ease;
 }
 
 .review:hover{

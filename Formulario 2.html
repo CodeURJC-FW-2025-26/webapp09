@@ -54,9 +54,16 @@
             <div class="col-md-4">
             <input type="text" class="form-control" placeholder="Talla" aria-label="TallaZapatilla">
             </div>
+            <p>Es un artículo destinado hacia:</p>
+            <div class="btn-group mb-3" role="group" aria-label="Género">
+            <input type="radio" class="btn-check" name="genero" id="Hombre" autocomplete="off">
+            <label class="btn btn-outline-primary" for="Hombre">Hombres</label>
+            <input type="radio" class="btn-check" name="genero" id="Mujer" autocomplete="off">
+            <label class="btn btn-outline-primary" for="Mujer">Mujeres</label>
+            </div>
             <h4>Añadir Imagen</h4>
             <div class="form-group">
-            <label for="archivo">Archivo</label> <!--Esto se usa para añadir archivos, es casi igual que los formularios pero la diferencia principal es el "type = file"-->
+            <label for="archivo">Archivo</label>
             <input type="file" class="form-control" id="archivo" name="archivo">
             </div>
         </div>

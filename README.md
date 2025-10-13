@@ -32,7 +32,13 @@
 # PRACTICE 1
 
 - Marcos Laorga Sagaseta de Ilurdoz: I created the 'footer', which will be used across other pages. Additionally, I developed the 'main page', incorporating the 'header', which was created by someone else, and the 'footer' that I implemented. The search bar was implemented by Javier, while my work focused on the 'create new item' button and its associated elements. 
-My five most important commits were: 'main_page_fffv', 'footer-final', 'footer' (I had to change it almost entirely), 'main_page_ffv,' and 'main_page_fv'.
+My five most important commits were:
+
+  - 'footer-final': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/ce5a0cb9de8c1c456cf3ffee7412ca4eb56fd62d
+  - 'main_page first version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8b518f27edb534ccc0d9db750f40c5f77cf067a6
+  - 'main_page second version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8bf26bd49dc777b48b595bdd8a86165743007d96
+  - 'main_page third version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8f3dbffcffea8549964873b87fd0026539b1e46e
+  - 'main_page last version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/c0a8b83878f0b832c74f7716b27853c3b578f802
 
 - Javier Méndez Hernández: I was the responsible for creating the header that had been implemented in all the pages. I helped to develope a search bar implemented in the main page. They were some mistakes made on the way, for example I had to delete the header.css and redo it all again. My 5 most important commits were "Implementación del header provisional", "Header con bootstrap implementado", "Header con desplegable para moviles", "Implementacion final del header e implementación de barra de busqueda en main_page.html" and "Eliminación del antiguo archivo css del header (header.css)". 
 

@@ -41,17 +41,18 @@ My five most important commits were:
   - 'main_page last version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/c127c2b8234048e45968bda535e49c1607b47e03
 
 - Javier Méndez Hernández: I was the responsible for creating the header that had been implemented in all the pages. I helped to develope a search bar implemented in the main page. They were some mistakes made on the way, for example I had to delete the header.css and redo it all again.
--  My 5 most important commits were
-  -  "Implementación del header provisional": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/0f25e26bb4d0ad285e6be439d86d0115169f0a0d
-  -  "Header con bootstrap implementado": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/63d95197b9753d8a5b2fc377c4aa98fdf7bf9ea2
-  -  "Header con desplegable para moviles" https://github.com/CodeURJC-FW-2025-26/webapp09/commit/369f8757a1431a61437ce667bbe5b4f35c455b58
-  -  "Implementacion final del header e implementación de barra de busqueda en main_page.html" https://github.com/CodeURJC-FW-2025-26/webapp09/commit/424b82f820ddaf1623b3f82db24482d99c9d3209
-  -  "Eliminación del antiguo archivo css del header (header.css) https://github.com/CodeURJC-FW-2025-26/webapp09/commit/b1f674711e3e06c78b18cc0d10c371d32de14d7d".
-  - Files I contributed:
-    - header.html  
-    - headerBs.css  
-    - README.md  
-    - main_page.html    
+  
+  -  My 5 most important commits were
+    -  "Implementación del header provisional": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/0f25e26bb4d0ad285e6be439d86d0115169f0a0d
+    -  "Header con bootstrap implementado": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/63d95197b9753d8a5b2fc377c4aa98fdf7bf9ea2
+    -  "Header con desplegable para moviles" https://github.com/CodeURJC-FW-2025-26/webapp09/commit/369f8757a1431a61437ce667bbe5b4f35c455b58
+    -  "Implementacion final del header e implementación de barra de busqueda en main_page.html" https://github.com/CodeURJC-FW-2025-26/webapp09/commit/424b82f820ddaf1623b3f82db24482d99c9d3209
+    -  "Eliminación del antiguo archivo css del header (header.css) https://github.com/CodeURJC-FW-2025-26/webapp09/commit/b1f674711e3e06c78b18cc0d10c371d32de14d7d".
+    - Files I contributed:
+      - header.html  
+      - headerBs.css  
+      - README.md  
+      - main_page.html    
 
 - Ivo Hagemann Martínez: I was responsible for creating the product page “product_detail.html” with its corresponding CSS file “product_detail.css”. On this page, I had to display in detail the main entity, Product, along with its respective attributes. In addition, I included a form to create a secondary entity, adapted from work done by another teammate. Finally, I added a section to display the secondary entities (reviews). I also included the header and footer made by two of my teammates.
 

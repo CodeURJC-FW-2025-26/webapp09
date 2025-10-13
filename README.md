@@ -39,7 +39,7 @@ Javier Méndez Hernández: I was the responsible for creating the header that ha
 Ivo Hagemann Martínez: I was responsible for creating the product page “product_detail.html” with its corresponding CSS file “product_detail.css”. On this page, I had to display in detail the main entity, Product, along with its respective attributes. In addition, I included a form to create a secondary entity, adapted from work done by another teammate. Finally, I added a section to display the secondary entities (reviews). I also included the header and footer made by two of my teammates.
 
   Most important commits:
-    - "Añadido formulario a página de producto y reseñas además del header y el footer". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/42cb35a4185895d52db7a054bb8f0bf1530763a7
+    - "Añadido formulario a página de producto y reseñas además del header y el footer". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/42cb35a4185895d52db7a054bb8f0bf1530763a7  
     - "Actualización clothe_info añadido de fotos laterales y tallas disponibles". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/62bc4d10a450449b15501e61e9d592e94b9d5fcf  
     - "Cambio de la clothe page a bootstrap". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/3f1c3f8e2d0fb0cbb73202abf508039b47b116fc  
     - "Header añadido al clothe_info, reestructuración de clothe_info.html". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/f71ffbafbcefc52dfbcb3d5d927124d7e82ccefc  

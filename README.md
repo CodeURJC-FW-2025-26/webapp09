@@ -40,16 +40,16 @@ Ivo Hagemann Martínez: I was responsible for creating the product page “produ
 
   Most important commits:
     - "Añadido formulario a página de producto y reseñas además del header y el footer". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/42cb35a4185895d52db7a054bb8f0bf1530763a7
-    - "Actualización clothe_info añadido de fotos laterales y tallas disponibles". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/62bc4d10a450449b15501e61e9d592e94b9d5fcf
-    - "Cambio de la clothe page a bootstrap". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/3f1c3f8e2d0fb0cbb73202abf508039b47b116fc
-    - "Header añadido al clothe_info, reestructuración de clothe_info.html". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/f71ffbafbcefc52dfbcb3d5d927124d7e82ccefc
-    - "Imagen de zapatillas genéricas y página de producto básica". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/a4c6a802b1f84a00c78fe736bfa4e5ea294491dc
+    - "Actualización clothe_info añadido de fotos laterales y tallas disponibles". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/62bc4d10a450449b15501e61e9d592e94b9d5fcf  
+    - "Cambio de la clothe page a bootstrap". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/3f1c3f8e2d0fb0cbb73202abf508039b47b116fc  
+    - "Header añadido al clothe_info, reestructuración de clothe_info.html". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/f71ffbafbcefc52dfbcb3d5d927124d7e82ccefc  
+    - "Imagen de zapatillas genéricas y página de producto básica". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/a4c6a802b1f84a00c78fe736bfa4e5ea294491dc  
 
   Files I contributed:
-    - product_detail.html
-    - product_detail.css
-    - README.md
-    - main_page.html
-    - formulario 1.html
+    - product_detail.html  
+    - product_detail.css  
+    - README.md  
+    - main_page.html  
+    - formulario 1.html  
     
     

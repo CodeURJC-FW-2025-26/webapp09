@@ -33,7 +33,8 @@
 
 ## Main page
 
-<img width="1915" height="1012" alt="image" src="https://github.com/user-attachments/assets/05550cb6-5132-4201-8e4e-dd190331471c" />
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/148facdd-1df8-4132-b342-b2dc3358f516" />
+
 
 <img width="1919" height="1074" alt="image" src="https://github.com/user-attachments/assets/929a6d8c-f1ff-4b65-8496-79c1602c7025" />
 
@@ -47,7 +48,7 @@ My five most important commits were:
   - 'main_page first version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8b518f27edb534ccc0d9db750f40c5f77cf067a6
   - 'main_page second version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8bf26bd49dc777b48b595bdd8a86165743007d96
   - 'main_page third version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8f3dbffcffea8549964873b87fd0026539b1e46e
-  - 'main_page last version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/c127c2b8234048e45968bda535e49c1607b47e03
+  - 'main_page last version': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/574e9970c203885778a61e9b702e79ba880b24b1
 
 - Javier Méndez Hernández: I was the responsible for creating the header that had been implemented in all the pages. I helped to develope a search bar implemented in the main page. They were some mistakes made on the way, for example I had to delete the header.css and redo it all again.
   

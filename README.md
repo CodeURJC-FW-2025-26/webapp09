@@ -31,6 +31,10 @@
 
 # PRACTICE 1
 
+<img width="1915" height="1012" alt="image" src="https://github.com/user-attachments/assets/05550cb6-5132-4201-8e4e-dd190331471c" />
+
+
+
 - Marcos Laorga Sagaseta de Ilurdoz: I created the 'footer', which will be used across other pages. Additionally, I developed the 'main page', incorporating the 'header', which was created by someone else, and the 'footer' that I implemented. The search bar was implemented by Javier, while my work focused on the 'create new item' button and its associated elements. 
 My five most important commits were:
 

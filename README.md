@@ -31,7 +31,7 @@
 
 # PRACTICE 1
 
-##Main page
+## Main page
 
 <img width="1915" height="1012" alt="image" src="https://github.com/user-attachments/assets/05550cb6-5132-4201-8e4e-dd190331471c" />
 

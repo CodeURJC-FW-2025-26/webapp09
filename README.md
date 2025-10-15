@@ -18,8 +18,9 @@
 - Name: Product name
 - Description: Product description
 - Price: Product price
-- Sizes: (S, M, L, XL)
-- Category: (t-shirt, trouser, sneakers)
+- Sizes: (XS, S, M, L, XL, XXL, XXXL)
+- Category: (t-shirt, trouser, sneakers, dress)
+
 
 #### Secondary Entities
 #### Review
@@ -27,7 +28,7 @@
 - review_id: unique identifier
 - product_id: reference to the product
 - user: user's name
-- rating: product rating
+- review: product review
 
 # PRACTICE 1
 

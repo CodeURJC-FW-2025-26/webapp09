@@ -38,7 +38,14 @@
 
 <img width="1919" height="1074" alt="image" src="https://github.com/user-attachments/assets/929a6d8c-f1ff-4b65-8496-79c1602c7025" />
 
+## Product page:
 
+<img width="1920" height="918" alt="image" src="https://github.com/user-attachments/assets/031c7a88-e55e-4af5-a9ac-67756dc4413c" />
+<img width="1913" height="915" alt="image" src="https://github.com/user-attachments/assets/4acb5fdd-6e07-492e-b330-37c8634c4d33" />
+
+## Add product page:
+
+<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/7d1cd671-68de-45e8-a466-d84482e10941" />
 
 
 - Marcos Laorga Sagaseta de Ilurdoz: I created the 'footer', which will be used across other pages. Additionally, I developed the 'main page', incorporating the 'header', which was created by someone else, and the 'footer' that I implemented. The search bar was implemented by Javier, while my work focused on the 'create new item' button and its associated elements. 
@@ -94,12 +101,6 @@ My five most important commits were:
     - formulario2.html
     - README.MD
     - 
--Product page:
 
-<img width="1920" height="918" alt="image" src="https://github.com/user-attachments/assets/031c7a88-e55e-4af5-a9ac-67756dc4413c" />
-<img width="1913" height="915" alt="image" src="https://github.com/user-attachments/assets/4acb5fdd-6e07-492e-b330-37c8634c4d33" />
-
-Add product page:
-<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/7d1cd671-68de-45e8-a466-d84482e10941" />
 
     

@@ -64,7 +64,7 @@ My five most important commits were:
       - README.md  
       - main_page.html    
 
-- Ivo Hagemann Martínez: I was responsible for creating the product page “product_detail.html” with its corresponding CSS file “product_detail.css”. On this page, I had to display in detail the main entity, Product, along with its respective attributes. In addition, I included a form to create a secondary entity, adapted from work done by another teammate. Finally, I added a section to display the secondary entities (reviews). I also included the header and footer made by two of my teammates.
+- Ivo Hagemann Martínez: I was responsible for creating the product page “product_detail.html” with its corresponding CSS file “product_detail.css”. On this page, I had to display in detail the main entity, Product, along with its respective attributes. In addition, I included a form to create a secondary entity, adapted from work done by another teammate. Finally, I added a section to display the secondary entities (reviews). I also included the header and footer made by two of my teammates. Due to an issue that arose in recent days, many of our latest commits seemed to be lost, and I was the one in charge of fixing it. When it happened again a few days later, I fixed it once more, created an extra branch as a backup, and investigated what had happened to prevent it from occurring again.
 
   - Most important commits:
     - "Añadido formulario a página de producto y reseñas además del header y el footer". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/42cb35a4185895d52db7a054bb8f0bf1530763a7  

@@ -78,5 +78,20 @@ My five most important commits were:
     - README.md  
     - main_page.html  
     - formulario 1.html  
+
+- Sergio Guindal Gómez: I was responsible for creating both of the forms that were implemented on the website. The first one is intended to be used by users to submit a resignation, and the second one is for us to add a new piece of clothing. I accidentally performed an unnecessary merge that almost cost us a lot of progress.
+
+  - Most important commits:
+    - "Añadir Formulario 1.html". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/a01abc66161f2470e4939c0228fea6db46051b26  
+    - "Añadir Formulario 2.html". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/0670b8372f8f3f95f3a878203a54dc953cbed68b 
+    - "añadir imagen". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/994a16b57067730655d2d40526f062c4588c2045  
+    - "Actualizo los formularios". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/fd054ecb5833b71ca7543cfd04604d61921bf24a  
+    - "formularios". Link: https://github.com/CodeURJC-FW-2025-26/webapp09/commit/54d0f6d1867237be6fbba9e7e5188ce3dbf3c304
+
+  - Files I contributed: 
+    - formulario 1.html
+    - formulario2.html
+    - README.MD 
+
     
     

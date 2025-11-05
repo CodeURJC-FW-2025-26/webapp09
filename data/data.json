@@ -1,0 +1,14 @@
+[
+    {
+        "user": "Pepe",
+        "title": "Vendo moto",
+        "text": "Barata, barata",
+        "imageFilename": "post0.jpeg"
+    },
+    {
+        "user": "Juan",
+        "title": "Compro coche",
+        "text": "Pago bien",
+        "imageFilename": "post1.jpeg"
+    }
+]

@@ -19,10 +19,13 @@ router.get('/', async (req, res) => {
 router.post('/clothe/new', upload.single('image'), async (req, res) => {
 
     let clothe = {
-        user: req.body.user,
-        title: req.body.title,
-        text: req.body.text,
-        imageFilename: req.file?.filename
+        name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+        size: req.body.size,
+        category: req.body.category,
+        reviews: [
+        ]
     };
 
     await board.addClothe(clothe);

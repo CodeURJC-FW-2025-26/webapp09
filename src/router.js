@@ -35,7 +35,7 @@ router.get('/clothe/:id', async (req, res) => {
 
     let clothe = await board.getClothe(req.params.id);
 
-    res.render('show_clothe', { clothe });
+    res.render('product_detail', { clothe });
 });
 
 router.get('/clothe/:id/delete', async (req, res) => {

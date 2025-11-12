@@ -11,49 +11,49 @@ const upload = multer({ dest: board.UPLOADS_FOLDER })
 
 router.get('/', async (req, res) => {
 
-    let posts = await board.getPosts();
+    let clothes = await board.getClothes();
 
-    res.render('index', { posts });
+    res.render('index', { clothes });
 });
 
-router.post('/post/new', upload.single('image'), async (req, res) => {
+router.post('/clothe/new', upload.single('image'), async (req, res) => {
 
-    let post = {
+    let clothe = {
         user: req.body.user,
         title: req.body.title,
         text: req.body.text,
         imageFilename: req.file?.filename
     };
 
-    await board.addPost(post);
+    await board.addClothe(clothe);
 
-    res.render('saved_post', { _id: post._id.toString() });
+    res.render('saved_clothe', { _id: clothe._id.toString() });
 
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/clothe/:id', async (req, res) => {
 
-    let post = await board.getPost(req.params.id);
+    let clothe = await board.getClothe(req.params.id);
 
-    res.render('show_post', { post });
+    res.render('show_clothe', { clothe });
 });
 
-router.get('/post/:id/delete', async (req, res) => {
+router.get('/clothe/:id/delete', async (req, res) => {
 
-    let post = await board.deletePost(req.params.id);
+    let clothe = await board.deleteClothe(req.params.id);
 
-    if (post && post.imageFilename) {
-        await fs.rm(board.UPLOADS_FOLDER + '/' + post.imageFilename);
+    if (clothe && clothe.imageFilename) {
+        await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
     }
 
-    res.render('deleted_post');
+    res.render('deleted_clothe');
 });
 
-router.get('/post/:id/image', async (req, res) => {
+router.get('/clothe/:id/image', async (req, res) => {
 
-    let post = await board.getPost(req.params.id);
+    let clothe = await board.getClothe(req.params.id);
 
-    res.download(board.UPLOADS_FOLDER + '/' + post.imageFilename);
+    res.download(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
 
 });
 

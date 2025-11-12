@@ -6,33 +6,34 @@ export default router;
 
 const client = new MongoClient('mongodb://localhost:27017');
 
-const db = client.db('board');
-const posts = db.collection('posts');
+const db = client.db('nomoretrash-db');
+const clothes = db.collection('clothes');
+
 
 export const UPLOADS_FOLDER = './uploads';
 
-export async function addPost(post) {
+export async function addClothe(clothe) {
 
-    return await posts.insertOne(post);
+    return await clothes.insertOne(clothe);
 }
 
-export async function deletePost(id){
+export async function deleteClothe(id){
 
-    return await posts.findOneAndDelete({ _id: new ObjectId(id) });
+    return await clothes.findOneAndDelete({ _id: new ObjectId(id) });
 }
 
-export async function deletePosts(){
+export async function deleteClothes(){
 
-    return await posts.deleteMany();
+    return await clothes.deleteMany();
 }
 
-export async function getPosts(){
+export async function getClothes(){
 
-    return await posts.find().toArray();
+    return await clothes.find().toArray();
 }
 
-export async function getPost(id){
+export async function getClothe(id){
 
-    return await posts.findOne({ _id: new ObjectId(id) });
+    return await clothes.findOne({ _id: new ObjectId(id) });
 }
 

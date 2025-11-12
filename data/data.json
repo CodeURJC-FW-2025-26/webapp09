@@ -1,14 +1,113 @@
 [
     {
-        "user": "Pepe",
-        "title": "Vendo moto",
-        "text": "Barata, barata",
-        "imageFilename": "post0.jpeg"
+        "name": "Replay Beige",
+        "description": "Combinan comodidad y estilo",
+        "price": 59.99,
+        "size": "45",
+        "category": "sneakers",
+        "reviews": [
+            {
+                "user": "Manolo",
+                "review": "Todo bien"
+            },
+            {
+                "user": "Marcos",
+                "review": "Muy malas la verdad"
+            }
+        ]
     },
     {
-        "user": "Juan",
-        "title": "Compro coche",
-        "text": "Pago bien",
-        "imageFilename": "post1.jpeg"
+        "name": "New Balance 892S",
+        "description": "Zapatillas comodiñas jeje",
+        "price": 59.99,
+        "size": "47",
+        "category": "sneakers",
+        "reviews": [
+            {
+                "user": "Javier",
+                "review": "Zapatillas cómodas y ligeras"
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Max 270",
+        "description": "Diseño moderno con amortiguación excepcional",
+        "price": 129.99,
+        "size": "44",
+        "category": "sneakers",
+        "reviews": [
+            {
+                "user": "Carlos",
+                "review": "Muy cómodas, ideales para correr"
+            },
+            {
+                "user": "Laura",
+                "review": "Buena calidad pero talla un poco pequeño"
+            }
+        ]
+    },
+    {
+        "name": "Adidas Ultraboost 22",
+        "description": "Perfectas para entrenar o para el día a día",
+        "price": 139.99,
+        "size": "42",
+        "category": "sneakers",
+        "reviews": [
+            {
+                "user": "Andrés",
+                "review": "El mejor calzado que he tenido"
+            },
+            {
+                "user": "Sofía",
+                "review": "Un poco caras, pero valen la pena"
+            }
+        ]
+    },
+    {
+        "name": "Converse Chuck Taylor All Star",
+        "description": "Un clásico que nunca pasa de moda",
+        "price": 64.99,
+        "size": "43",
+        "category": "casual",
+        "reviews": [
+            {
+                "user": "Paula",
+                "review": "Combinan con todo, las amo"
+            },
+            {
+                "user": "Dani",
+                "review": "Buen diseño, aunque no son muy cómodas para caminar mucho"
+            }
+        ]
+    },
+    {
+        "name": "Puma RS-X³",
+        "description": "Zapatillas con diseño atrevido y materiales de alta calidad",
+        "price": 89.99,
+        "size": "46",
+        "category": "sneakers",
+        "reviews": [
+            {
+                "user": "Lucía",
+                "review": "Diseño espectacular, cómodas y ligeras"
+            }
+        ]
+    },
+    {
+        "name": "Reebok Classic Leather",
+        "description": "Inspiradas en el running, con un toque retro",
+        "price": 74.99,
+        "size": "44",
+        "category": "casual",
+        "reviews": [
+            {
+                "user": "Pedro",
+                "review": "Buena calidad y cómodas"
+            },
+            {
+                "user": "Marta",
+                "review": "Me encantan, las uso todos los días"
+            }
+        ]
     }
 ]

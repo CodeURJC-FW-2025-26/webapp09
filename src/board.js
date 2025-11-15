@@ -7,19 +7,6 @@ export default router;
 const client = new MongoClient('mongodb://localhost:27017');
 await client.connect();
 
-async function testConnection() {
-    try{
-        await client.connect();
-        console.log("Conexión a MOongoDB establecida")
-
-        const db = client.db('nomoretrahs-db');
-        const clothes = db.collection('clothes');
-        console.log("Colecciones en la base de datos:", clothes.map(c => c.name));
-    } catch(err){
-    console.error("Error conectando a la base de datos")
-    }
-}
-
 const db = client.db('nomoretrash-db');
 const clothes = db.collection('clothes');
 
@@ -27,7 +14,7 @@ const clothes = db.collection('clothes');
 export const UPLOADS_FOLDER = './uploads';
 
 export async function addClothe(clothe) {
-
+    
     return await clothes.insertOne(clothe);
 }
 

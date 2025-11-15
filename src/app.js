@@ -1,9 +1,12 @@
 import express from 'express';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
+import board from './board.js'
 
 import router from './router.js';
 import './load_data.js';
+
+
 
 const app = express();
 

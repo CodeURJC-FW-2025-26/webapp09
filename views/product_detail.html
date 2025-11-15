@@ -93,24 +93,16 @@
             <!-- Column for description, name...  -->
             <div class = "col-md-6" id = "text-description">  
                 <a id="title-brand" class="p-0 m-0" href="#"> Nike </a>
-                <div id="title"> Zapatillas Genéricas </div>
-                <p id = "price"> Precio: 59,99€</p>
+                <div id="title"> {{clothe.name}} </div>
+                <p id = "price"> Precio: {{clothe.price}}€</p>
                 <p id = "color"> Color: <em>beige</em> </p>
                 <h3> Descripción del producto </h3>
-                <p id = "description">Estas zapatillas combinan comodidad, estilo y versatilidad 
-                para acompañarte en tu día a día. Su diseño moderno y ligero 
-                se adapta tanto a looks casuales como deportivos, mientras 
-                que la suela resistente y flexible ofrece una pisada segura y 
-                 confortable </p>
+                <p id = "description">{{clothe.description}}</p>
                 <p> Tallas: </p>
                 
                 <!-- Available sizes -->
                 <section id="available-sizes">
-                    <button type = "button" class = "btn btn-dark mb-2">39</button>
-                    <button type = "button" class = "btn btn-dark mb-2">40</button>
-                    <button type = "button" class = "btn btn-dark mb-2">41.5</button>
-                    <button type = "button" class = "btn btn-dark mb-2">42</button>
-                    <button type = "button" class = "btn btn-dark mb-2">44</button>
+                    <button type = "button" class = "btn btn-dark mb-2">{{clothe.size}}</button>
                 </section>
                 
                 <!-- Form -->

@@ -35,9 +35,9 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
 });
 
 router.get('/clothe/:id', async (req, res) => {
-
     let clothe = await board.getClothe(req.params.id);
-
+    console.log("CLOTHE: ", clothe);
+    console.log("ID recibido: ", req.params.id);
     res.render('product_detail', { clothe });
 });
 
@@ -55,6 +55,7 @@ router.get('/clothe/:id/delete', async (req, res) => {
 router.get('/clothe/:id/image', async (req, res) => {
 
     let clothe = await board.getClothe(req.params.id);
+    
 
     res.download(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
 

@@ -100,7 +100,36 @@ My five most important commits were:
     - formulario 1.html
     - formulario2.html
     - README.MD
-    - 
 
+# PRACTICE 2
 
+## Execution instructions
+
+## File description
+
+  - 'index.html': This file is the main page of the web application. It provides the overall structure and layout of the website, including the header, search bar, category buttons, product grid, and pagination controls. It integrates CSS files (main_page.css, header.css, footer.css) for styling and uses Bootstrap for responsive design. The page dynamically displays products from data.json using template placeholders ({{#clothes}}...{{/clothes}}) and allows users to navigate between pages and filter by category or search terms. It also includes a button to add new products.
     
+  - 'data.json': This file contains all the product data used in the application, structured in JSON format. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of reviews from users. The file serves as the data source for the main page, enabling dynamic rendering of product cards, including images, prices, and user reviews.
+
+## Demonstration video
+
+## Member participation
+
+- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (index.html): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the 'data.json' file and made modifications to the main_page.css
+
+  I have only made 2 commits because I uploaded everything after finishing it. The second one was to fix a bug.
+
+  - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/16d4b61ede1cca89f68691312d6ac3ac58a1bc44
+  - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8d0be5979488108a7940fb3bf8fb43812fb2a355 (with the bug fixed)
+ 
+  Files I contributed:
+
+  - data.json
+  - images folder
+  - main_page.css
+  - app.js
+  - board.js
+  - load_data.js
+  - router.js
+  - main_page.js
+  - index.html

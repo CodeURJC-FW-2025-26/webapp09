@@ -162,7 +162,7 @@ router.get('/clothe/:id/delete', async (req, res) => {
         await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
     }
 
-    res.render('deleted_clothe');
+    return res.redirect('/');
 });
 
 router.get('/Formulario2', (req, res) => {

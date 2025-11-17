@@ -13,40 +13,7 @@
     </head>
     <body class="d-flex flex-column min-vh-100">
     <!-- HEADER -->
-    <header class="container-fluid bg-light shadow-sm py-3 fixed-top">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-10 col-md-3 text-start">
-          <a href="main_page.html" class="text-decoration-none fw-bold fs-4 text-dark">
-            NOMORETRASH
-          </a>
-        </div>
-        <div class="col-2 d-md-none text-end">
-          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse col-12 col-md-9 d-md-block" id="navMenu">
-          <div class="row align-items-center mt-3 mt-md-0">
-            <div class="col-12 col-md-8">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Iniciar sesión</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Salir</a></li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-4 text-center text-md-end mt-3 mt-md-0">
-              <a href="#"><img src="images/icons/iconUser.png" width="30" alt="User" class="mx-1"></a>
-              <a href="https://www.instagram.com/"><img src="images/icons/iconInstagram.png" width="30" alt="Instagram" class="mx-1"></a>
-              <a href="#"><img id="shopkart" src="images/icons/iconCarrito.jpg" width="30" alt="Shopkart" class="mx-1"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+    {{>header}}
   <main class="flex-grow-1 d-flex justify-content-center align-items-center" style="padding-top: 80px;">
     <div class="card shadow p-4" style="width: 400px;">
       <h1>Añadir producto</h1>
@@ -120,50 +87,5 @@
         </div>
   </main>
         <!-- Footer -->
-        <footer class="container-fluid bg-light border-top custom-footer mt-5 py-5">
-            <div class="container">
-                <div class="row text-center text-md-start justify-content-center">
-
-                    <!-- About us -->
-                    <div class="col-12 col-md-3 mb-4">
-                        <h6 class="fw-bold mb-3 title">Sobre nosotros</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="link">Quiénes somos</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Help -->
-                    <div class="col-12 col-md-3 mb-4">
-                        <h6 class="fw-bold mb-3 title">Ayuda</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="link">Devolución</a></li>
-                            <li><a href="#" class="link">Reembolso</a></li>
-                            <li><a href="#" class="link">Rastrear pedido</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Customer service -->
-                    <div class="col-12 col-md-3 mb-4">
-                        <h6 class="fw-bold mb-3 title">Servicio al cliente</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="link">Contáctenos</a></li>
-                            <li><a href="#" class="link">Preguntas frecuentes</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Follow us -->
-                    <div class="col-12 col-md-3 mb-4">
-                        <h6 class="fw-bold mb-3 title">Síguenos</h6>
-                        <a href="#" class="icon"><i class="bi bi-instagram"></i></a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- All rights reserved -->
-            <div class="text-center small text-muted">
-                ©2025 <span class="fw-bold text-dark">NOMORETRASH</span>. Todos los derechos reservados.
-            </div>
-        </footer>
+       {{>footer}}
 </html>

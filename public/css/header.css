@@ -1,120 +1,23 @@
-#header {
-    width: 100%;
-    margin: 0;
-    border-bottom: 1p
-    x solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: fixed;
-    /* lo fija */
-    top: 0;
-    /* se pega arriba */
-    left: 0;
-    /* se alinea con el borde izquierdo */
-    z-index: 1000;
-    background-color: white;
+/* Color base de los enlaces del menú */
+.nav-link {
+  color: gray !important;
+  /* Le metes el !important para que pille prioridad el css porque el .nav-link es muy estricto*/
 }
 
-#imagen {
-    flex: 0 0 25%;
-    /* 25% fijo */
-    display: flex;
-    justify-content: flex-start;
-    /* logo a la izquierda */
-
-    /* border: 2px solid red; */
-
+/* Color al pasar el ratón por encima */
+.nav-link:hover {
+  color: black !important;
+  background-color: white;
+  transition: 0.3s;
+  /* animación suave */
 }
 
-#cabecera {
-    flex: 1;
-    /* Ocupa espacio proporcional */
-    /* border: 2px solid red; */
-    max-width: 200px;
-    height: auto;
-
-    /* border: 2px solid red; */
+#shopkart {
+  height: 40px;
+  width: auto;
 }
 
-#contenedorCabecera {
-    flex: 0 0 50%;
-    /* 50% fijo */
-    display: flex;
-    justify-content: center;
-    /* centra el menú dentro */
-    /* border: 2px solid blue; */
-    opacity: 70%;
-}
-
-#contenedorIconos {
-    flex: 0 0 25%;
-    /* 25% fijo */
-    display: flex;
-    /* ahora sí usa flexbox */
-    align-items: center;
-    /* centra verticalmente */
-    /* border: 2px solid green; */
-}
-
-#cab a {
-    text-decoration: none;
-    color: black;
-    font-size: 80%;
-    transition: background 0.3s;
-}
-
-#cab {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-}
-
-li {
-    list-style: none;
-}
-
-#iconoUser {
-    width: 15%;
-    height: auto;
-}
-
-#iconoInstagram {
-    width: 15%;
-    height: auto;
-}
-
-#cab a:hover {
-    color: gray;
-    /* padding: 5px 10px; */
-    border-radius: 5px;
-}
-
-#cabIconos {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-
-
-}
-
-#cabIconos li {
-    list-style: none;
-}
-
-#iconoUser,
-#iconoInstagram {
-    width: 30px;
-    height: auto;
-    left: 10%;
+/* esto le da un fondo al boton de "hamburguesa" */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

@@ -23,3 +23,36 @@ section h3{
     font-size: 1.3rem;
     letter-spacing: 0.1rem;
 }
+
+.pagination a {
+    margin: 0;
+    padding: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    background: white;
+}
+
+.pagination a:hover {
+    background: #007bff;
+    color: white;
+}
+
+.pagination strong {
+    margin: 5px;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    background: #007bff;
+    color: white;
+    font-weight: 700;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}

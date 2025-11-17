@@ -5,15 +5,17 @@ const router = express.Router();
 export default router;
 
 const client = new MongoClient('mongodb://localhost:27017');
+await client.connect();
+
 
 const db = client.db('nomoretrash-db');
-const clothes = db.collection('clothes');
+export const clothes = db.collection('clothes');
 
 
 export const UPLOADS_FOLDER = './uploads';
 
 export async function addClothe(clothe) {
-
+    
     return await clothes.insertOne(clothe);
 }
 

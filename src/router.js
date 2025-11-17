@@ -186,7 +186,14 @@ router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
 })
 
 router.post('/clothe/:id/review/new', async (req,res) =>{
-    await board.addReview(req.body.user, req.body.title, req.body.review, req.params.id);
+    await board.addReview(req.body.user, req.body.title, req.body.review, req.params.id, req.body.reviewId); 
     console.log('Review añadida, usuario:',req.body.user, 'titulo', req.body.titulo);
     return res.redirect('/clothe/' + req.params.id);
+})
+
+router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
+    let clothe = await board.getClothe(req.params.id);
+    
+    let review = clothe.reviews.find(r => r.id === Number(req.params.idReview) )
+    return res.render('edit_review', {clothe, review})
 })

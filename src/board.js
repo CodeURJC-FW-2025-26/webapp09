@@ -39,3 +39,12 @@ export async function getClothe(id){
     return await clothes.findOne({ _id: new ObjectId(id) });
 }
 
+export async function deleteReview(clotheId, reviewId){
+
+    console.log('Id Review: ', reviewId);
+    console.log('Clothe Id: ', clotheId);
+    return await clothes.updateOne(
+        {_id: new ObjectId(clotheId)},
+        {$pull: { reviews:{ id: reviewId } }}
+    )
+}

@@ -180,3 +180,9 @@ router.get('/clothe/:id/image', async (req, res) => {
 
 });
 
+router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
+    await board.deleteReview(req.params.id, Number(req.params.idReview));
+    console.log('review eliminada')
+    res.redirect(req.get("Referer") || '/');
+})
+

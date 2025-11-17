@@ -186,3 +186,8 @@ router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
     res.redirect(req.get("Referer") || '/');
 })
 
+router.post('/clothe/:id/review/new', async (req,res) =>{
+    await board.addReview(req.body.user, req.body.title, req.body.review, req.params.id);
+    console.log('Review añadida, usuario:',req.body.user, 'titulo', req.body.titulo);
+    return res.redirect('/clothe/' + req.params.id);
+})

@@ -48,3 +48,14 @@ export async function deleteReview(clotheId, reviewId){
         {$pull: { reviews:{ id: reviewId } }}
     )
 }
+
+export async function addReview(user, title, review, clotheId){
+    let clothe = await getClothe(clotheId)
+    let reviewID = clothe.reviewCount + 1;
+    await clothes.updateOne({_id: new ObjectId(clotheId)}, {
+        $push: { reviews:{id: reviewID, title: title, review: review, user: user }},
+        $inc: {reviewsCount: 1}
+    })
+    console.log('Id de la nueva review: ', reviewID);
+    console.log('Nuevo valor del contador: ', clothe.reviewsCount);
+}

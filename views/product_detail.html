@@ -106,19 +106,19 @@
                 </section>
                 
                 <!-- Form -->
-                <form>
+                <form action = "{{clothe._id}}/review/new" method = "post">
                     <div class = "p-2 mt-4 rounded" id = "form-box">
                         <h5> Deja tu reseña </h5>
                         <hr class = "mt-0"/>
                         <span class = "form-group">
-                            <input class = "form-control mb-2" placeholder="Introduce tu nombre de usuario">   
+                            <input class = "form-control mb-2" name = "user" placeholder="Introduce tu nombre de usuario">   
                             
                         </span>
                         <span class = "form-group">
-                            <input class = "form-control mb-2" placeholder="Resume tu opinión en una línea">
+                            <input class = "form-control mb-2" name = "title" placeholder="Resume tu opinión en una línea">
                         </span>
                         <span class = "form-group">
-                            <textarea class = "form-control" rows="3" placeholder="Escribe tu reseña"></textarea>
+                            <textarea class = "form-control" name = "review" rows="3" placeholder="Escribe tu reseña"></textarea>
                         </span>
                         <div class = "text-end">
                             <button type = "submit" class = "btn btn-dark m-2 me-0"> Enviar </button>
@@ -138,7 +138,7 @@
                 <div class = "col-12 col-md-3 mb-3">
                 <div class = "card review shadow">
                     <div class = "card-body">
-                        <h5 class = "card-title"> Título </p>
+                        <h5 class = "card-title"> {{title}} </p>
                         <h6 class = "card-subtitle"> {{user}} </p>
                         <p class = "card-text"> {{review}} </p>
                         <div class = "container p-0">

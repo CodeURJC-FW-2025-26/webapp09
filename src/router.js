@@ -32,7 +32,6 @@ router.get('/', async (req, res) => {
     const start = (page - 1) * perPage;
     const clothes = allClothes.slice(start, start + perPage);
 
-    // 👉 Ya no reasignamos una constante (antes: "pages = pages.map...")
     const pages = Array.from({ length: totalPages }, (_, i) => ({
         number: i + 1,
         isCurrent: (i + 1) === page

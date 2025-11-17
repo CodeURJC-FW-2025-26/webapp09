@@ -107,9 +107,9 @@ My five most important commits were:
 
 ## File description
 
-  - 'index.html': This file is the main page of the web application. It provides the overall structure and layout of the website, including the header, search bar, category buttons, product grid, and pagination controls. It integrates CSS files (main_page.css, header.css, footer.css) for styling and uses Bootstrap for responsive design. The page dynamically displays products from data.json using template placeholders ({{#clothes}}...{{/clothes}}) and allows users to navigate between pages and filter by category or search terms. It also includes a button to add new products.
+  - 'index.html': This file is the main page of the web application. It provides the overall structure and layout of the website, including the header, search bar, category buttons, product grid, and pagination controls. It integrates CSS files (main_page.css, header.css, footer.css) for styling and uses Bootstrap for responsive design. The page dynamically displays products from data.json using template placeholders and allows users to navigate between pages and filter by category or search terms. It also includes a button to add new products.
     
-  - 'data.json': This file contains all the product data used in the application, structured in JSON format. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of reviews from users. The file serves as the data source for the main page, enabling dynamic rendering of product cards, including images, prices, and user reviews.
+  - 'data.json': This file contains all the product data used in the application. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of reviews from users. The file serves as the data source for the main page and product detail.
 
 ## Demonstration video
 

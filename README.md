@@ -158,7 +158,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   - `board.js`: It connects to the MongoDB server and create a reference to the clothes collection.
 
-  - `load_data.js`: It loads demo data into the database when the server starts. It reads the `data.json` file I will describe after.
+  - `load_data.js`: This file resets the application's data every time the server starts and then reload the initial data from `json.data`.
 
   - `router.js`: This file contains all the routes used by the application, like the main page pagination.
     

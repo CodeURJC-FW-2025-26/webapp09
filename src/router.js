@@ -9,31 +9,34 @@ export default router;
 
 const upload = multer({ dest: board.UPLOADS_FOLDER })
 
+// Main page with filter and pagination
 router.get('/', async (req, res) => {
-    let { page = 1, search = "", category = "" } = req.query;
+    
+    let { page = 1, search = "", category = "" } = req.query; // Read GET filters
     page = parseInt(page);
 
     const perPage = 6;
 
-    let allClothes = await board.getClothes();
+    let allClothes = await board.getClothes(); // Obtain all clothes
 
-    if (search) {
+    if (search) {                                           // Text filter
         const searchLower = search.toLowerCase();
         allClothes = allClothes.filter(c =>
             c.name.toLowerCase().includes(searchLower)
         );
     }
 
-    if (category) {
+    if (category) {                                                     // Category filter
         allClothes = allClothes.filter(c => c.category === category);
     }
 
-    const totalPages = Math.ceil(allClothes.length / perPage);
+    const totalPages = Math.ceil(allClothes.length / perPage);          // Pages count rounded to the nearest integer
     const start = (page - 1) * perPage;
-    const clothes = allClothes.slice(start, start + perPage);
+    const clothes = allClothes.slice(start, start + perPage);           // Array with clothes per page
 
-    const pages = Array.from({ length: totalPages }, (_, i) => ({
-        number: i + 1,
+    // Pagination buttoms with all pages
+    const pages = Array.from({ length: totalPages }, (_, i) => ({       // Array with totalPages elems
+        number: i + 1,                                                  // Pages start on 1
         isCurrent: (i + 1) === page
     }));
 

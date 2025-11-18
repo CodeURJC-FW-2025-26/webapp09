@@ -98,7 +98,6 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
             });
         }
 
-
         // 2. Incorrect price (not numeric or below 0)
         const priceNumber = Number(price);
         //Nan = not a number
@@ -127,7 +126,8 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
             });
         }
 
-        // 4. If its everything ok, we create the clothe in the bd
+             // 4. Si todo está OK, NO guardamos todavía.
+        // Preparamos el objeto prenda y mostramos página de confirmación
         let clothe = {
             name,
             description,
@@ -137,19 +137,56 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
             reviews: []
         };
 
-        // Idk if i need to save the clothe and img name
         if (req.file) {
             clothe.imageFilename = req.file.filename;
         }
 
-        await board.addClothe(clothe);
-        //It was saved_clothe before
-        res.render('saved_post', { _id: clothe._id.toString() });
+        // Renderizamos la página de confirmación (sin guardar en BD aún)
+        return res.render('confirm_new_clothe', { clothe });
+
+
+
+        
 
     } catch (err) {
         console.error('Error al crear la prenda:', err);
 
         // Generic error (for instance, error de BD)
+        return res.status(500).render('error', {
+            mensaje: 'Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde.',
+            urlBoton: '/',
+            textoBoton: 'Volver a la tienda'
+        });
+    }
+});
+
+
+// Confirmar y guardar definitivamente la prenda
+router.post('/clothe/new/confirm', async (req, res) => {
+    try {
+        const { name, description, price, size, category, imageFilename } = req.body;
+
+        const priceNumber = Number(price);
+
+        let clothe = {
+            name,
+            description,
+            price: priceNumber,
+            size,
+            category,
+            reviews: []
+        };
+
+        if (imageFilename) {
+            clothe.imageFilename = imageFilename;
+        }
+
+        await board.addClothe(clothe);
+
+        return res.render('saved_post', { _id: clothe._id.toString() });
+
+    } catch (err) {
+        console.error('Error al confirmar la prenda:', err);
         return res.status(500).render('error', {
             mensaje: 'Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde.',
             urlBoton: '/',
@@ -165,12 +202,52 @@ router.get('/clothe/:id', async (req, res) => {
     res.render('product_detail', { clothe });
 });
 
-router.get('/clothe/:id/delete', async (req, res) => {
+
+
+
+// NEW RUTE
+// Show the confirm view
+router.get('/clothe/:id/confirm-delete', async (req, res) => {
+    let clothe = await board.getClothe(req.params.id);
+
+    if (!clothe) {
+        return res.status(404).render('error', {
+            mensaje: 'No se encontró la prenda.',
+            urlBoton: '/',
+            textoBoton: 'Volver al inicio'
+        });
+    }
+
+    res.render('confirm_delete', { clothe });
+});
+
+
+
+
+
+// //old
+
+// router.get('/clothe/:id/delete', async (req, res) => {
+
+//     let clothe = await board.deleteClothe(req.params.id);
+
+//     if (clothe && clothe.imageFilename) {
+//         await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
+//     }
+
+//     return res.redirect('/');
+// });
+
+
+
+//  NEW RUTE 
+// Delete clothe (after confirm)
+router.post('/clothe/:id/delete', async (req, res) => {
 
     let clothe = await board.deleteClothe(req.params.id);
 
-    if (clothe && clothe.imageFilename) {
-        await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
+    if (clothe && clothe.value && clothe.value.imageFilename) {
+        await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.value.imageFilename);
     }
 
     return res.redirect('/');
@@ -178,7 +255,7 @@ router.get('/clothe/:id/delete', async (req, res) => {
 
 router.get('/new_clothe_form', (req, res) => {
     res.render('new_clothe_form');
-    // Express buscará views/Formulario2.html
+    
 });
 
 router.get('/clothe/:id/image', async (req, res) => {

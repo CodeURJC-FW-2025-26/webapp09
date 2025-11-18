@@ -109,7 +109,7 @@ My five most important commits were:
 
   - `index.html`: This file is the main page of the web application. It provides the overall structure and layout of the website, including the header, search bar, category buttons, product grid, and pagination controls. It integrates CSS files (`main_page.css, header.css, footer.css`) for styling and uses Bootstrap for responsive design. The page dynamically displays products from data.json using template placeholders and allows users to navigate between pages and filter by category or search terms. It also includes a button to add new products.
     
-  - `data.json`: This file contains the initial product data loaded when the application starts. If the database is empty, the server reads this file and inserts its contents into MongoDB. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of user reviews. The file serves as the initial seed data for both the main page and the product detail pages.
+  - `data.json`: This file contains the initial product data loaded when the application starts. If the database is empty, the server reads this file and inserts its contents into MongoDB. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of user reviews. The file serves as the initial data for both the main page and the product detail pages.
 
 ## Demonstration video
 
@@ -122,7 +122,6 @@ My five most important commits were:
   - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/16d4b61ede1cca89f68691312d6ac3ac58a1bc44
   - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8d0be5979488108a7940fb3bf8fb43812fb2a355 (with the bug fixed)
   - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/37c56fd2565691bad3cf6c7651c83a51fc240c67
-  - 'main_pageBs': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/d16387c8066f335b7a55a39f7016369247a6c146
  
   Files I contributed:
 

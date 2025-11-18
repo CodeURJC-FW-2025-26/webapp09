@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
     const start = (page - 1) * perPage;
     const clothes = allClothes.slice(start, start + perPage);
 
-    // 👉 Ya no reasignamos una constante (antes: "pages = pages.map...")
+
     const pages = Array.from({ length: totalPages }, (_, i) => ({
         number: i + 1,
         isCurrent: (i + 1) === page
@@ -74,8 +74,18 @@ router.get('/', async (req, res) => {
 
 
 router.post('/clothe/new', upload.single('image'), async (req, res) => {
+    console.log('BODY:', req.body);
+    console.log('FILE:', req.file);
     try {
         const { name, description, price, size, category } = req.body;
+
+        if (description.length < 10 || description.length > 250) {
+            return res.status(400).render('error', {
+                mensaje: 'La descripción debe tener entre 10 y 250 caracteres.',
+                urlBoton: '/Formulario2',
+                textoBoton: 'Corregir descripción'
+            });
+        }
 
         // Empty info
         if (!name || !description || !price || !size || !category) {
@@ -88,6 +98,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
                 textoBoton: 'Volver al formulario'
             });
         }
+
 
         // 2. Incorrect price (not numeric or below 0)
         const priceNumber = Number(price);
@@ -133,8 +144,8 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
         }
 
         await board.addClothe(clothe);
-
-        res.render('saved_clothe', { _id: clothe._id.toString() });
+        //It was saved_clothe before
+        res.render('saved_post', { _id: clothe._id.toString() });
 
     } catch (err) {
         console.error('Error al crear la prenda:', err);
@@ -174,7 +185,7 @@ router.get('/Formulario2', (req, res) => {
 router.get('/clothe/:id/image', async (req, res) => {
 
     let clothe = await board.getClothe(req.params.id);
-    
+
 
     res.download(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
 

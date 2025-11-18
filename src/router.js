@@ -73,8 +73,8 @@ router.get('/', async (req, res) => {
 
 
 router.post('/clothe/new', upload.single('image'), async (req, res) => {
-    console.log('BODY:', req.body);
-    console.log('FILE:', req.file);
+    // console.log('BODY:', req.body);
+    // console.log('FILE:', req.file);
     try {
         const { name, description, price, size, category } = req.body;
 
@@ -160,8 +160,8 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
 
 router.get('/clothe/:id', async (req, res) => {
     let clothe = await board.getClothe(req.params.id);
-    console.log("CLOTHE: ", clothe);
-    console.log("ID recibido: ", req.params.id);
+    // console.log("CLOTHE: ", clothe);
+    // console.log("ID recibido: ", req.params.id);
     res.render('product_detail', { clothe });
 });
 

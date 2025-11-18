@@ -10,10 +10,46 @@ export default router;
 const upload = multer({ dest: board.UPLOADS_FOLDER })
 
 router.get('/', async (req, res) => {
+    let { page = 1, search = "", category = "" } = req.query;
+    page = parseInt(page);
 
-    let clothes = await board.getClothes();
+    const perPage = 6;
 
-    res.render('index', { clothes });
+    let allClothes = await board.getClothes();
+
+    if (search) {
+        const searchLower = search.toLowerCase();
+        allClothes = allClothes.filter(c =>
+            c.name.toLowerCase().includes(searchLower)
+        );
+    }
+
+    if (category) {
+        allClothes = allClothes.filter(c => c.category === category);
+    }
+
+    const totalPages = Math.ceil(allClothes.length / perPage);
+    const start = (page - 1) * perPage;
+    const clothes = allClothes.slice(start, start + perPage);
+
+    // 👉 Ya no reasignamos una constante (antes: "pages = pages.map...")
+    const pages = Array.from({ length: totalPages }, (_, i) => ({
+        number: i + 1,
+        isCurrent: (i + 1) === page
+    }));
+
+    res.render('index', {
+        clothes,
+        currentPage: page,
+        totalPages,
+        pages,
+        search,
+        category,
+        hasPrev: page > 1,
+        hasNext: page < totalPages,
+        prevPage: page - 1,
+        nextPage: page + 1
+    });
 });
 
 

@@ -105,9 +105,62 @@ My five most important commits were:
 
 ## Execution instructions
 
+Requirements:
+  - Node.js v22.21.0
+  - MongoDB V8.2.1
+
+To run the application, you have to go to the GitHub repository **Releases** section, and then go to 'Práctica 2' release. There, download the `.zip` file. Extract the `.zip` file to a folder of your choice. Open a terminal and go to your project folder:
+$ cd ...
+
+Install Node.js and MongoDB if you don't have them installed. You have to install Node.js in your terminal:
+$ npm install
+
+Then, run the application:
+$ node src/app.js
+
+You should read a message like this:
+Web ready in `http://localhost:3000/`
+
+Open your browser and go to `http://localhost:3000/`. The app should be running and ready to use.
+
 ## File description
 
-  - `index.html`: This file is the main page of the web application. It provides the overall structure and layout of the website, including the header, search bar, category buttons, product grid, and pagination controls. It integrates CSS files (`main_page.css, header.css, footer.css`) for styling and uses Bootstrap for responsive design. The page dynamically displays products from data.json using template placeholders and allows users to navigate between pages and filter by category or search terms. It also includes a button to add new products.
+  - CSS Files: These files are used to style the web application. They include header, footer and page specific styles:
+    
+      · `footer.css`
+      · `header.css`
+      · `main_page.css`
+      · `product_detail.css`
+
+  - `index.html`: This file is the main page of the web application. It provides the overall structure of the website, including the search bar, category buttons, product grid, and pagination controls. It also includes a button to add new products.
+
+  - `confirm_delete.html`: Page to confirm deletion of an element (a product in our case). It shows the product name and image and provides two buttons: confirm delete and cancel/back.
+
+  - `confirm_new_clothe.html`: This file confirms adding a new product. It displays all product details and ask for confirmation.
+
+  - `deleted_post.html`: This page appears after a product has been deleted. It shows a confirmation message.
+
+  - `edit_review.html`: It allows users to edit an existing product review. It loads the current review data into a form so the user can update it.
+
+  - `error.html`: This page is shown whenever an error occurs. It displays an error message received from the server and a button that redirects the user back to the appropiate page.
+
+  - `footer.html`: This file defines the footer of the website. It includes sections such as _About us_, _Help_ or _Customer Service_.
+
+  - `header.html`: This is the header of the website. It contains the logo, navigation menu, user icon...
+
+  - `new_clothe_form.html`: This page contains the form used to create a new product. User can write the name, price, description, category, size...
+
+  - `product_detail.html`: This page shows users the details of a specific product: image, name, category, price, size and description. It also shows the reviews, with the options of delete or edit them.
+
+  - `saved_post.html`: This page is shown only when a new product has been created. It confirms that the item is saved.
+
+  - `app.js`: This file initilizes the Express server and configures the main settings.
+
+  - `board.js`: It connects to the MongoDB server and create a reference to the clothes collection.
+
+  - `load_data.js`: It loads demo data into the database when the server starts. It reads the `data.json` file I will describe after.
+
+  - `router.js`: This file contains all the routes used by the application, like the main page pagination.
     
   - `data.json`: This file contains the initial product data loaded when the application starts. If the database is empty, the server reads this file and inserts its contents into MongoDB. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of user reviews. The file serves as the initial data for both the main page and the product detail pages.
 
@@ -115,9 +168,9 @@ My five most important commits were:
 
 ## Member participation
 
-- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file and made modifications to the `main_page.css`, and described the files `index.html` and `data.json`.
+- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file and made modifications to the `main_page.css`. In the `README.md` file, I have defined the files and written the installation instructions for the program.
 
-  These are the final commits
+  These are the final commits:
   
   - 'main_page_fv': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/447e7f6dedaf49ac0aa8f7e6a2257937b74a6141
   - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/37c56fd2565691bad3cf6c7651c83a51fc240c67

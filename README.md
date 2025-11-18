@@ -4,7 +4,7 @@
 # Website name: NOMORETRASH
 
 ## Team:
-- Marcos Laorga Sagaseta de Ilurdoz | m.laorga.2024@alumnos.urjc.es | marcoslaorga
+- Marcos Laorga Sagaseta de Ilurdoz | m.laorga.2024@alumnos.urjc.es | marcoslaorga and marcoslaorga2
 - Ivo Hagemann Martínez | i.hagemann.2024@alumnos.urjc.es | IvoDev14
 - Sergio Guindal Gómez | s.guindal.2024@alumnos.urjc.es | sguindal
 - Javier Méndez Hernández | j.mendezh.2025@alumnos.urjc.es | dkode18
@@ -173,7 +173,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   These are the final commits:
   
   - 'main_page_fv': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/447e7f6dedaf49ac0aa8f7e6a2257937b74a6141
-  - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/37c56fd2565691bad3cf6c7651c83a51fc240c67
+  - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/eaf93ddc6b064e00352d16170b1ceae946236766
  
   Files I contributed:
 

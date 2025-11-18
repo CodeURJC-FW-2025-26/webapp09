@@ -117,10 +117,9 @@ My five most important commits were:
 
 - Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file and made modifications to the `main_page.css`, and described the files `index.html` and `data.json`.
 
-  I have only made 4 commits because I uploaded everything after finishing it. The second one was to fix a bug.
+  I have only made 2 commits because I uploaded everything after finishing it.
 
-  - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/16d4b61ede1cca89f68691312d6ac3ac58a1bc44
-  - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8d0be5979488108a7940fb3bf8fb43812fb2a355 (with the bug fixed)
+  - 'main_page': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8d0be5979488108a7940fb3bf8fb43812fb2a355
   - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/37c56fd2565691bad3cf6c7651c83a51fc240c67
  
   Files I contributed:

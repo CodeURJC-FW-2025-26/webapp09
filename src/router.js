@@ -81,7 +81,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
         if (description.length < 10 || description.length > 250) {
             return res.status(400).render('error', {
                 mensaje: 'La descripción debe tener entre 10 y 250 caracteres.',
-                urlBoton: '/Formulario2',
+                urlBoton: '/new_clothe_form',
                 textoBoton: 'Corregir descripción'
             });
         }
@@ -107,7 +107,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
 
             return res.status(400).render('error', {
                 mensaje: 'El precio debe ser un número mayor que 0.',
-                urlBoton: '/Formulario2',
+                urlBoton: '/new_clothe_form',
                 textoBoton: 'Corregir datos'
             });
         }
@@ -122,7 +122,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
 
             return res.status(400).render('error', {
                 mensaje: 'Ya existe una prenda con ese nombre. Elige otro diferente.',
-                urlBoton: '/Formulario2',
+                urlBoton: '/new_clothe_form',
                 textoBoton: 'Volver al formulario'
             });
         }
@@ -176,8 +176,8 @@ router.get('/clothe/:id/delete', async (req, res) => {
     return res.redirect('/');
 });
 
-router.get('/Formulario2', (req, res) => {
-    res.render('Formulario2');
+router.get('/new_clothe_form', (req, res) => {
+    res.render('new_clothe_form');
     // Express buscará views/Formulario2.html
 });
 

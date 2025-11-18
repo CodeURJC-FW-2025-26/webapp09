@@ -12,11 +12,15 @@
 
 .btn-primary{
     font-size: 1.1rem;
+    background-color: white;
+    border: 1px solid black;
+    color: black
 }
 
 .btn-primary:hover{
     background-color: black;
     color: white;
+    border-color: black;
 }
 
 section h3{
@@ -24,30 +28,30 @@ section h3{
     letter-spacing: 0.1rem;
 }
 
-.pagination a {
+.pagination a{
     margin: 0;
     padding: 6px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
-    color: #333;
-    background: white;
+    background-color: white;
+    color: black;
 }
 
-.pagination a:hover {
-    background: #007bff;
+.pagination a:hover{
+    background-color: black;
     color: white;
+    border-color: black;
 }
 
 .pagination strong {
     margin: 5px;
     padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    background: #007bff;
-    color: white;
+    border-radius: 8px;;;
     font-weight: 700;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
 }
 
 .pagination {

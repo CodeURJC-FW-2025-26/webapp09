@@ -39,22 +39,21 @@
     <!-- category button -->
     <div class="container text-center mb-4">
         <a href="/" class="btn btn-outline-dark m-1">Todos</a>
-        <a href="/?category=sneakers" class="btn btn-outline-primary m-1">Zapatillas</a>
-        <a href="/?category=trouser" class="btn btn-outline-primary m-1">Pantalones</a>
-        <a href="/?category=t-shirt" class="btn btn-outline-primary m-1">Camisetas</a>
+        <a href="/?category=sneakers" class="btn btn-outline-dark m-1">Zapatillas</a>
+        <a href="/?category=trouser" class="btn btn-outline-dark m-1">Pantalones</a>
+        <a href="/?category=t-shirt" class="btn btn-outline-dark m-1">Camisetas</a>
     </div>
 
     <!-- Button to create a new product -->
     <div class="container mt-4 mb-4">
         <div class="d-flex justify-content-end mb-4">
-            <a href="new_clothe_form" class="btn btn-primary btn-sm rounded-5" role="button">
+            <a href="new_clothe_form" class="btn btn-outline-dark btn-sm rounded-5" role="button">
                 <i class="bi bi-plus-circle"></i> Añadir nueva prenda de ropa
             </a>
         </div>
     </div>
 
     <!-- Products grid -->
-
     <div class="container mt-5 mb-5">
         <div class="row row-cols-1 row-cols-lg-3 g-4">
 
@@ -67,7 +66,7 @@
                             <h6 class="card-title">{{name}}</h6>
                             <p class="fw-bold mb-2">{{price}}</p>
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary btn-sm rounded-circle">
+                                <button class="btn btn-outline-dark btn-sm rounded-circle">
                                     <i class="bi bi-bag"></i>
                                 </button>
                             </div>
@@ -82,7 +81,7 @@
     <div class="container text-center mt-4 pagination">
         <!-- previous button -->
         {{#hasPrev}}
-        <a class="btn btn-outline-secondary btn-sm" href="/?page={{prevPage}}&search={{search}}&category={{category}}">
+        <a class="btn btn-outline-dark btn-sm" href="/?page={{prevPage}}&search={{search}}&category={{category}}">
             Anterior
         </a>
         {{/hasPrev}}
@@ -100,7 +99,7 @@
         
         <!-- next page -->
         {{#hasNext}}
-        <a class="btn btn-outline-secondary btn-sm" href="/?page={{nextPage}}&search={{search}}&category={{category}}">
+        <a class="btn btn-outline-dark btn-sm" href="/?page={{nextPage}}&search={{search}}&category={{category}}">
             Siguiente
         </a>
         {{/hasNext}}

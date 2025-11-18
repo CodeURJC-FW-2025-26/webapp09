@@ -32,7 +32,6 @@ router.get('/', async (req, res) => {
     const start = (page - 1) * perPage;
     const clothes = allClothes.slice(start, start + perPage);
 
-
     const pages = Array.from({ length: totalPages }, (_, i) => ({
         number: i + 1,
         isCurrent: (i + 1) === page
@@ -174,7 +173,7 @@ router.get('/clothe/:id/delete', async (req, res) => {
         await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
     }
 
-    res.render('deleted_clothe');
+    return res.redirect('/');
 });
 
 router.get('/Formulario2', (req, res) => {
@@ -191,3 +190,21 @@ router.get('/clothe/:id/image', async (req, res) => {
 
 });
 
+router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
+    await board.deleteReview(req.params.id, Number(req.params.idReview));
+    console.log('review eliminada')
+    res.redirect(req.get("Referer") || '/');
+})
+
+router.post('/clothe/:id/review/new', async (req,res) =>{
+    await board.addReview(req.body.user, req.body.title, req.body.review, req.params.id, req.body.reviewId); 
+    console.log('Review añadida, usuario:',req.body.user, 'titulo', req.body.titulo);
+    return res.redirect('/clothe/' + req.params.id);
+})
+
+router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
+    let clothe = await board.getClothe(req.params.id);
+    
+    let review = clothe.reviews.find(r => r.id === Number(req.params.idReview) )
+    return res.render('edit_review', {clothe, review})
+})

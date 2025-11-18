@@ -100,7 +100,37 @@ My five most important commits were:
     - formulario 1.html
     - formulario2.html
     - README.MD
-    - 
 
+# PRACTICE 2
 
+## Execution instructions
+
+## File description
+
+  - `index.html`: This file is the main page of the web application. It provides the overall structure and layout of the website, including the header, search bar, category buttons, product grid, and pagination controls. It integrates CSS files (`main_page.css, header.css, footer.css`) for styling and uses Bootstrap for responsive design. The page dynamically displays products from data.json using template placeholders and allows users to navigate between pages and filter by category or search terms. It also includes a button to add new products.
     
+  - `data.json`: This file contains the initial product data loaded when the application starts. If the database is empty, the server reads this file and inserts its contents into MongoDB. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of user reviews. The file serves as the initial data for both the main page and the product detail pages.
+
+## Demonstration video
+
+## Member participation
+
+- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file and made modifications to the `main_page.css`, and described the files `index.html` and `data.json`.
+
+  I have only made 2 commits because I uploaded everything after finishing it.
+
+  - 'main_pageBs': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/1f72f2d05d1b17e803e7d27d414cfcdf38ddab60#diff-d7f41ba1aa74f41ef4b0c2337abe593d08092ffae6528a8aa2db712afeee0b66
+  - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/37c56fd2565691bad3cf6c7651c83a51fc240c67
+ 
+  Files I contributed:
+
+  - `data.json`
+  - images folder
+  - `main_page.css`
+  - `app.js`
+  - `board.js`
+  - `load_data.js`
+  - `router.js`
+  - `main_page.js`
+  - `index.html`
+  - `README.md`

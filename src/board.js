@@ -39,3 +39,36 @@ export async function getClothe(id){
     return await clothes.findOne({ _id: new ObjectId(id) });
 }
 
+export async function deleteReview(clotheId, reviewId){
+
+    console.log('Id Review: ', reviewId);
+    console.log('Clothe Id: ', clotheId);
+    return await clothes.updateOne(
+        {_id: new ObjectId(clotheId)},
+        {$pull: { reviews:{ id: reviewId } }}
+    )
+}
+
+export async function addReview(user, title, review, clotheId, inputReviewID){
+    let clothe = await getClothe(clotheId)
+    if (inputReviewID === ""){
+        var reviewID = clothe.reviewsCount + 1;
+        await clothes.updateOne({_id: new ObjectId(clotheId)}, {
+        $push: { reviews:{id: reviewID, title: title, review: review, user: user }},
+        $inc: {reviewsCount: 1}
+    })
+    } else {
+        var reviewID = Number(inputReviewID); 
+        await clothes.updateOne({_id: new ObjectId(clotheId), "reviews.id":reviewID}, {
+            $set: {
+                "reviews.$.title": title,
+                "reviews.$.review": review,
+                "reviews.$.user": user
+            }
+        })
+    }
+    
+    console.log('Id de la nueva review: ', reviewID);
+    console.log('Nuevo valor del contador: ', clothe.reviewsCount);
+}
+

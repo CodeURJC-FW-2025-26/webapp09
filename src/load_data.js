@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
-import * as board from './board.js';
+import * as shop from './shop.js';
 
 const UPLOADS_FOLDER = './uploads';
 const DATA_FOLDER = './data';
@@ -11,9 +11,9 @@ console.log(DATA_FOLDER + '/' + dataFile, 'utf8')
 
 const clothes = JSON.parse(dataString);
 
-await board.deleteClothes();
+await shop.deleteClothes();
 for(let clothe of clothes){
-    await board.addClothe(clothe);
+    await shop.addClothe(clothe);
 }
 
 await fs.rm(UPLOADS_FOLDER, { recursive: true, force: true });

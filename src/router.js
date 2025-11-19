@@ -2,12 +2,12 @@ import express from 'express';
 import multer from 'multer';
 import fs from 'node:fs/promises';
 
-import * as board from './board.js';
+import * as shop from './shop.js';
 
 const router = express.Router();
 export default router;
 
-const upload = multer({ dest: board.UPLOADS_FOLDER })
+const upload = multer({ dest: shop.UPLOADS_FOLDER })
 
 // Old main page filter and pagination
 
@@ -20,7 +20,7 @@ const upload = multer({ dest: board.UPLOADS_FOLDER })
 
     // const perPage = 6;
 
-    // let allClothes = await.board.getClothes();
+    // let allClothes = await.shop.getClothes();
 
     // if (search !== "") {
         // let searchLower = search.toLowerCase();
@@ -90,7 +90,7 @@ router.get('/', async (req, res) => {
 
     const perPage = 6;
 
-    let allClothes = await board.getClothes(); // Obtain all clothes
+    let allClothes = await shop.getClothes(); // Obtain all clothes
 
     if (search) {                                           // Text filter
         const searchLower = search.toLowerCase();
@@ -180,7 +180,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
         }
 
         // 3. Duplicate name
-        const clothes = await board.getClothes();
+        const clothes = await shop.getClothes();
         const alreadyExists = clothes.find(c => c.name === name);
 
         if (alreadyExists) {
@@ -241,7 +241,7 @@ router.post('/clothe/new/confirm', async (req, res) => {
             clothe.imageFilename = imageFilename;
         }
 
-        await board.addClothe(clothe);
+        await shop.addClothe(clothe);
 
         return res.render('saved_post', { _id: clothe._id.toString() });
 
@@ -258,7 +258,7 @@ router.post('/clothe/new/confirm', async (req, res) => {
 // Route to show the edition form
 router.get('/clothe/:id/edit', async (req, res) => {
     try {
-        let clothe = await board.getClothe(req.params.id);
+        let clothe = await shop.getClothe(req.params.id);
         if (!clothe) {
             return res.status(404).render('error', {
                 mensaje: 'Prenda no encontrada.',
@@ -336,7 +336,7 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
         }
 
         // Verify duplicates (excluding the actual piece of cloathing)
-        const clothes = await board.getClothes();
+        const clothes = await shop.getClothes();
         const alreadyExists = clothes.find(c => c.name === name && c._id.toString() !== id);
 
         if (alreadyExists) {
@@ -359,15 +359,15 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
         // if there is a new image, update filename
         if (req.file) {
             // Delete previous image if it exist
-            const existingClothe = await board.getClothe(id);
+            const existingClothe = await shop.getClothe(id);
             if (existingClothe && existingClothe.imageFilename) {
-                await fs.rm(board.UPLOADS_FOLDER + '/' + existingClothe.imageFilename);
+                await fs.rm(shop.UPLOADS_FOLDER + '/' + existingClothe.imageFilename);
             }
             updateData.imageFilename = req.file.filename;
         }
 
         // update the database
-        await board.updateClothe(id, updateData);
+        await shop.updateClothe(id, updateData);
 
         res.render('saved_edit', { _id: id });
 
@@ -382,13 +382,13 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
 });
 
 router.get('/clothe/:id', async (req, res) => {
-    let clothe = await board.getClothe(req.params.id);
+    let clothe = await shop.getClothe(req.params.id);
     res.render('product_detail', { clothe });
 });
 
 // Show the confirm delete view
 router.get('/clothe/:id/confirm-delete', async (req, res) => {
-    let clothe = await board.getClothe(req.params.id);
+    let clothe = await shop.getClothe(req.params.id);
 
     if (!clothe) {
         return res.status(404).render('error', {
@@ -404,10 +404,10 @@ router.get('/clothe/:id/confirm-delete', async (req, res) => {
 // Delete clothe (after confirm)
 router.post('/clothe/:id/delete', async (req, res) => {
 
-    let clothe = await board.deleteClothe(req.params.id);
+    let clothe = await shop.deleteClothe(req.params.id);
 
     if (clothe && clothe.value && clothe.value.imageFilename) {
-        await fs.rm(board.UPLOADS_FOLDER + '/' + clothe.value.imageFilename);
+        await fs.rm(shop.UPLOADS_FOLDER + '/' + clothe.value.imageFilename);
     }
 
     return res.redirect('/');
@@ -418,24 +418,24 @@ router.get('/new_clothe_form', (req, res) => {
 });
 
 router.get('/clothe/:id/image', async (req, res) => {
-    let clothe = await board.getClothe(req.params.id);
-    res.download(board.UPLOADS_FOLDER + '/' + clothe.imageFilename);
+    let clothe = await shop.getClothe(req.params.id);
+    res.download(shop.UPLOADS_FOLDER + '/' + clothe.imageFilename);
 });
 
 router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
-    await board.deleteReview(req.params.id, Number(req.params.idReview));
+    await shop.deleteReview(req.params.id, Number(req.params.idReview));
     console.log('review eliminada')
     res.redirect(req.get("Referer") || '/');
 })
 
 router.post('/clothe/:id/review/new', async (req,res) =>{
-    await board.addReview(req.body.user, req.body.title, req.body.review, req.params.id, req.body.reviewId); 
+    await shop.addReview(req.body.user, req.body.title, req.body.review, req.params.id, req.body.reviewId); 
     console.log('Review añadida, usuario:',req.body.user, 'titulo', req.body.titulo);
     return res.redirect('/clothe/' + req.params.id);
 })
 
 router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
-    let clothe = await board.getClothe(req.params.id);
+    let clothe = await shop.getClothe(req.params.id);
     
     let review = clothe.reviews.find(r => r.id === Number(req.params.idReview) )
     return res.render('edit_review', {clothe, review})

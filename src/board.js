@@ -19,6 +19,7 @@ export async function addClothe(clothe) {
     return await clothes.insertOne(clothe);
 }
 
+<<<<<<< HEAD
 export async function updateClothe(id, updateData) {
     return await clothes.updateOne(
         { _id: new ObjectId(id) },
@@ -26,6 +27,8 @@ export async function updateClothe(id, updateData) {
     );
 }
 
+=======
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
 export async function deleteClothe(id){
 
     return await clothes.findOneAndDelete({ _id: new ObjectId(id) });
@@ -77,4 +80,9 @@ export async function addReview(user, title, review, clotheId, inputReviewID){
     
     console.log('Id de la nueva review: ', reviewID);
     console.log('Nuevo valor del contador: ', clothe.reviewsCount);
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219

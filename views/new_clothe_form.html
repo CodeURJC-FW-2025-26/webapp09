@@ -17,6 +17,7 @@
   {{>header}}
   <main class="flex-grow-1 d-flex justify-content-center align-items-center" style="padding-top: 80px;">
     <div class="card shadow p-4" style="width: 400px;">
+<<<<<<< HEAD
       <h1>{{#clothe}}Editar producto{{/clothe}}{{^clothe}}Añadir producto{{/clothe}}</h1>
 
       <form action="{{#clothe}}/clothe/{{clothe._id}}/edit{{/clothe}}{{^clothe}}/clothe/new{{/clothe}}" method="POST" enctype="multipart/form-data">
@@ -65,10 +66,52 @@
         </div>
 
         <!-- Size -->
+=======
+      <h1>Añadir producto</h1>
+
+      <form action="/clothe/new" method="POST" enctype="multipart/form-data">
+
+        <!-- Nombre -->
+        <div class="form-group mb-3">
+          <label>Nombre</label>
+          <input type="text" class="form-control" name="name" placeholder="Nombre del producto" required>
+        </div>
+
+        <!-- Precio -->
+        <div class="form-group mb-3">
+          <label>Precio</label>
+          <input type="number" step="0.01" class="form-control" name="price" placeholder="Precio del producto" required>
+        </div>
+
+        <!-- Descripción -->
+        <div class="form-group mb-3">
+          <label>Descripción</label>
+          <textarea class="form-control" name="description" placeholder="Descripción del producto" required></textarea>
+        </div>
+
+        <!-- Tipo de producto -->
+        <p>Qué tipo de producto es:</p>
+        <div class="btn-group mb-3" role="group">
+          <input type="radio" class="btn-check" name="category" id="t-shirt" value="t-shirt" required>
+          <label class="btn btn-outline-dark" for="t-shirt">Camisa</label>
+
+          <input type="radio" class="btn-check" name="category" id="trouser" value="trouser">
+          <label class="btn btn-outline-dark" for="trouser">Pantalón</label>
+
+          <input type="radio" class="btn-check" name="category" id="sneakers" value="sneakers">
+          <label class="btn btn-outline-dark" for="sneakers">Zapatos</label>
+
+          <input type="radio" class="btn-check" name="category" id="dress" value="dress">
+          <label class="btn btn-outline-dark" for="dress">Vestido</label>
+        </div>
+
+        <!-- Talla -->
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
         <h4>Indica la talla del producto</h4>
 
         <p>Tallas para camisetas, vestidos y pantalones:</p>
         <div class="btn-group mb-3" role="group">
+<<<<<<< HEAD
           <input type="radio" class="btn-check" name="size" id="xs" value="XS"
                  {{#clothe}}{{#clothe.xs}}checked{{/clothe.xs}}{{/clothe}}>
           <label class="btn btn-outline-dark" for="xs">XS</label>
@@ -87,30 +130,58 @@
 
           <input type="radio" class="btn-check" name="size" id="xl" value="XL"
                  {{#clothe}}{{#clothe.xl}}checked{{/clothe.xl}}{{/clothe}}>
+=======
+          <input type="radio" class="btn-check" name="size" id="xs" value="XS">
+          <label class="btn btn-outline-dark" for="xs">XS</label>
+
+          <input type="radio" class="btn-check" name="size" id="s" value="S">
+          <label class="btn btn-outline-dark" for="s">S</label>
+
+          <input type="radio" class="btn-check" name="size" id="m" value="M">
+          <label class="btn btn-outline-dark" for="m">M</label>
+
+          <input type="radio" class="btn-check" name="size" id="l" value="L">
+          <label class="btn btn-outline-dark" for="l">L</label>
+
+          <input type="radio" class="btn-check" name="size" id="xl" value="XL">
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
           <label class="btn btn-outline-dark" for="xl">XL</label>
         </div>
 
         <p>Si es una zapatilla indica la talla numérica:</p>
+<<<<<<< HEAD
         <input type="text" class="form-control mb-3" name="sizeZapatilla" placeholder="Talla"
                value="{{#clothe}}{{#clothe.sneakers}}{{clothe.size}}{{/clothe.sneakers}}{{/clothe}}">
 
         <!-- Image -->
+=======
+        <input type="text" class="form-control mb-3" name="sizeZapatilla" placeholder="Talla">
+
+        <!-- Imagen -->
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
         <h4>Añadir Imagen</h4>
         <div class="form-group mb-3">
           <label for="archivo">Archivo</label>
           <input type="file" class="form-control" id="archivo" name="image">
+<<<<<<< HEAD
           {{#clothe}}
           {{#clothe.imageFilename}}
           <small class="form-text text-muted">Imagen actual: {{clothe.imageFilename}}</small>
           {{/clothe.imageFilename}}
           {{/clothe}}
+=======
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
         </div>
 
         <!-- Submit -->
         <div class="text-center">
+<<<<<<< HEAD
           <button type="submit" class="btn btn-outline-dark">
             {{#clothe}}Actualizar{{/clothe}}{{^clothe}}Enviar{{/clothe}}
           </button>
+=======
+          <button type="submit" class="btn btn-outline-dark">Enviar</button>
+>>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
         </div>
 
       </form>

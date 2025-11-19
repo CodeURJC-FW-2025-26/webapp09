@@ -367,3 +367,4 @@ router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
     let review = clothe.reviews.find(r => r.id === Number(req.params.idReview) )
     return res.render('edit_review', {clothe, review})
 })
+

@@ -150,11 +150,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
     // console.log('FILE:', req.file);
     try {
         const { name, description, price, size, category } = req.body;
-<<<<<<< HEAD
         // Validate the size depending on the category
-=======
-        // Validar tallas según categoría
->>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
         const sizeZapatilla = req.body.sizeZapatilla;
         if (category === "sneakers") {
         if (!sizeZapatilla || sizeZapatilla.trim() === "") {
@@ -165,11 +161,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
                 });
          }
         }
-<<<<<<< HEAD
         // If its not a shoe → normal size
-=======
-        // Si NO es zapato → size normal obligatoria
->>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
         if (category !== "sneakers") {
         if (!size || size.trim() === "") {
         return res.status(400).render('error', {
@@ -267,7 +259,6 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
     }
 });
 
-<<<<<<< HEAD
 // Route to show the edition form
 router.get('/clothe/:id/edit', async (req, res) => {
     try {
@@ -394,8 +385,6 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
     }
 });
 
-=======
->>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
 router.get('/clothe/:id', async (req, res) => {
     let clothe = await board.getClothe(req.params.id);
     // console.log("CLOTHE: ", clothe);
@@ -416,11 +405,7 @@ router.get('/clothe/:id/delete', async (req, res) => {
 
 router.get('/new_clothe_form', (req, res) => {
     res.render('new_clothe_form');
-<<<<<<< HEAD
     // Express will search views/Formulario2.html
-=======
-    // Express buscará views/Formulario2.html
->>>>>>> 27ddcbd35066ddcf411176041d468e2e78987219
 });
 
 router.get('/clothe/:id/image', async (req, res) => {

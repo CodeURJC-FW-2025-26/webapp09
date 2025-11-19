@@ -1,0 +1,62 @@
+.card img{
+    object-fit: cover;
+    height: 280px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+
+.card-title{
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.btn-primary{
+    font-size: 1.1rem;
+    background-color: white;
+    border: 1px solid black;
+    color: black
+}
+
+.btn-primary:hover{
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+section h3{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+}
+
+.pagination a{
+    margin: 0;
+    padding: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: white;
+    color: black;
+}
+
+.pagination a:hover{
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.pagination strong {
+    margin: 5px;
+    padding: 12px;
+    border-radius: 8px;;;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <title>NOMORETRASH</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link type="text/css" rel="stylesheet" href="/css/footer.css">
+  <link rel="icon" href="logo.ico" type="image/x-icon">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- HEADER -->
+  {{>header}}
+  <main class="flex-grow-1 d-flex justify-content-center align-items-center" style="padding-top: 80px;">
+    <div class="card shadow p-4" style="width: 400px;">
+      <h1>{{#clothe}}Editar producto{{/clothe}}{{^clothe}}Añadir producto{{/clothe}}</h1>
+
+      <form action="{{#clothe}}/clothe/{{clothe._id}}/edit{{/clothe}}{{^clothe}}/clothe/new{{/clothe}}" method="POST" enctype="multipart/form-data">
+
+        <!-- Hidden field for the ID -->
+        <input type="hidden" name="id" value="{{#clothe}}{{clothe._id}}{{/clothe}}">
+
+        <!-- Name -->
+        <div class="form-group mb-3">
+          <label>Nombre</label>
+          <input type="text" class="form-control" name="name" placeholder="Nombre del producto" 
+                 value="{{#clothe}}{{clothe.name}}{{/clothe}}" required>
+        </div>
+
+        <!-- Prize -->
+        <div class="form-group mb-3">
+          <label>Precio</label>
+          <input type="number" step="0.01" class="form-control" name="price" placeholder="Precio del producto" 
+                 value="{{#clothe}}{{clothe.price}}{{/clothe}}" required>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-3">
+          <label>Descripción</label>
+          <textarea class="form-control" name="description" placeholder="Descripción del producto" required>{{#clothe}}{{clothe.description}}{{/clothe}}</textarea>
+        </div>
+
+        <!-- Type of product -->
+        <p>Qué tipo de producto es:</p>
+        <div class="btn-group mb-3" role="group">
+          <input type="radio" class="btn-check" name="category" id="t-shirt" value="t-shirt" 
+                 {{#clothe}}{{#clothe.t-shirt}}checked{{/clothe.t-shirt}}{{/clothe}} required>
+          <label class="btn btn-outline-dark" for="t-shirt">Camisa</label>
+
+          <input type="radio" class="btn-check" name="category" id="trouser" value="trouser"
+                 {{#clothe}}{{#clothe.trouser}}checked{{/clothe.trouser}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="trouser">Pantalón</label>
+
+          <input type="radio" class="btn-check" name="category" id="sneakers" value="sneakers"
+                 {{#clothe}}{{#clothe.sneakers}}checked{{/clothe.sneakers}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="sneakers">Zapatos</label>
+
+          <input type="radio" class="btn-check" name="category" id="dress" value="dress"
+                 {{#clothe}}{{#clothe.dress}}checked{{/clothe.dress}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="dress">Vestido</label>
+        </div>
+
+        <!-- Size -->
+        <h4>Indica la talla del producto</h4>
+
+        <p>Tallas para camisetas, vestidos y pantalones:</p>
+        <div class="btn-group mb-3" role="group">
+          <input type="radio" class="btn-check" name="size" id="xs" value="XS"
+                 {{#clothe}}{{#clothe.xs}}checked{{/clothe.xs}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="xs">XS</label>
+
+          <input type="radio" class="btn-check" name="size" id="s" value="S"
+                 {{#clothe}}{{#clothe.s}}checked{{/clothe.s}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="s">S</label>
+
+          <input type="radio" class="btn-check" name="size" id="m" value="M"
+                 {{#clothe}}{{#clothe.m}}checked{{/clothe.m}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="m">M</label>
+
+          <input type="radio" class="btn-check" name="size" id="l" value="L"
+                 {{#clothe}}{{#clothe.l}}checked{{/clothe.l}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="l">L</label>
+
+          <input type="radio" class="btn-check" name="size" id="xl" value="XL"
+                 {{#clothe}}{{#clothe.xl}}checked{{/clothe.xl}}{{/clothe}}>
+          <label class="btn btn-outline-dark" for="xl">XL</label>
+        </div>
+
+        <p>Si es una zapatilla indica la talla numérica:</p>
+        <input type="text" class="form-control mb-3" name="sizeZapatilla" placeholder="Talla"
+               value="{{#clothe}}{{#clothe.sneakers}}{{clothe.size}}{{/clothe.sneakers}}{{/clothe}}">
+
+        <!-- Image -->
+        <h4>Añadir Imagen</h4>
+        <div class="form-group mb-3">
+          <label for="archivo">Archivo</label>
+          <input type="file" class="form-control" id="archivo" name="image">
+          {{#clothe}}
+          {{#clothe.imageFilename}}
+          <small class="form-text text-muted">Imagen actual: {{clothe.imageFilename}}</small>
+          {{/clothe.imageFilename}}
+          {{/clothe}}
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-dark">
+            {{#clothe}}Actualizar{{/clothe}}{{^clothe}}Enviar{{/clothe}}
+          </button>
+        </div>
+
+      </form>
+
+  </main>
+  <!-- Footer -->
+  {{>footer}}
+
+</html>

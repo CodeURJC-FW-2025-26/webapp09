@@ -170,12 +170,12 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
 ## Member participation
 
-- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file (my partner Ivo made some item's data) and made modifications to the `main_page.css`. In the `README.md` file, I have defined the files and written the installation instructions for the program. I also helped a partner with his `new_clothe_form.html`, and I had to help him make some commits.
+- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file (my partner Ivo made some item's data) and made modifications to the `main_page.css`. In the `README.md` file, I have defined the files and written the installation instructions for the program. I also helped a partner with his `new_clothe_form.html`, and I had to help him make some commits. Finally, I also made the release.
 
   These are the final commits:
   
   - 'main_page_fv': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/447e7f6dedaf49ac0aa8f7e6a2257937b74a6141
-  - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/eaf93ddc6b064e00352d16170b1ceae946236766
+  - 'Update `README.md`': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/249ce40866f5746b937a284575f7efd376376638
  
   Files I contributed:
 
@@ -206,7 +206,6 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - new_clothe_form.html
   - saved_edit.html
   - producr_detail.html
-  - README.md
  
 -Javier Méndez Hernández: I've done the dinamic header and dinamic footer. I've created as well the confirmation pages for editing, deleting and creating a new element. I've modified some of the proyect's css and improved some of the views. One of the main things ive done is the managing of the errors that could happen in the form's data. The most tricky part by far was doing the confirmation pages because i had to put them between the data form and the inserts of that data in the database, those pages act kind of a "middleman" between the data input and the database management.
 

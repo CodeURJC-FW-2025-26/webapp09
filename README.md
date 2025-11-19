@@ -109,7 +109,7 @@ Requirements:
   - Node.js v22.21.0
   - MongoDB V8.2.1
 
-To run the application, you have to go to the GitHub repository **Releases** section, and then go to 'Práctica 2' release. There, download the `.zip` file. Extract the `.zip` file to a folder of your choice. Open a terminal and go to your project folder:
+To run the application, you have to go to the GitHub repository **Releases** section, and then go to 'practica2' release. There, download the Source code (`.zip` file). Extract the `.zip` file to a folder of your choice. Open a terminal and go to your project folder:
 $ cd ...
 
 Install Node.js and MongoDB if you don't have them installed. You have to install Node.js in your terminal:

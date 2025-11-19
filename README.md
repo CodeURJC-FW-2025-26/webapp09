@@ -181,12 +181,13 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - images folder
   - `main_page.css`
   - `app.js`
-  - `board.js`
+  - `shop.js`
   - `load_data.js`
   - `router.js`
   - `main_page.js`
   - `index.html`
   - `README.md`
+
 
 - Sergio Guindal Gomez: I have done everything related to the main form (new_clothe_form): i made the form functional so now it adds a new piece of cloathing to the data base everytime someone uses it, i have made sure that the category of the new prodcuts works correctly so when you search by category the new product is shown as well, and ive also implemented the function to edit clothes based on the same form, also created for this process the "saved_edit.html" page, i have also been responsible for the code having all the comments on english as well as making sure there wasnt any duplicated code.
 
@@ -222,4 +223,17 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - `confirm_new_clothe.html`
   - `deleted_post.html`
   - `saved_post.html`
+
+- Ivo Hagemann Martínez: I was responsible for migrating the static website to a web application, creating the example elements, and implementing the function that moves them to the uploads folder. I also handled adding functionality to the “new review” form, collecting the data in the router and appending the review to the corresponding item’s list of reviews. Additionally, I created the view that displays all reviews stored for an item. I also built the review editing form, which reuses the form for creating a new review, and updated the router and related functions so that the same URL can handle both creation and editing.
+
+  Files I contributed:
+  - `data.json`
+  - `router.js`
+  - `load_data.js`
+  - `app.js`
+  - `shop.js`
+  - `new_clothe_form`
+
+
+
     

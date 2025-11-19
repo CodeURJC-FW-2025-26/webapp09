@@ -166,9 +166,11 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
 ## Demonstration video
 
+`https://youtu.be/M8PN_G4TTTo`
+
 ## Member participation
 
-- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file and made modifications to the `main_page.css`. In the `README.md` file, I have defined the files and written the installation instructions for the program.
+- Marcos Laorga Sagaseta de Ilurdoz: I have done everything related to the main page (`index.html`): implemented pagination, displayed database data paginated with 6 items per page, created buttons with links to go to the next and previous pages, also created the search bar, the buttons to access the categories, and participated in the implementation of Practice 1 at the beginning of Practice 2. I also created the `data.json` file (my partner Ivo made some item's data) and made modifications to the `main_page.css`. In the `README.md` file, I have defined the files and written the installation instructions for the program. I also helped a partner with his `new_clothe_form.html`, and I had to help him make some commits.
 
   These are the final commits:
   
@@ -187,7 +189,8 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - `main_page.js`
   - `index.html`
   - `README.md`
-
+  - `new_clothe_form.html`
+  - `footer.html`
 
 - Sergio Guindal Gomez: I have done everything related to the main form (new_clothe_form): i made the form functional so now it adds a new piece of cloathing to the data base everytime someone uses it, i have made sure that the category of the new prodcuts works correctly so when you search by category the new product is shown as well, and ive also implemented the function to edit clothes based on the same form, also created for this process the "saved_edit.html" page, i have also been responsible for the code having all the comments on english as well as making sure there wasnt any duplicated code.
 
@@ -198,8 +201,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
  
   Files I contributed:
 
-  - data.json
-  - board.js
+  - shop.js
   - router.js
   - new_clothe_form.html
   - saved_edit.html
@@ -215,7 +217,6 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   Files I contributed:
 
-  - `data.json`
   - `router.js`
   - `new_clothe_form.html`
   - `saved_edit.html`

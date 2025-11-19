@@ -430,11 +430,66 @@ router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
     res.redirect(req.get("Referer") || '/');
 })
 
-router.post('/clothe/:id/review/new', async (req,res) =>{
-    await shop.addReview(req.body.user, req.body.title, req.body.review, req.params.id, req.body.reviewId); 
-    console.log('Review añadida, usuario:',req.body.user, 'titulo', req.body.titulo);
-    return res.redirect('/clothe/' + req.params.id);
-})
+router.post('/clothe/:id/review/new', async (req, res) => {
+    try {
+        const { user, title, review, reviewId, formSource } = req.body;
+        const clotheId = req.params.id;
+
+        
+        //Choose where to come back if it fails
+        let backUrl = `/clothe/${clotheId}`; // por defecto, detalle del producto
+        if (formSource === 'edit_review' && reviewId) {
+            backUrl = `/clothe/${clotheId}/review/${reviewId}/edit`;
+        }
+
+        // VALIDATIONS
+        if (!user || !title || !review) {
+            return res.status(400).render('error', {
+                mensaje: 'Todos los campos de la reseña son obligatorios (usuario, título y texto).',
+                urlBoton: backUrl,
+                textoBoton: 'Volver al formulario'
+            });
+        }
+
+        if (user.length < 3 || user.length > 50) {
+            return res.status(400).render('error', {
+                mensaje: 'El nombre de usuario debe tener entre 3 y 50 caracteres.',
+                urlBoton: backUrl,
+                textoBoton: 'Corregir usuario'
+            });
+        }
+
+        if (title.length < 3 || title.length > 100) {
+            return res.status(400).render('error', {
+                mensaje: 'El título debe tener entre 3 y 100 caracteres.',
+                urlBoton: backUrl,
+                textoBoton: 'Corregir título'
+            });
+        }
+
+        if (review.length < 10 || review.length > 500) {
+            return res.status(400).render('error', {
+                mensaje: 'La reseña debe tener entre 10 y 500 caracteres.',
+                urlBoton: backUrl,
+                textoBoton: 'Corregir reseña'
+            });
+        }
+
+        //If everythings ok we create/change the review
+        await shop.addReview(user, title, review, clotheId, reviewId);
+
+        console.log('Review añadida/actualizada, usuario:', user, 'titulo:', title);
+        return res.redirect('/clothe/' + clotheId);
+
+    } catch (err) {
+        console.error('Error al guardar la reseña:', err);
+        return res.status(500).render('error', {
+            mensaje: 'Ha ocurrido un error al guardar la reseña. Inténtalo de nuevo más tarde.',
+            urlBoton: '/clothe/' + req.params.id,
+            textoBoton: 'Volver al producto'
+        });
+    }
+});
 
 router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
     let clothe = await shop.getClothe(req.params.id);

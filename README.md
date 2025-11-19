@@ -209,8 +209,8 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   These are the most important commits ive done:
   
-  -"Implementacion de la pagina de confirmacion y edicion de enlaces de la pagina product_detail para acceder a dicha pagina": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/a64b5e8e900434e185e5109ffc4e9fb3812e191c
-  -"Edicion y mejora de las comprobaciones del router.post": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/b7c08636eb27710966825470c6987c6b7c87ff28
+  - "Implementacion de la pagina de confirmacion y edicion de enlaces de la pagina product_detail para acceder a dicha pagina": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/a64b5e8e900434e185e5109ffc4e9fb3812e191c
+  - "Edicion y mejora de las comprobaciones del router.post": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/b7c08636eb27710966825470c6987c6b7c87ff28
 
   Files I contributed:
 

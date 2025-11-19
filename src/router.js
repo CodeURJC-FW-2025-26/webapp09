@@ -199,6 +199,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
             price: priceNumber,
             size: category === "sneakers" ? sizeZapatilla : size,
             category,
+            reviewsCount: 0,
             reviews: []
         };
 
@@ -234,6 +235,7 @@ router.post('/clothe/new/confirm', async (req, res) => {
             price: priceNumber,
             size,
             category,
+            reviewsCount: 0,
             reviews: []
         };
 

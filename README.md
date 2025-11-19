@@ -119,7 +119,7 @@ Then, run the application:
 $ node src/app.js
 
 You should read a message like this:
-Web ready in `http://localhost:3000/`
+Web ready in http://localhost:3000/
 
 Open your browser and go to `http://localhost:3000/`. The app should be running and ready to use.
 
@@ -166,7 +166,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
 ## Demonstration video
 
-`https://youtu.be/M8PN_G4TTTo`
+https://youtu.be/M8PN_G4TTTo
 
 ## Member participation
 

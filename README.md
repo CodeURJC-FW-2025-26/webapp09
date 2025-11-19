@@ -187,3 +187,20 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - `main_page.js`
   - `index.html`
   - `README.md`
+
+  - Sergio Guindal Gomez: I have done everything related to the main form (new_clothe_form): i made the form functional so now it adds a new piece of cloathing to the data base everytime someone uses it, i have made sure that the category of the new prodcuts works correctly so when you search by category the new product is shown as well, and ive also implemented the function to edit clothes based on the same form, also created for this process the "saved_edit.html" page, i have also been responsible for the code having all the comments on english as well as making sure there wasnt any duplicated code.
+
+  These are the final commits:
+  
+  - 'Un merge': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/242962f971ffcac70d5b054687bfae25f428d20d
+  - 'Update README.md': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/eaf93ddc6b064e00352d16170b1ceae946236766
+ 
+  Files I contributed:
+
+  - data.json
+  - board.js
+  - router.js
+  - new_clothe_form.html
+  - saved_edit.html
+  - producr_detail.html
+  - README.md

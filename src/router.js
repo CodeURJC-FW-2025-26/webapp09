@@ -373,7 +373,7 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
         // update the database
         await board.updateClothe(id, updateData);
 
-        res.redirect(`/clothe/${id}`);
+        res.render('saved_edit', { _id: id });
 
     } catch (err) {
         console.error('Error al editar la prenda:', err);

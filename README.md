@@ -188,7 +188,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - `index.html`
   - `README.md`
 
-  - Sergio Guindal Gomez: I have done everything related to the main form (new_clothe_form): i made the form functional so now it adds a new piece of cloathing to the data base everytime someone uses it, i have made sure that the category of the new prodcuts works correctly so when you search by category the new product is shown as well, and ive also implemented the function to edit clothes based on the same form, also created for this process the "saved_edit.html" page, i have also been responsible for the code having all the comments on english as well as making sure there wasnt any duplicated code.
+- Sergio Guindal Gomez: I have done everything related to the main form (new_clothe_form): i made the form functional so now it adds a new piece of cloathing to the data base everytime someone uses it, i have made sure that the category of the new prodcuts works correctly so when you search by category the new product is shown as well, and ive also implemented the function to edit clothes based on the same form, also created for this process the "saved_edit.html" page, i have also been responsible for the code having all the comments on english as well as making sure there wasnt any duplicated code.
 
   These are the final commits:
   
@@ -204,3 +204,22 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - saved_edit.html
   - producr_detail.html
   - README.md
+ 
+-Javier Méndez Hernández: I've done the dinamic header and dinamic footer. I've created as well the confirmation pages for editing, deleting and creating a new element. I've modified some of the proyect's css and improved some of the views. One of the main things ive done is the managing of the errors that could happen in the form's data. The most tricky part by far was doing the confirmation pages because i had to put them between the data form and the inserts of that data in the database, those pages act kind of a "middleman" between the data input and the database management.
+
+  These are the most important commits ive done:
+  
+  -"Implementacion de la pagina de confirmacion y edicion de enlaces de la pagina product_detail para acceder a dicha pagina": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/a64b5e8e900434e185e5109ffc4e9fb3812e191c
+  -"Edicion y mejora de las comprobaciones del router.post": https://github.com/CodeURJC-FW-2025-26/webapp09/commit/b7c08636eb27710966825470c6987c6b7c87ff28
+
+  Files I contributed:
+
+  -data.json
+  -router.js
+  -new_clothe_form.html
+  -saved_edit.html
+  -confirm_delete.html
+  -confirm_new_clothe.html
+  -deleted_post.html
+  -saved_post.html
+    

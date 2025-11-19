@@ -15,11 +15,16 @@
     {{>header}}
 
     <!-- Product Management -->
-    <section class = "container mt-3">
-        <div class = "row">
-            <a type = "button" class = "btn btn-outline-dark" href = "/clothe/{{clothe._id}}/edit">Editar</a>
-            <span class = "col-6 text-end"><a type = "button" class = "btn btn-outline-danger" href = "/clothe/{{clothe._id}}/confirm-delete"> ELIMINAR </a></span>
-             <!-- <a class="btn btn-danger" href="/clothe/{{clothe._id}}/confirm-delete">Eliminar</a> -->
+    <section class = "container mt-">
+        <div class = "row p-2">
+            <div class = "col-12 col-md-1">
+                <a type = "button" class = "btn btn-outline-dark" href = "/clothe/{{clothe._id}}/edit">Editar</a>
+            </div>
+            <div class = "col-12 col-md-1 offset-md-10">
+                <a type = "button" class="btn btn-danger" href="/clothe/{{clothe._id}}/confirm-delete">Eliminar</a> 
+            </div>
+            <!-- <span class = "col-6 text-end"><a type = "button" class = "btn btn-outline-danger" href = "/clothe/{{clothe._id}}/confirm-delete"> ELIMINAR </a></span> -->
+            
         </div>
     </section>
 

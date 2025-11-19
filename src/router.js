@@ -9,6 +9,79 @@ export default router;
 
 const upload = multer({ dest: board.UPLOADS_FOLDER })
 
+// Old main page filter and pagination
+
+// router.get('/', async (req, res) => {
+    // let page = req.query.page || 1;
+    // page = Numer(page);
+
+    // let search = req.query.search || "";
+    // let category = req.query.category || "";
+
+    // const perPage = 6;
+
+    // let allClothes = await.board.getClothes();
+
+    // if (search !== "") {
+        // let searchLower = search.toLowerCase();
+
+        // let filtered = [];
+        // for (let c of allClothes) {
+            // if (c.name.toLowerCase().indexOf(searchLower) !== -1) {
+                // filtered.push(c);
+            // }
+        // }
+        // allClothes = filtered;
+    // }
+
+    // if (category !== "") {
+        // let filtered = [];
+        // for (let c of allClothes) {
+            // if (c.category === category) {
+                // filtered.push(c);
+            // }
+        // }
+        // allClothes = filtered;
+    // }
+
+    // let totalPages = allClothes.lenght / perPage;
+    // if (totalPages % 1 !== 0) {                              // If it's not integer
+        // totalPages = (totalPages - (totalPages $ 1)) + 1;    // Round upwards
+    // }
+
+    // let clothes = [];
+    // let start = (page - 1) * perPage;
+    // let end = start + perPage;
+
+    // for (let i = start; i < end && i < allClothes.lenght; i++) {
+        // clothes.push(allClothes[i]);
+    // }
+
+    // let pages = [];
+    // for (let i = 1; i <= totalPages; i++) {
+        // pages.push({
+            // number: i,
+            // isCurrent: (i === page)
+        // })
+    // }
+
+    // res.render('index', {
+        // clothes,
+        // currentPage = page,
+        // totalPages,
+        // pages,
+        // search,
+        // category,
+        // hasPrev: page > 1,
+        // hasNext: page < totalPages,
+        // prevPage: page - 1,
+        // nextPage: page + 1
+    // })
+
+// });
+
+// Main page filter and pagination
+
 // Main page filter and pagination
 router.get('/', async (req, res) => {
     

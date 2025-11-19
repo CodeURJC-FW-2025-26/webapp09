@@ -214,12 +214,12 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   Files I contributed:
 
-  -data.json
-  -router.js
-  -new_clothe_form.html
-  -saved_edit.html
-  -confirm_delete.html
-  -confirm_new_clothe.html
-  -deleted_post.html
-  -saved_post.html
+  - `data.json`
+  - `router.js`
+  - `new_clothe_form.html`
+  - `saved_edit.html`
+  - `confirm_delete.html`
+  - `confirm_new_clothe.html`
+  - `deleted_post.html`
+  - `saved_post.html`
     

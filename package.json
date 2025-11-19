@@ -1,0 +1,19 @@
+{
+  "name": "web-ejer4",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "watch": "nodemon -e js,html,css src/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "5.1.0",
+    "mongodb": "^6.21.0",
+    "multer": "^2.0.2",
+    "mustache-express": "^1.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.10"
+  }
+}

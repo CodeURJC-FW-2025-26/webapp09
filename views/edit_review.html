@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/product_detail.css">
+    </head>
+    
+    <body>
+        {{>header}}
+        <div class = "container">
+            <div class = "row justify-content-center">
+                <form action = "/clothe/{{clothe._id}}/review/new" method = "post" class = "p-3 col-12 col-md-8 col-lg-6">
+                    <div class = "p-2 mt-4 rounded" id = "form-box">
+                        <h5> Deja tu reseña </h5>
+                        <hr class = "mt-0"/>
+                        <input type="hidden" name = "reviewId" value = "{{review.id}}">
+                        <span class = "form-group">
+                            <input value = "{{review.user}}" class = "form-control mb-2" name = "user" placeholder="Introduce tu nombre de usuario">   
+                            
+                        </span>
+                        <span class = "form-group">
+                            <input value = "{{review.title}}" class = "form-control mb-2" name = "title" placeholder="Resume tu opinión en una línea">
+                        </span>
+                        <span class = "form-group">
+                            <textarea class = "form-control" name = "review" rows="3" placeholder="Escribe tu reseña">{{review.review}}</textarea>
+                        </span>
+                        <div class = "text-end">
+                            <button type = "submit" class = "btn btn-dark m-2 me-0"> Enviar </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>

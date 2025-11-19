@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Replay Beige",
+    "description": "Combinan comodidad y estilo",
+    "price": 59.99,
+    "size": "45",
+    "category": "sneakers",
+    "imageFilename": "zapatilla.png",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Manolo", "review": "Todo bien" },
+      { "id": 2, "user": "Marcos", "review": "Muy malas la verdad" }
+    ]
+  },
+  {
+    "name": "Camiseta blanca con rayas negras",
+    "description": "Camiseta ligera con rayas finas negras",
+    "price": 14.99,
+    "size": "M",
+    "category": "t-shirt",
+    "imageFilename": "c_m_1.png",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Lucía", "review": "Muy fresquita" },
+      { "id": 2, "user": "Carlos", "review": "Me encanta cómo queda" }
+    ]
+  },
+  {
+    "name": "Pantalones marrones elegantes",
+    "description": "Pantalón de vestir marrón, ideal para ocasiones formales",
+    "price": 34.99,
+    "size": "L",
+    "category": "trouser",
+    "imageFilename": "p_m_1.jpg",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Pablo", "review": "Quedan perfectos" },
+      { "id": 2, "user": "Miriam", "review": "Muy buena calidad" }
+    ]
+  },
+  {
+    "name": "New Balance 892S",
+    "description": "Zapatillas comodiñas jeje",
+    "price": 59.99,
+    "size": "47",
+    "category": "sneakers",
+    "imageFilename": "zapatillaNB.jpeg",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Javier", "review": "Zapatillas cómodas y ligeras" }
+    ]
+  },
+  {
+    "name": "Camiseta color crema",
+    "description": "Camiseta suave con un tono crema elegante",
+    "price": 12.99,
+    "size": "L",
+    "category": "t-shirt",
+    "imageFilename": "c_m_2.png",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Andrea", "review": "Muy bonita y cómoda" }
+    ]
+  },
+  {
+    "name": "Pantalones color vino",
+    "description": "Pantalón casual color vino, muy combinable",
+    "price": 27.99,
+    "size": "M",
+    "category": "trouser",
+    "imageFilename": "p_m_2.png",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Mario", "review": "Color precioso" }
+    ]
+  },
+  {
+    "name": "Nike Air Max 270",
+    "description": "Diseño moderno con amortiguación excepcional",
+    "price": 129.99,
+    "size": "44",
+    "category": "sneakers",
+    "imageFilename": "AIR-MAX-270.png",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Carlos", "review": "Muy cómodas, ideales para correr" },
+      { "id": 2, "user": "Laura", "review": "Buena calidad pero talla un poco pequeño" }
+    ]
+  },
+  {
+    "name": "Camiseta Oscar Mayer",
+    "description": "Camiseta divertida con diseño clásico Oscar Mayer",
+    "price": 19.99,
+    "size": "XL",
+    "category": "t-shirt",
+    "imageFilename": "c_oscar_mayer.jpg",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Jorge", "review": "Diseño muy original" }
+    ]
+  },
+  {
+    "name": "Vaqueros normales",
+    "description": "Vaquero azul estándar, cómodo y duradero",
+    "price": 24.99,
+    "size": "42",
+    "category": "trouser",
+    "imageFilename": "p_m_3.png",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Sara", "review": "Los básicos de siempre" }
+    ]
+  },
+  {
+    "name": "Adidas Ultraboost 22",
+    "description": "Perfectas para entrenar o para el día a día",
+    "price": 139.99,
+    "size": "42",
+    "category": "sneakers",
+    "imageFilename": "19434922_43282895_1000.png",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Andrés", "review": "El mejor calzado que he tenido" },
+      { "id": 2, "user": "Sofía", "review": "Un poco caras, pero valen la pena" }
+    ]
+  },
+  {
+    "name": "Camiseta edición Van Gogh",
+    "description": "Camiseta artística inspirada en las obras de Van Gogh",
+    "price": 22.99,
+    "size": "M",
+    "category": "t-shirt",
+    "imageFilename": "camiseta_van_gogh.png",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Julia", "review": "El estampado es precioso" }
+    ]
+  },
+  {
+    "name": "Pantalones de chándal marrón",
+    "description": "Chándal marrón súper cómodo, ideal para el día a día",
+    "price": 19.99,
+    "size": "L",
+    "category": "trouser",
+    "imageFilename": "p_marrones.jpg",
+    "reviewsCount": 1,
+    "reviews": [
+        { "id": 1, "user": "Alex", "review": "Muy cómodos, me encantan" }
+    ]
+  },
+  {
+    "name": "Converse Chuck Taylor All Star",
+    "description": "Un clásico que nunca pasa de moda",
+    "price": 64.99,
+    "size": "43",
+    "category": "sneakers",
+    "imageFilename": "M9160_A_08X1.jpg",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Paula", "review": "Combinan con todo, las amo" },
+      { "id": 2, "user": "Dani", "review": "Buen diseño, aunque no son muy cómodas para caminar mucho" }
+    ]
+  },
+  {
+    "name": "Básica blanca",
+    "description": "Camiseta blanca básica",
+    "price": 9.99,
+    "size": "M",
+    "category": "t-shirt",
+    "imageFilename": "t_m_1.png",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "Carlos", "review": "Me encanta" },
+      { "id": 2, "user": "Antonio", "review": "Las básicas siempre son geniales" }
+    ]
+  },
+  {
+    "name": "Pantalones formales marrones",
+    "description": "Pantalones formales marrones para ocasiones elegantes",
+    "price": 39.99,
+    "size": "L",
+    "category": "trouser",
+    "imageFilename": "pant1.png",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Daniel", "review": "Muy elegantes" }
+    ]
+  },
+  {
+    "name": "Puma RS-X³",
+    "description": "Zapatillas con diseño atrevido y materiales de alta calidad",
+    "price": 89.99,
+    "size": "46",
+    "category": "sneakers",
+    "imageFilename": "zapatillas-sportswear-puma-rs-x-wh.png",
+    "reviewsCount": 1,
+    "reviews": [
+      { "id": 1, "user": "Lucía", "review": "Diseño espectacular, cómodas y ligeras" }
+    ]
+  },
+  {
+    "name": "Vaqueros cargo",
+    "description": "Muy cómodos, pegan con todo",
+    "price": 29.99,
+    "size": "L",
+    "category": "trouser",
+    "imageFilename": "cargo.png",
+    "reviewsCount": 2,
+    "reviews": [
+      { "id": 1, "user": "axelblaze2002", "review": "son tremendos :D" },
+      { "id": 2, "user": "Raulitopicapiedra", "review": "están muy guapos. Muy recomendaados" }
+    ]
+  }
+]

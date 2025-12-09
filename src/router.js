@@ -9,79 +9,6 @@ export default router;
 
 const upload = multer({ dest: shop.UPLOADS_FOLDER })
 
-// Old main page filter and pagination
-
-// router.get('/', async (req, res) => {
-    // let page = req.query.page || 1;
-    // page = Numer(page);
-
-    // let search = req.query.search || "";
-    // let category = req.query.category || "";
-
-    // const perPage = 6;
-
-    // let allClothes = await.shop.getClothes();
-
-    // if (search !== "") {
-        // let searchLower = search.toLowerCase();
-
-        // let filtered = [];
-        // for (let c of allClothes) {
-            // if (c.name.toLowerCase().indexOf(searchLower) !== -1) {
-                // filtered.push(c);
-            // }
-        // }
-        // allClothes = filtered;
-    // }
-
-    // if (category !== "") {
-        // let filtered = [];
-        // for (let c of allClothes) {
-            // if (c.category === category) {
-                // filtered.push(c);
-            // }
-        // }
-        // allClothes = filtered;
-    // }
-
-    // let totalPages = allClothes.lenght / perPage;
-    // if (totalPages % 1 !== 0) {                              // If it's not integer
-        // totalPages = (totalPages - (totalPages $ 1)) + 1;    // Round upwards
-    // }
-
-    // let clothes = [];
-    // let start = (page - 1) * perPage;
-    // let end = start + perPage;
-
-    // for (let i = start; i < end && i < allClothes.lenght; i++) {
-        // clothes.push(allClothes[i]);
-    // }
-
-    // let pages = [];
-    // for (let i = 1; i <= totalPages; i++) {
-        // pages.push({
-            // number: i,
-            // isCurrent: (i === page)
-        // })
-    // }
-
-    // res.render('index', {
-        // clothes,
-        // currentPage = page,
-        // totalPages,
-        // pages,
-        // search,
-        // category,
-        // hasPrev: page > 1,
-        // hasNext: page < totalPages,
-        // prevPage: page - 1,
-        // nextPage: page + 1
-    // })
-
-// });
-
-// Main page filter and pagination
-
 // Main page filter and pagination
 router.get('/', async (req, res) => {
     
@@ -190,9 +117,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
                 textoBoton: 'Volver al formulario'
             });
         }
-
-        // 4. Si todo está OK, NO guardamos todavía.
-        // Preparamos el objeto prenda y mostramos página de confirmación
+n
         let clothe = {
             name,
             description,
@@ -207,13 +132,11 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
             clothe.imageFilename = req.file.filename;
         }
 
-        // Renderizamos la página de confirmación (sin guardar en BD aún)
         return res.render('confirm_new_clothe', { clothe });
 
     } catch (err) {
         console.error('Error al crear la prenda:', err);
 
-        // Generic error (for instance, error de BD)
         return res.status(500).render('error', {
             mensaje: 'Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde.',
             urlBoton: '/',
@@ -222,7 +145,6 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
     }
 });
 
-// Confirmar y guardar definitivamente la prenda
 router.post('/clothe/new/confirm', async (req, res) => {
     try {
         const { name, description, price, size, category, imageFilename } = req.body;
@@ -437,7 +359,7 @@ router.post('/clothe/:id/review/new', async (req, res) => {
 
         
         //Choose where to come back if it fails
-        let backUrl = `/clothe/${clotheId}`; // por defecto, detalle del producto
+        let backUrl = `/clothe/${clotheId}`;
         if (formSource === 'edit_review' && reviewId) {
             backUrl = `/clothe/${clotheId}/review/${reviewId}/edit`;
         }

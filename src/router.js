@@ -58,9 +58,9 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
     try {
         const { name, description, price, size, category } = req.body;
         // Validate the size depending on the category
-        const sizeZapatilla = req.body.sizeZapatilla;
+        const sizeSneakers = req.body.sizeSneakers;
         if (category === "sneakers") {
-        if (!sizeZapatilla || sizeZapatilla.trim() === "") {
+        if (!sizeSneakers || sizeSneakers.trim() === "") {
         return res.status(400).render('error', {
             mensaje: 'Si el producto es una zapatilla, debes indicar la talla numérica.',
             urlBoton: '/new_clothe_form',
@@ -122,7 +122,7 @@ n
             name,
             description,
             price: priceNumber,
-            size: category === "sneakers" ? sizeZapatilla : size,
+            size: category === "sneakers" ? sizeSneakers : size,
             category,
             reviewsCount: 0,
             reviews: []
@@ -210,12 +210,12 @@ router.get('/clothe/:id/edit', async (req, res) => {
 router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
     try {
         const { name, description, price, size, category } = req.body;
-        const sizeZapatilla = req.body.sizeZapatilla;
+        const sizeSneakers = req.body.sizeSneakers;
         const id = req.params.id;
 
         // Validations (The sames as in crear)
         if (category === "sneakers") {
-            if (!sizeZapatilla || sizeZapatilla.trim() === "") {
+            if (!sizeSneakers || sizeSneakers.trim() === "") {
                 return res.status(400).render('error', {
                     mensaje: 'Si el producto es una zapatilla, debes indicar la talla numérica.',
                     urlBoton: `/clothe/${id}/edit`,
@@ -276,7 +276,7 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
             name,
             description,
             price: priceNumber,
-            size: category === "sneakers" ? sizeZapatilla : size,
+            size: category === "sneakers" ? sizeSneakers : size,
             category
         };
 

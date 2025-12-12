@@ -1,3 +1,4 @@
+// infinite scrolling
 const PER_PAGE = 6;
 
 let loadMoreCount = 1;

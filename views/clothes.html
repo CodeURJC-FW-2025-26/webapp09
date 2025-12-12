@@ -1,0 +1,18 @@
+{{#clothes}}
+<div class="col">
+    <div class="card h-100 border-0 shadow-sm">
+        <a href="/clothe/{{_id}}" class="text-decoration-none text-dark">
+            <img src="/clothe/{{_id}}/image" class="card-img-top rounded-3">
+            <div class="card-body text-start">
+                <h6 class="card-title">{{name}}</h6>
+                <p class="fw-bold mb-2">{{price}}</p>
+                <div class="d-flex justify-contend-end">
+                    <button class="btn btn-outline-dark btn-sm rounded-circle">
+                        <i class="bi bi-bag"></i>
+                    </button>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+{{/clothes}}

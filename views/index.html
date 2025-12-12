@@ -53,7 +53,7 @@
 
     <!-- Products grid -->
     <div class="container mt-5 mb-5">
-        <div class="row row-cols-1 row-cols-lg-3 g-4">
+        <div id="clothesContainer" class="row row-cols-1 row-cols-lg-3 g-4">
 
             {{#clothes}}
             <div class="col">
@@ -76,33 +76,8 @@
 
         </div>
     </div>
-    <div class="container text-center mt-4 pagination">
-        <!-- previous button -->
-        {{#hasPrev}}
-        <a class="btn btn-outline-dark btn-sm" href="/?page={{prevPage}}&search={{search}}&category={{category}}">
-            Anterior
-        </a>
-        {{/hasPrev}}
 
-        <!-- number of page -->
-        {{#pages}}
-            {{#isCurrent}}
-                <strong>{{number}}</strong>
-            {{/isCurrent}}
-
-            {{^isCurrent}}
-                <a href="/?page={{number}}&search={{search}}&category={{category}}">{{number}}</a>
-            {{/isCurrent}}
-        {{/pages}}
-        
-        <!-- next page -->
-        {{#hasNext}}
-        <a class="btn btn-outline-dark btn-sm" href="/?page={{nextPage}}&search={{search}}&category={{category}}">
-            Siguiente
-        </a>
-        {{/hasNext}}
-
-    </div>
+    <script src="/app.js"></script>
 
     <!-- Footer -->
     {{>footer}}

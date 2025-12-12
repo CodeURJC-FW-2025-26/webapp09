@@ -9,50 +9,58 @@ export default router;
 
 const upload = multer({ dest: shop.UPLOADS_FOLDER })
 
-// Main page filter and pagination
+// main page
+
 router.get('/', async (req, res) => {
-    
-    let { page = 1, search = "", category = "" } = req.query; // Read GET filters
-    page = parseInt(page);
+    let { search = "", category = "" } = req.query; 
 
     const perPage = 6;
 
-    let allClothes = await shop.getClothes(); // Obtain all clothes
+    let allClothes = await shop.getClothes();
 
-    if (search) {                                           // Text filter
-        const searchLower = search.toLowerCase();
-        allClothes = allClothes.filter(c =>
-            c.name.toLowerCase().includes(searchLower)
-        );
+    if (search) {
+        const s = search.toLowerCase();
+        allClothes = allClothes.filter(c => c.name.toLowerCase().includes(s));
     }
 
-    if (category) {                                                     // Category filter
+    if (category) {
         allClothes = allClothes.filter(c => c.category === category);
     }
 
-    const totalPages = Math.ceil(allClothes.length / perPage);          // Pages count rounded to the nearest integer
-    const start = (page - 1) * perPage;
-    const clothes = allClothes.slice(start, start + perPage);           // Array with clothes per page
-
-    // Pagination buttoms with all pages
-    const pages = Array.from({ length: totalPages }, (_, i) => ({       // Array with totalPages elems
-        number: i + 1,                                                  // Pages start on 1
-        isCurrent: (i + 1) === page
-    }));
+    const clothes = allClothes.slice(0, perPage);
 
     res.render('index', {
         clothes,
-        currentPage: page,
-        totalPages,
-        pages,
         search,
-        category,
-        hasPrev: page > 1,
-        hasNext: page < totalPages,
-        prevPage: page - 1,
-        nextPage: page + 1
+        category
     });
 });
+
+// Infinite scroll
+router.get('/loadMoreClothes', async (req, res) => {
+
+    let { from, to, search = "", category = "" } = req.query;
+
+    from = parseInt(from);
+    to = parseInt(to);
+
+    let allClothes = await shop.getClothes();
+
+    if (search) {
+        const s = search.toLowerCase();
+        allClothes = allClothes.filter(c => c.name.toLowerCase().includes(s));
+    }
+
+    if (category) {
+        allClothes = allClothes.filter(c => c.category === category);
+    }
+
+    const clothes = allClothes.slice(from, to);
+
+    res.render('clothes', { clothes });
+
+});
+
 
 router.post('/clothe/new', upload.single('image'), async (req, res) => {
     try {

@@ -236,9 +236,78 @@ https://youtu.be/M8PN_G4TTTo
 
 # PRACTICE 3
 
+## Execution instructions
+
+Requirements:
+  - Node.js v22.21.0
+  - MongoDB V8.2.1
+
+To run the application, go to the **Releases** section of the GitHub repository, then open the 'practica2' release (v.2.0.0 tag). Download the Source code (`.zip` file), extract it to a folder of your choice. Open a terminal and go to your project folder using the following command:
+$ cd ...
+
+Install Node.js and MongoDB if you don't have them installed. Install Node.js in your terminal:
+$ npm install
+
+Then, run the application:
+$ node src/app.js
+
+You should read a message like this:
+Web ready in http://localhost:3000/
+
+Open your browser and go to `http://localhost:3000/`. The app should be running and ready to use.
+
+## File description
+
+  - CSS Files: These files are used to style the web application. They include header, footer and page specific styles:
+    
+      · `footer.css`
+      · `header.css`
+      · `main_page.css`
+      · `product_detail.css`
+
+  - `index.html`: This file is the main page of the web application. It provides the overall structure of the website, including the search bar, category buttons, product grid, and pagination controls. It also includes a button to add new products.
+
+  - `confirm_delete.html`: Page to confirm deletion of an element (a product in our case). It shows the product name and image and provides two buttons: confirm delete and cancel/back.
+
+  - `confirm_new_clothe.html`: This file confirms adding a new product. It displays all product details and ask for confirmation.
+
+  - `deleted_post.html`: This page appears after a product has been deleted. It shows a confirmation message.
+
+  - `edit_review.html`: It allows users to edit an existing product review. It loads the current review data into a form so the user can update it.
+
+  - `error.html`: This page is shown whenever an error occurs. It displays an error message received from the server and a button that redirects the user back to the appropiate page.
+
+  - `footer.html`: This file defines the footer of the website. It includes sections such as _About us_, _Help_ or _Customer Service_.
+
+  - `header.html`: This is the header of the website. It contains the logo, navigation menu, user icon...
+
+  - `new_clothe_form.html`: This page contains the form used to create a new product. User can write the name, price, description, category, size...
+
+  - `product_detail.html`: This page shows users the details of a specific product: image, name, category, price, size and description. It also shows the reviews, with the options of delete or edit them.
+
+  - `saved_post.html`: This page is shown only when a new product has been created. It confirms that the item is saved.
+
+  - `clothes.html`: This is a client-side template used to render a list of products on the main page. For each product, it creates a card showing the product image, name and price. Each card links to the product's detail page and includes a button (shopping bag).
+
+  - `app.js` (src): This file initilizes the Express server and configures the main settings.
+
+  - `board.js`: It connects to the MongoDB server and create a reference to the clothes collection.
+
+  - `load_data.js`: This file resets the application's data every time the server starts and then reload the initial data from `json.data`.
+
+  - `router.js`: This file contains all the routes used by the application, like the main page pagination.
+    
+  - `data.json`: This file contains the initial product data loaded when the application starts. If the database is empty, the server reads this file and inserts its contents into MongoDB. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of user reviews. The file serves as the initial data for both the main page and the product detail pages.
+
+  - `app.js` (public): This is the client JavaScript file for the web application. It handles user interactions like the infinite scrolling.
+
+## Demonstration video
+
+
+
 ## Member participation
 
-- Marcos Laorga Sagaseta de Ilurdoz: I have fixed the issues from Practice 2, created the files `app.js` (public) and `clothes.html`, and implemented infinite scrolling on the main page.
+- Marcos Laorga Sagaseta de Ilurdoz: I have fixed the issues from Practice 2, created the files `app.js` (public) and `clothes.html`, organized the `README.md` file with the necessary documentation with new files descriptions and implemented infinite scrolling on the main page.
 
   These are the final commits:
 
@@ -251,3 +320,4 @@ https://youtu.be/M8PN_G4TTTo
   - `router.js`
   - `clothes.html`
   - `index.html`
+  - `README.md`

@@ -234,6 +234,20 @@ https://youtu.be/M8PN_G4TTTo
   - `shop.js`
   - `new_clothe_form`
 
+# PRACTICE 3
 
+## Member participation
 
-    
+- Marcos Laorga Sagaseta de Ilurdoz: I have fixed the issues from Practice 2, created the files `app.js` (public) and `clothes.html`, and implemented infinite scrolling on the main page.
+
+  These are the final commits:
+
+  - 'infinite_scroll': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/74b4c315b5678389d5ca3d1922868c1e2a29da5b
+  - 'infinite_scroll_comments': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/643498b0a84777d777ebc0df73149497ecf6b3a9
+ 
+  Files I contributed:
+
+  - `app.js` (public)
+  - `router.js`
+  - `clothes.html`
+  - `index.html`

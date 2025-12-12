@@ -12,11 +12,11 @@ const upload = multer({ dest: shop.UPLOADS_FOLDER })
 // main page
 
 router.get('/', async (req, res) => {
-    let { search = "", category = "" } = req.query; 
+    let { search = "", category = "" } = req.query;     // receives the parameters of the URL
 
     const perPage = 6;
 
-    let allClothes = await shop.getClothes();
+    let allClothes = await shop.getClothes();   // charges the products
 
     if (search) {
         const s = search.toLowerCase();
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
         allClothes = allClothes.filter(c => c.category === category);
     }
 
-    const clothes = allClothes.slice(0, perPage);
+    const clothes = allClothes.slice(0, perPage);   // the first 6 products
 
     res.render('index', {
         clothes,
@@ -41,10 +41,10 @@ router.get('/loadMoreClothes', async (req, res) => {
 
     let { from, to, search = "", category = "" } = req.query;
 
-    from = parseInt(from);
+    from = parseInt(from);      // Converts the values from string to number
     to = parseInt(to);
 
-    let allClothes = await shop.getClothes();
+    let allClothes = await shop.getClothes();   // fetches the products
 
     if (search) {
         const s = search.toLowerCase();
@@ -55,7 +55,7 @@ router.get('/loadMoreClothes', async (req, res) => {
         allClothes = allClothes.filter(c => c.category === category);
     }
 
-    const clothes = allClothes.slice(from, to);
+    const clothes = allClothes.slice(from, to);     // the next "block" of clothes
 
     res.render('clothes', { clothes });
 

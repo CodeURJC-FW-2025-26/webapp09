@@ -10,9 +10,9 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 async function onScrollLoad() {
-    if (loading) return;
+    if (loading) return;        // if it's loading, doesn't do anything
 
-    const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200; // total height of the page's content - 200px
+    const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200; // bottom it's true if it's near the bottom of the page
 
     if (bottom) {
         loading = true;
@@ -26,7 +26,7 @@ async function loadMoreClothes() {
     const to = from + PER_PAGE;
 
     const params = new URLSearchParams(window.location.search);
-    const search = params.get("search") || "";
+    const search = params.get("search") || "";      // if it's false, "" (OR)
     const category = params.get("category") || "";
 
     const container = document.getElementById("clothesContainer");

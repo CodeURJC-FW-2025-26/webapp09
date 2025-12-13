@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src = "/confirm_delete.js"> </script>
     <link type="text/css" rel="stylesheet" href="/css/product_detail.css">
     <link rel="icon" href="logo.ico" type="image/x-icon">
 </head>
@@ -21,7 +22,39 @@
                 <a type="button" class="btn btn-outline-dark" href="/clothe/{{clothe._id}}/edit">Editar</a>
             </div>
             <div class="col-12 col-md-1 offset-md-10">
-                <a type="button" class="btn btn-danger" href="/clothe/{{clothe._id}}/confirm-delete">Eliminar</a>
+                <!--<a type="button" class="btn btn-danger" href="/clothe/{{clothe._id}}/confirm-delete">Eliminar</a>-->
+                <button type = "button" class = "btn btn-danger" data-bs-toggle = "modal" data-bs-target = "#confirmDeleteModal"> Eliminar </button>
+
+                <div class = "modal fade" id = "confirmDeleteModal" tabindex="-1" role= "alertdialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>¿Seguro que quieres eliminar esta prenda?</h2>
+
+                            <p class="mt-3"><strong>{{clothe.name}}</strong></p>
+
+                            {{#clothe.imageFilename}}
+                            <img src="/clothe/{{clothe._id}}/image" class="img-fluid" style="max-width: 200px;">
+                            {{/clothe.imageFilename}}
+                        </div>
+                        <div class="modal-footer">
+                            <!-- OK button -->
+                            <form data-id = "{{clothe._id}}" id = "delete-form" action="/clothe/{{clothe._id}}/delete" method="POST" style="display:inline;">
+                                <button id = "delete-button" class="btn btn-danger">Sí, eliminar</button>
+                            </form> 
+                            <!-- back button -->
+                            <a class="btn btn-secondary" href="/clothe/{{clothe._id}}">No, volver</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- <span class = "col-6 text-end"><a type = "button" class = "btn btn-outline-danger" href = "/clothe/{{clothe._id}}/confirm-delete"> ELIMINAR </a></span> -->
 

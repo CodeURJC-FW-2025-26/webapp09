@@ -74,7 +74,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
             urlBoton: '/new_clothe_form',
             textoBoton: 'Volver al formulario'
                 });
-         }
+        }
         }
         // If its not a shoe → normal size
         if (category !== "sneakers") {
@@ -97,7 +97,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
         // Empty info
         if (!name || !description || !price || !category) {
             return res.status(400).render('error', {
-             mensaje: 'Debes completar todos los campos obligatorios.',
+            mensaje: 'Debes completar todos los campos obligatorios.',
             urlBoton: '/',
             textoBoton: 'Volver al formulario'
         });

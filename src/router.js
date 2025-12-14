@@ -263,6 +263,8 @@ router.post('/clothe/:id/delete', async (req, res) => {
     if (clothe && clothe.value && clothe.value.imageFilename) {
         await fs.rm(shop.UPLOADS_FOLDER + '/' + clothe.value.imageFilename);
     }
+
+    res.redirect('/');
 });
 
 router.get('/new_clothe_form', (req, res) => {

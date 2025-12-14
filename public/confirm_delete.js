@@ -1,17 +1,32 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    console.log("DOM cargado")
+    console.log("DOM load")
 
     const form = document.getElementById("delete-form");
 
-    form.addEventListener("submit", async (e) =>{
-        e.preventDefault();
+    if (!form){
+        console.log("form doesnt exist");
+    } else {
+        
+        form.addEventListener("submit", async (e) =>{
+            e.preventDefault();
+            try{
+                const response = await fetch(form.action, {
+                    method: form.method
+                })
 
-        const response = await fetch(form.action, {
-            method: form.method
+                if(response.ok){
+                    window.location.href = response.url;
+                } else {
+                    console.log(response.statusText);
+                }
+
+            } catch {
+                console.log("Promise Fail");
+            }
+            
         })
-
-        window.location.href = response.url;
-    })
+    }
+    
 })
 
 

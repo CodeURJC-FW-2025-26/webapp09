@@ -29,9 +29,9 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">¡Atención!</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true"></span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -44,12 +44,15 @@
                             {{/clothe.imageFilename}}
                         </div>
                         <div class="modal-footer">
+                            <div id = "spinner-delete" class="visually-hidden spinner-border" role ="status">
+                                
+                            </div>
                             <!-- OK button -->
                             <form data-id = "{{clothe._id}}" id = "delete-form" action="/clothe/{{clothe._id}}/delete" method="POST" style="display:inline;">
                                 <button id = "delete-button" class="btn btn-danger">Sí, eliminar</button>
                             </form> 
                             <!-- back button -->
-                            <a class="btn btn-secondary" href="/clothe/{{clothe._id}}">No, volver</a>
+                            <a class="btn btn-secondary" data-bs-dismiss="modal">No, volver</a>
                         </div>
                         </div>
                     </div>

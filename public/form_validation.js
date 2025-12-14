@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const price = document.getElementById("price");
     const description = document.getElementById("description");
     const sizeSneakers = document.getElementById("sizeSneakers");
+    const imageInput = document.getElementById("file");
 
     const submitBtn = document.getElementById("submitBtn");
-    const btnSpinner = document.getElementById("btnSpinner");
+    const formSpinner = document.getElementById("formSpinner");
     const btnText = document.getElementById("btnText");
 
     function setInvalid(input, errorId, message) {
@@ -26,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function validateClient() {
         let valid = true;
 
+        imageInput.classList.remove("is-invalid");
+
         if (name.value.length === 0) {
             setInvalid(name, "error-name", "El nombre es obligatorio.")
             valid = false;
@@ -33,19 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
             setValid(name, "error-name");
         }
 
-        if (price.value.length === 0) {
+        if (price.value.trim() === "") {
             setInvalid(price, "error-price", "El precio es obligatorio.")
             valid = false;
         } else {
-            let ok = true;
-            for (let i = 0; i < price.value.length; i++) {
-                const c = price.value[i];
-                if (!((c >= "0" && c <= "9") || c === ".")) {
-                    ok = false;
-                }
-            }
-            if (!ok) {
-                setInvalid(price, "error-price", "El precio debe escribirse en números.");
+            const priceNumber = Number(price.value);
+
+            if (Number.isNaN(priceNumber) || priceNumber <= 0) {
+                setInvalid(price, "error-price", "El precio debe ser un número mayor que 0.");
                 valid = false;
             } else {
                 setValid(price, "error-price");
@@ -70,6 +68,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } else {
             setValid(sizeSneakers, "error-sizeSneakers");
+        }
+
+        const edit = form.action.includes("/edit");
+        if (!edit) {
+            if (!imageInput.files || imageInput.files.length === 0) {
+                imageInput.classList.add("is-invalid");
+                valid = false;
+            } else {
+                imageInput.classList.remove("is-invalid");
+            }
         }
 
         return valid;
@@ -101,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!(await validateNameServer())) return;
 
         submitBtn.disabled = true;
-        btnSpinner.classList.remove("d-none");
+        formSpinner.classList.remove("d-none");
         btnText.classList.add("d-none");
         
         const response = await fetch(form.action, {
@@ -115,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             showErrorModal(result.message);
 
             submitBtn.disabled = false;
-            btnSpinner.classList.add("d-none");
+            formSpinner.classList.add("d-none");
             btnText.classList.remove("d-none");
             return;
         }

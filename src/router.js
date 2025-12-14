@@ -57,6 +57,10 @@ router.get('/loadMoreClothes', async (req, res) => {
 
     const clothes = allClothes.slice(from, to);     // the next "block" of clothes
 
+    if (clothes.length === 0) {
+        return res.send("");
+    }
+
     res.render('clothes', { clothes });
 
 });
@@ -105,6 +109,10 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
       return res.status(400).json({ message: "Ya existe una prenda con ese nombre. Elige otro diferente." });
     }
 
+    if (!req.file) {
+        return res.status(400).json({ message: "Debes subir una imagen."});
+    }
+
     let clothe = {
       name,
       description,
@@ -130,35 +138,6 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
     console.error('Error al crear la prenda:', err);
     return res.status(500).json({ message: "Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde." });
   }
-});
-
-router.post('/clothe/new/confirm', async (req, res) => {
-    try {
-        const { name, description, price, size, category, imageFilename } = req.body;
-
-        const priceNumber = Number(price);
-
-        let clothe = {
-            name,
-            description,
-            price: priceNumber,
-            size,
-            category,
-            reviewsCount: 0,
-            reviews: []
-        };
-
-        if (imageFilename) {
-            clothe.imageFilename = imageFilename;
-        }
-
-        await shop.addClothe(clothe);
-
-
-    } catch (err) {
-        console.error('Error al confirmar la prenda:', err);
-        return res.status(500).json({ message: "Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde." });
-    }
 });
 
 // Route to show the edition form
@@ -204,7 +183,7 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
                 return res.status(400).json({ message: "Este tipo de producto no puede tener talla numérica." });
             }
         }
-        
+
         if (description.length < 10 || description.length > 250) {
             return res.status(400).json({ message: "La descripción debe tener entre 10 y 250 caracteres." });
         }

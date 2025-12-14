@@ -33,7 +33,7 @@
         <!-- Prize -->
         <div class="form-group mb-3">
           <label>Precio</label>
-          <input id="price" type="text" class="form-control" name="price" value="{{#clothe}}{{clothe.price}}{{/clothe}}">
+          <input id="price" type="number" step="0.01" class="form-control" name="price" min="0.01" value="{{#clothe}}{{clothe.price}}{{/clothe}}">
           <div id="error-price" class="invalid-feedback"></div>
         </div>
 
@@ -88,8 +88,9 @@
         <!-- Image -->
         <h4>Añadir Imagen</h4>
         <div class="form-group mb-3">
-          <label for="archivo">Archivo</label>
-          <input type="file" class="form-control" id="archivo" name="image">
+          <label for="file">file</label>
+          <input type="file" class="form-control" id="file" name="image">
+          <div class="invalid-feedback">Debes subir una imagen.</div>
           {{#clothe}}
           {{#clothe.imageFilename}}
           <small class="form-text text-muted">Imagen actual: {{clothe.imageFilename}}</small>
@@ -101,7 +102,7 @@
         <div class="text-center">
           <button type="submit" id="submitBtn" class="btn btn-outline-dark w-100">
             <span id="btnText">{{#clothe}}Actualizar{{/clothe}}{{^clothe}}Enviar{{/clothe}}</span>
-            <span id="btnSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status"></span>
+            <span id="formSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status"></span>
           </button>
         </div>
 

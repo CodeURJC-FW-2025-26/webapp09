@@ -265,7 +265,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
       · `main_page.css`
       · `product_detail.css`
 
-  - `index.html`: This file is the main page of the web application. It provides the overall structure of the website, including the search bar, category buttons, product grid, and pagination controls. It also includes a button to add new products.
+  - `index.html`: This file is the main page of the web application. It provides the overall structure of the website, including the search bar, category buttons, product grid, and an infinite scroll with a spinner. It also includes a button to add new products.
 
   - `confirm_delete.html`: Page to confirm deletion of an element (a product in our case). It shows the product name and image and provides two buttons: confirm delete and cancel/back.
 
@@ -289,7 +289,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   - `clothes.html`: This is a client-side template used to render a list of products on the main page. For each product, it creates a card showing the product image, name and price. Each card links to the product's detail page and includes a button (shopping bag).
 
-  - `app.js` (src): This file initilizes the Express server and configures the main settings.
+  - `app.js`: This file initilizes the Express server and configures the main settings.
 
   - `board.js`: It connects to the MongoDB server and create a reference to the clothes collection.
 
@@ -299,7 +299,11 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
     
   - `data.json`: This file contains the initial product data loaded when the application starts. If the database is empty, the server reads this file and inserts its contents into MongoDB. Each product entry includes properties such as name, description, price, size, category, imageFilename, and an array of user reviews. The file serves as the initial data for both the main page and the product detail pages.
 
-  - `app.js` (public): This is the client JavaScript file for the web application. It handles user interactions like the infinite scrolling.
+  - `main_page.js`: This file handles the infinite scrolling functionality on the main page of the application.
+
+  - `form_validation.js`: This file manages client-side and server-side validation for the product creation and editing forms.
+
+  - `confirm_delete.js`: This file handles the client-side logic for deleting a product using an asynchronous request.
 
 ## Demonstration video
 

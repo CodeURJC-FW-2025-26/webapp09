@@ -135,9 +135,9 @@
         <hr />
 
         <!-- Reviews -->
-        <section class="row">
+        <section id = "reviews-section" class="row">
             {{#clothe.reviews}}
-            <div class="col-12 col-md-3 mb-3">
+            <div id = "{id}" class="col-12 col-md-3 mb-3">
                 <div class="card review shadow">
                     <div class="card-body">
                         <h5 class="card-title"> {{title}} </p>
@@ -151,9 +151,11 @@
                                                     class="bi bi-pencil-square"></i> </a>
                                         </div>
                                         <div class="col-6 text-end">
-                                            <a type="button" class="btn text-end"
-                                                href="/clothe/{{clothe._id}}/review/{{id}}/delete"><i
-                                                    class="bi bi-trash3 trash-icon"></i></a>
+                                            <button type="button" class="btn text-end deleter-button"
+                                                data-url="/clothe/{{clothe._id}}/review/{{id}}/delete">
+                                                <div class = "spinner-border visually-hidden" role = "status"></div>
+                                                <i class="bi bi-trash3 trash-icon"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

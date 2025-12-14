@@ -31,6 +31,57 @@ document.addEventListener("DOMContentLoaded", ()=>{
             
         })
     }
+
+    const reviewSection = document.getElementById("reviews-section");
+
+    if(!reviewSection){
+        console.log("review section not found");
+    } else {
+        console.log("review section found");
+        reviewSection.addEventListener("click", async (e)=>{
+            const button = e.target.closest(".deleter-button");
+            const spinner = button.closest(".col-6").querySelector(".spinner-border");
+
+            console.log(button.innerHTML);
+
+            if(!button){
+                return;
+            }
+
+            spinner.classList.toggle("visually-hidden");
+            
+            console.log("Deleted Button Pressed");
+            const deleteURL = button.dataset.url;
+
+            console.log(`Delet URL = ${deleteURL}`);
+            const response = await fetch(deleteURL, {
+                method: "POST"
+            });
+
+            if(response.ok){
+                const data = await response.json();
+
+                console.log("deleted succesfully");
+                
+                console.log(`Id searching: ${data.id}`);
+                const deletedReview = e.target.closest(".col-12");
+
+                if(!deletedReview){
+                    console.log("review card not found");
+                } else {
+                    deletedReview.remove();
+                    spinner.classList.toggle("visually-hidden");
+                    console.log("deleted review card");
+                }
+                
+            } else {
+                console.log("Server error");
+            }
+            
+            
+
+        })
+    }
     
 })
 

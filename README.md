@@ -307,18 +307,22 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
 ## Member participation
 
-- Marcos Laorga Sagaseta de Ilurdoz: I have fixed the issues from Practice 2, created the files `app.js` (public) and `clothes.html`, organized the `README.md` file with the necessary documentation with new files descriptions and implemented infinite scrolling on the main page.
+- Marcos Laorga Sagaseta de Ilurdoz: I have fixed the issues from Practice 2, created the files `main_page.js`, `form_validation.js` and `clothes.html`, organized the `README.md` file with the necessary documentation with new files descriptions, implemented the new create and edit form's functions and implemented infinite scrolling on the main page.
 
-  These are the final commits:
+  These are some commits:
 
   - 'infinite_scroll': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/74b4c315b5678389d5ca3d1922868c1e2a29da5b
   - 'infinite_scroll_comments': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/643498b0a84777d777ebc0df73149497ecf6b3a9
   - 'Update README.md': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/113bda28e9b1e2baa44db1f7c6fe03ab3914627e
+  - 'create/edit form': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/5464949feb45a65897fb00d0fa6dfd65c36e3027
+  - 'create/edit form (I forgot to change the name. In this commit I did the main_page spinner and I implemented the no-image error)': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8212dd87bd7941946c9ac1b4384973592fe34706
  
   Files I contributed:
 
-  - `app.js` (public)
+  - `main_page.js`
   - `router.js`
+  - `form_validation.js`
   - `clothes.html`
   - `index.html`
+  - `new_clothe_form.html`
   - `README.md`

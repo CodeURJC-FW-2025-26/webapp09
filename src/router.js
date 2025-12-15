@@ -281,7 +281,7 @@ router.get('/clothe/:id/image', async (req, res) => {
     res.download(shop.UPLOADS_FOLDER + '/' + clothe.imageFilename);
 });
 
-router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
+router.post('/clothe/:id/review/:idReview/delete', async (req, res) => {
     await shop.deleteReview(req.params.id, Number(req.params.idReview));
     res.status(200).json({
         id:req.params.idReview

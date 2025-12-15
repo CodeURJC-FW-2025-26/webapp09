@@ -339,6 +339,7 @@ router.post('/clothe/:id/review/new', async (req, res) => {
         await shop.addReview(user, title, review, clotheId, reviewId);
 
         console.log('Review añadida/actualizada, usuario:', user, 'titulo:', title);
+        return res.redirect(`/clothe/${clotheId}`);
 
     } catch (err) {
         console.error('Error al guardar la reseña:', err);

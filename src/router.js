@@ -165,7 +165,7 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
         const { name, description, price, size, category } = req.body;
         const sizeSneakers = req.body.sizeSneakers;
         const id = req.params.id;
-
+        const removeImage = req.body.removeImage === "true";
         if (category === "sneakers") {
             if (!sizeSneakers || sizeSneakers.trim() === "") {
                 return res.status(400).json({ message: "Si el producto es una zapatilla, debes indicar la talla numérica." });
@@ -211,7 +211,12 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
             size: category === "sneakers" ? sizeSneakers : size,
             category
         };
+        const existingClothe = await shop.getClothe(id);
 
+        if (removeImage && existingClothe && existingClothe.imageFilename) {
+            await fs.rm(shop.UPLOADS_FOLDER + '/' + existingClothe.imageFilename);
+            updateData.imageFilename = null;
+        }
         if (req.file) {
             const existingClothe = await shop.getClothe(id);
             if (existingClothe && existingClothe.imageFilename) {
@@ -276,7 +281,7 @@ router.get('/clothe/:id/image', async (req, res) => {
     res.download(shop.UPLOADS_FOLDER + '/' + clothe.imageFilename);
 });
 
-router.post('/clothe/:id/review/:idReview/delete', async (req, res) => {
+router.get('/clothe/:id/review/:idReview/delete', async (req, res) => {
     await shop.deleteReview(req.params.id, Number(req.params.idReview));
     res.status(200).json({
         id:req.params.idReview

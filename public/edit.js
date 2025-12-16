@@ -20,9 +20,9 @@ function editarReview(buttonEl) {
   const originalHTML = cardBody.innerHTML;
 
   // Actual data
-  const title = cardBody.querySelector(".card-title")?.textContent.trim() ?? "";
-  const user = cardBody.querySelector(".card-subtitle")?.textContent.trim() ?? "";
-  const reviewText = cardBody.querySelector(".card-text")?.textContent.trim() ?? "";
+  const title = cardBody.querySelector(".card-title")?.textContent.trim();//.value doesnt work here
+  const user = cardBody.querySelector(".card-subtitle")?.textContent.trim();
+  const reviewText = cardBody.querySelector(".card-text")?.textContent.trim();
   const reviewId = reviewItem.dataset.reviewId;
 
   const clotheId = document.body.dataset.clotheId;

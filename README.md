@@ -315,7 +315,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
 - Marcos Laorga Sagaseta de Ilurdoz: I have fixed the issues from Practice 2, created the files `main_page.js`, `form_validation.js` and `clothes.html`, organized the `README.md` file with the necessary documentation with new files descriptions, implemented the new create and edit form's functions and implemented infinite scrolling on the main page.
 
-  These are some commits:
+  These are my 5 most important commits:
 
   - 'infinite_scroll': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/74b4c315b5678389d5ca3d1922868c1e2a29da5b
   - 'Update README.md': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/113bda28e9b1e2baa44db1f7c6fe03ab3914627e

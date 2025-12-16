@@ -148,8 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        if (!validateClient()) return;
-        if (!(await validateNameServer())) return;
+        const clientValid = validateClient();
+        if (!clientValid) {
+            console.warn("Errores de validación.");
+        }
 
         submitBtn.disabled = true;
         formSpinner.classList.remove("d-none");

@@ -321,6 +321,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   - 'create/edit form': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/5464949feb45a65897fb00d0fa6dfd65c36e3027
   - 'create/edit form (I forgot to change the name. In this commit I did the main_page spinner and I implemented the no-image error)': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8212dd87bd7941946c9ac1b4384973592fe34706
   - 'category_and_size_error': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/6000961a8beda1d10bab2414de8f0ccb192d8d76
+  - 'already_exists': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/286b506c73fafb8f291422c208ab4ab6c29a4e55
  
   Files I contributed:
 

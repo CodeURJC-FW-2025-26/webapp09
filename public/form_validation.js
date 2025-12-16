@@ -59,6 +59,66 @@ document.addEventListener("DOMContentLoaded", () => {
         setValid(name, "error-name");
     });
 
+    price.addEventListener("input", () => {
+        const value = price.value.trim();
+
+        if (value === "") {
+            setInvalid(price, "error-price", "El precio es obligatorio.");
+            return;
+        }
+
+        const priceNumber = Number(value);
+
+        if (Number.isNaN(priceNumber) || priceNumber <= 0) {
+            setInvalid(price, "error-price", "El precio debe ser un número mayor que 0.");
+            return;
+        }
+
+        setValid(price, "error-price");
+    });
+
+    description.addEventListener("input", () => {
+        const length = description.value.length;
+
+        if (length < 10 || length > 250) {
+            setInvalid(description, "error-description", "La descripción debe tener entre 10 y 250 caracteres.");
+            return;
+        }
+
+        setValid(description, "error-description");
+    });
+
+    sizeSneakers.addEventListener("input", () => {
+        if (sizeSneakers.value.trim() === "") {
+            setInvalid(sizeSneakers, "error-sizeSneakers", "Debes introducir una talla numérica para zapatillas.");
+            return;
+        }
+
+        setValid(sizeSneakers, "error-sizeSneakers");
+    });
+
+    imageInput.addEventListener("change", () => {
+        if (imageInput.files && imageInput.files.length > 0) {
+            imageInput.classList.remove("is-invalid");
+        }
+    });
+
+    const categories = document.querySelectorAll('input[name="category"]');
+
+    for (let i = 0; i < categories.length; i++) {
+        categories[i].addEventListener("change", () => {
+            clearGroupError("error-category");
+        });
+    }
+
+    const sizes = document.querySelectorAll('input[name="size"]');
+
+    for (let i = 0; i < sizes.length; i++) {
+        sizes[i].addEventListener("change", () => {
+            clearGroupError("error-size");
+        });
+    }
+
     function validateClient() {
         let valid = true;
 
@@ -92,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
             setValid(description, "error-description");
         }
 
-        const categories = document.querySelectorAll('input[name="category"]');
         let categorySelected = false;
 
         for (let i = 0; i < categories.length; i++) {
@@ -121,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             setValid(sizeSneakers, "error-sizeSneakers");
 
-            const sizes = document.querySelectorAll('input[name="size"]');
             let sizeSelected = false;
 
             for (let i = 0; i < sizes.length; i++) {

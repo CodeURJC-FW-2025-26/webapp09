@@ -100,6 +100,13 @@ document.addEventListener("DOMContentLoaded", () => {       // wait for the HTML
 
     // real-time validation for sneakers numeric size
     sizeSneakers.addEventListener("input", () => {
+        const sneakersChecked = document.getElementById("sneakers").checked;
+
+        if (!sneakersChecked) {
+            setValid(sizeSneakers, "error-sizeSneakers");
+            return;
+        }
+
         if (sizeSneakers.value.trim() === "") {     // must enter a numeric size for sneakers
             setInvalid(sizeSneakers, "error-sizeSneakers", "Debes introducir una talla numérica para zapatillas.");
             return;

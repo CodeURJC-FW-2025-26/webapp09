@@ -129,6 +129,11 @@ document.addEventListener("DOMContentLoaded", () => {       // wait for the HTML
     for (let i = 0; i < categories.length; i++) {
         categories[i].addEventListener("change", () => {
             clearGroupError("error-category");
+
+            const sneakersChecked = document.getElementById("sneakers").checked;
+            if (!sneakersChecked) {
+                setValid(sizeSneakers, "error-sizeSneakers");
+            }
         });
     }
 
@@ -237,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {       // wait for the HTML
                 setGroupError("error-size", "Debes seleccionar una talla de camiseta / vestido / pantalón.");
                 valid = false;
             } else {
-                clearGroupError("errorSize");
+                clearGroupError("error-size");
             }
         }
 

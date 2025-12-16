@@ -163,7 +163,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = await response.json();
 
         if (!response.ok) {
-            showErrorModal(result.message);
+
+            if (result.field === "name") {
+                setInvalid(name, "error-name", result.message);
+            } else {
+                showErrorModal(result.message);
+            }
 
             submitBtn.disabled = false;
             formSpinner.classList.add("d-none");

@@ -106,7 +106,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
     const alreadyExists = clothes.find(c => c.name === name);
 
     if (alreadyExists) {
-      return res.status(400).json({ message: "Ya existe una prenda con ese nombre. Elige otro diferente." });
+      return res.status(400).json({ field: "name", message: "Ya existe una prenda con ese nombre. Elige otro diferente." });
     }
 
     if (!req.file) {
@@ -201,7 +201,7 @@ router.post('/clothe/:id/edit', upload.single('image'), async (req, res) => {
         const alreadyExists = clothes.find(c => c.name === name && c._id.toString() !== id);
 
         if (alreadyExists) {
-            return res.status(400).json({ message: "Ya existe otra prenda con ese nombre. Elige otro diferente." });
+            return res.status(400).json({ field: "name", message: "Ya existe otra prenda con ese nombre. Elige otro diferente." });
         }
 
         const updateData = {

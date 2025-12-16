@@ -307,6 +307,8 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   - `image_form.js`: This file handles the client for image management in the product creation and editing forms.
 
+  - `edit.js`: This file enables inline editing of user reviews of the shop and submits the changes with AJAX without reloading the page.
+
 ## Demonstration video
 
 

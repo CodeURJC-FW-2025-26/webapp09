@@ -119,6 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const clearSize = document.getElementById("clearSize")
+
+    clearSize.addEventListener("click", () => {
+        for (let i = 0; i < sizes.length; i++) {
+            sizes[i].checked = false;
+        }
+        clearGroupError("error-size");
+    });
+
     function validateClient() {
         let valid = true;
 
@@ -169,7 +178,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const sneakersChecked = document.getElementById("sneakers").checked;
 
-        if (sneakersChecked) {
+        if (!categorySelected) {
+            setGroupError("error-size", "Debes seleccionar una talla.");
+            valid = false;
+        }
+        else if (sneakersChecked) {
             if (sizeSneakers.value.trim() === "") {
                 setInvalid(sizeSneakers, "error-sizeSneakers", "Debes introducir una talla numérica para zapatillas.");
                 valid = false;
@@ -177,7 +190,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 setValid(sizeSneakers, "error-sizeSneakers");
             }
             clearGroupError("error-size");
-        } else {
+        }
+        else {
             setValid(sizeSneakers, "error-sizeSneakers");
 
             let sizeSelected = false;
@@ -192,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setGroupError("error-size", "Debes seleccionar una talla de camiseta / vestido / pantalón.");
                 valid = false;
             } else {
-                clearGroupError("error-size");
+                clearGroupError("errorSize");
             }
         }
 

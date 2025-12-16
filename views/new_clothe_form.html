@@ -122,20 +122,15 @@
 
   </main>
 
-  <div class="modal fade" id="errorModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Error</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow">
+        <div class="modal-body text-center p-4">
+          <i class="bi bi-exclamation-triangle-fill text-danger fs-1 mb-3"></i>
+          <h4 class="mb-3 text-danger">Ha ocurrido un error</h4>
+          <p id="modalErrorText" class="mb-4"></p>
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
         </div>
-
-        <div class="modal-body" id="modalErrorText"></div>
-
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-
       </div>
     </div>
   </div>

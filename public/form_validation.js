@@ -24,12 +24,22 @@ document.addEventListener("DOMContentLoaded", () => {
         if (error) error.textContent = "";
     }
 
+    function setGroupError(errorId, message) {
+        const error = document.getElementById(errorId);
+        if (error) error.textContent = message;
+    }
+
+    function clearGroupError(errorId) {
+        const error = document.getElementById(errorId);
+        if (error) error.textContent = "";
+    }
+
     function validateClient() {
         let valid = true;
 
         imageInput.classList.remove("is-invalid");
 
-        if (name.value.length === 0) {
+        if (name.value.trim() === "") {
             setInvalid(name, "error-name", "El nombre es obligatorio.")
             valid = false;
         } else {
@@ -57,26 +67,59 @@ document.addEventListener("DOMContentLoaded", () => {
             setValid(description, "error-description");
         }
 
-        const sneakers = document.getElementById("sneakers").checked;
+        const categories = document.querySelectorAll('input[name="category"]');
+        let categorySelected = false;
 
-        if (sneakers) {
-            if (sizeSneakers.value.length === 0) {
-                setInvalid(sizeSneakers, "error-sizeSneakers", "Debes introducir la talla numérica.");
+        for (let i = 0; i < categories.length; i++) {
+            if (categories[i].checked) {
+                categorySelected = true;
+            }
+        }
+
+        if (!categorySelected) {
+            setGroupError("error-category", "Debes seleccionar una categoría.");
+            valid = false;
+        } else {
+            clearGroupError("error-category");
+        }
+
+        const sneakersChecked = document.getElementById("sneakers").checked;
+
+        if (sneakersChecked) {
+            if (sizeSneakers.value.trim() === "") {
+                setInvalid(sizeSneakers, "error-sizeSneakers", "Debes introducir una talla numérica para zapatillas.");
                 valid = false;
             } else {
                 setValid(sizeSneakers, "error-sizeSneakers");
             }
+            clearGroupError("error-size");
         } else {
             setValid(sizeSneakers, "error-sizeSneakers");
+
+            const sizes = document.querySelectorAll('input[name="size"]');
+            let sizeSelected = false;
+
+            for (let i = 0; i < sizes.length; i++) {
+                if (sizes[i].checked) {
+                    sizeSelected = true;
+                }
+            }
+
+            if (!sizeSelected) {
+                setGroupError("error-size", "Debes seleccionar una talla de camiseta / vestido / pantalón.");
+                valid = false;
+            } else {
+                clearGroupError("error-size");
+            }
         }
 
-        const edit = form.action.includes("/edit");
-        if (!edit) {
+        const isEdit = form.action.includes("/edit");
+        imageInput.classList.remove("is-invalid");
+
+        if (!isEdit) {
             if (!imageInput.files || imageInput.files.length === 0) {
                 imageInput.classList.add("is-invalid");
                 valid = false;
-            } else {
-                imageInput.classList.remove("is-invalid");
             }
         }
 
@@ -98,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showErrorModal(text) {
         const modalError = document.getElementById("modalErrorText");
-        if (modalError) modalError.innerHTML = text;
+        modalError.innerHTML = text;
         new bootstrap.Modal(document.getElementById("errorModal")).show();
     }
 

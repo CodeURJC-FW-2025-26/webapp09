@@ -47,7 +47,7 @@
         <!-- Type of product -->
         <p>Qué tipo de producto es:</p>
         <div class="btn-group mb-3" role="group">
-          <input type="radio" class="btn-check" name="category" id="t-shirt" value="t-shirt" {{#clothe}}{{#clothe.t-shirt}}checked{{/clothe.t-shirt}}{{/clothe}} required>
+          <input type="radio" class="btn-check" name="category" id="t-shirt" value="t-shirt" {{#clothe}}{{#clothe.t-shirt}}checked{{/clothe.t-shirt}}{{/clothe}}>
           <label class="btn btn-outline-dark" for="t-shirt">Camisa</label>
 
           <input type="radio" class="btn-check" name="category" id="trouser" value="trouser" {{#clothe}}{{#clothe.trouser}}checked{{/clothe.trouser}}{{/clothe}}>
@@ -59,6 +59,7 @@
           <input type="radio" class="btn-check" name="category" id="dress" value="dress" {{#clothe}}{{#clothe.dress}}checked{{/clothe.dress}}{{/clothe}}>
           <label class="btn btn-outline-dark" for="dress">Vestido</label>
         </div>
+        <div id="error-category" class="invalid-feedback d-block"></div>
 
         <!-- Size -->
         <h4>Indica la talla del producto</h4>
@@ -80,6 +81,8 @@
           <input type="radio" class="btn-check" name="size" id="xl" value="XL" {{#clothe}}{{#clothe.xl}}checked{{/clothe.xl}}{{/clothe}}>
           <label class="btn btn-outline-dark" for="xl">XL</label>
         </div>
+
+        <div id="error-size" class="invalid-feedback d-block"></div>
 
         <p>Si es una zapatilla indica la talla numérica:</p>
         <input id="sizeSneakers" type="text" class="form-control" name="sizeSneakers" value="{{#clothe}}{{#clothe.sneakers}}{{clothe.size}}{{/clothe.sneakers}}{{/clothe}}">

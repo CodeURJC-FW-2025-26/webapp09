@@ -301,9 +301,11 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   - `main_page.js`: This file handles the infinite scrolling functionality on the main page of the application.
 
-  - `form_validation.js`: This file manages client-side and server-side validation for the product creation and editing forms.
+  - `form_validation.js`: This file manages client and server-side validation for the product creation and editing forms.
 
-  - `confirm_delete.js`: This file handles the client-side logic for deleting a product using an asynchronous request.
+  - `confirm_delete.js`: This file handles the client for deleting a product using an asynchronous request.
+
+  - `image_form.js`: This file handles the client for image management in the product creation and editing forms.
 
 ## Demonstration video
 

@@ -63,7 +63,7 @@
 
         <!-- Size -->
         <h4>Indica la talla del producto</h4>
-
+        <!-- t-shirt, dress and trousers -->
         <p>Tallas para camisetas, vestidos y pantalones:</p>
         <div class="btn-group mb-3" role="group">
           <input type="radio" class="btn-check" name="size" id="xs" value="XS" {{#clothe}}{{#clothe.xs}}checked{{/clothe.xs}}{{/clothe}}>
@@ -85,7 +85,8 @@
         </div>
 
         <div id="error-size" class="invalid-feedback d-block"></div>
-
+        
+        <!-- Sneakers -->
         <p>Si es una zapatilla indica la talla numérica:</p>
         <input id="sizeSneakers" type="text" class="form-control" name="sizeSneakers" value="{{#clothe}}{{#clothe.sneakers}}{{clothe.size}}{{/clothe.sneakers}}{{/clothe}}">
         <div id="error-sizeSneakers" class="invalid-feedback"></div>
@@ -124,6 +125,7 @@
 
   </main>
 
+  <!-- modal error -->
   <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content shadow">

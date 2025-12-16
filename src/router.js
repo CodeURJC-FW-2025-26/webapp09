@@ -10,7 +10,6 @@ export default router;
 const upload = multer({ dest: shop.UPLOADS_FOLDER })
 
 // main page
-
 router.get('/', async (req, res) => {
     let { search = "", category = "" } = req.query;     // receives the parameters of the URL
 
@@ -65,18 +64,18 @@ router.get('/loadMoreClothes', async (req, res) => {
 
 });
 
-
+// process the creation of a new clothe
 router.post('/clothe/new', upload.single('image'), async (req, res) => {
   try {
     const { name, description, price, size, category } = req.body;
     const sizeSneakers = req.body.sizeSneakers;
 
-    if (!name || !description || !price || !category) {
+    if (!name || !description || !price || !category) {     // check if required fields are missing
       return res.status(400).json({ message: "Debes completar todos los campos obligatorios." });
     }
 
-    if (category === "sneakers") {
-      if (!sizeSneakers || sizeSneakers.trim() === "") {
+    if (category === "sneakers") {      // validation for sneakers category
+      if (!sizeSneakers || sizeSneakers.trim() === "") {      // sneakers require a numeric size
         return res.status(400).json({ message: "Si el producto es una zapatilla, debes indicar la talla numérica." });
       }
 
@@ -84,7 +83,7 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
         return res.status(400).json({ message: "Las zapatillas no pueden tener talla de camiseta/vestido/pantalón." });
       }
     } else {
-      if (!size || size.trim() === "") {
+      if (!size || size.trim() === "") {        // if the category is not sneakers, it must require a regular clothing size
         return res.status(400).json({ message: "Debes seleccionar una talla de camiseta/vestido/pantalón." });
       }
 
@@ -93,26 +92,27 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
       }
     }
 
-    if (description.length < 10 || description.length > 250) {
+    if (description.length < 10 || description.length > 250) {      // validation for description
       return res.status(400).json({ message: "La descripción debe tener entre 10 y 250 caracteres." });
     }
 
-    const priceNumber = Number(price);
+    const priceNumber = Number(price);      // validation for price
     if (Number.isNaN(priceNumber) || priceNumber <= 0) {
       return res.status(400).json({ message: "El precio debe ser un número mayor que 0." });
     }
 
-    const clothes = await shop.getClothes();
-    const alreadyExists = clothes.find(c => c.name === name);
+    const clothes = await shop.getClothes();        // get all existing clothes from the shop
+    const alreadyExists = clothes.find(c => c.name === name);       // check if a clothing item with the same name exists
 
     if (alreadyExists) {
       return res.status(400).json({ field: "name", message: "Ya existe una prenda con ese nombre. Elige otro diferente." });
     }
 
-    if (!req.file) {
+    if (!req.file) {        // check if an image was uploaded
         return res.status(400).json({ message: "Debes subir una imagen."});
     }
 
+    // create the new clothing object
     let clothe = {
       name,
       description,
@@ -123,20 +123,20 @@ router.post('/clothe/new', upload.single('image'), async (req, res) => {
       reviews: []
     };
 
-    if (req.file) {
+    if (req.file) {         // if an image was uploaded, save its filename
       clothe.imageFilename = req.file.filename;
     }
 
-    await shop.addClothe(clothe);
+    await shop.addClothe(clothe);       // save the new clothing item in the db
 
-    res.json({
+    res.json({      // response with success and its new ID
       ok: true,
       id: clothe._id.toString()
     });
 
   } catch (err) {
-    console.error('Error al crear la prenda:', err);
-    return res.status(500).json({ message: "Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde." });
+    console.error('Error al crear la prenda:', err);        // log error for debugging
+    return res.status(500).json({ message: "Ha ocurrido un error al guardar la prenda. Inténtalo de nuevo más tarde." });       // return a server error to the client
   }
 });
 
@@ -272,6 +272,7 @@ router.post('/clothe/:id/delete', async (req, res) => {
     res.redirect('/');
 });
 
+// show the form to create a clothe
 router.get('/new_clothe_form', (req, res) => {
     res.render('new_clothe_form');
 });
@@ -358,6 +359,7 @@ router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
     return res.render('edit_review', {clothe, review})
 })
 
+// check if there's already an item with that name
 router.get('/validateName', async (req,res) => {
     const name = req.query.name;
 
@@ -365,7 +367,7 @@ router.get('/validateName', async (req,res) => {
         return res.json({ exists: false });
     }
 
-    const clothes = await shop.getClothes();
+    const clothes = await shop.getClothes();        // get all clothes saved in the shop
     let exists = false;
 
     for (let i = 0; i < clothes.length; i++) {

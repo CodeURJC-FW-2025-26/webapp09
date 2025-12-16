@@ -316,12 +316,10 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
   These are some commits:
 
   - 'infinite_scroll': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/74b4c315b5678389d5ca3d1922868c1e2a29da5b
-  - 'infinite_scroll_comments': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/643498b0a84777d777ebc0df73149497ecf6b3a9
   - 'Update README.md': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/113bda28e9b1e2baa44db1f7c6fe03ab3914627e
   - 'create/edit form': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/5464949feb45a65897fb00d0fa6dfd65c36e3027
   - 'create/edit form (I forgot to change the name. In this commit I did the main_page spinner and I implemented the no-image error)': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8212dd87bd7941946c9ac1b4384973592fe34706
-  - 'category_and_size_error': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/6000961a8beda1d10bab2414de8f0ccb192d8d76
-  - 'already_exists': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/286b506c73fafb8f291422c208ab4ab6c29a4e55
+  - 'real-time_name_validation': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/779c0e0577ff678c7d1aca5ff3012dc5fbb6086f
  
   Files I contributed:
 

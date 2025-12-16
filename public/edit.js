@@ -138,7 +138,7 @@ function renderReviewBody(title, user, reviewText, fallbackOriginalHTML) {
   `;
 }
 
-// Truco simple: reutiliza la parte de botones que ya tenías en la card original
+// Reutilize previous buttons on the original card
 function extractButtonsHtml(originalHTML) {
   const tmp = document.createElement("div");
   tmp.innerHTML = originalHTML;

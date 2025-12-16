@@ -297,7 +297,7 @@ router.post('/clothe/:id/review/new', async (req, res) => {
 
     const wantsJson = req.headers.accept?.includes("application/json");
 
-    // VALIDACIONES (igual que antes)
+    // Validations (same as before)
     if (!user || !title || !review) {
       const msg = 'Todos los campos de la reseña son obligatorios (usuario, título y texto).';
       return wantsJson ? res.status(400).json({ ok: false, message: msg }) : res.status(400).render("error", {});
@@ -320,7 +320,8 @@ router.post('/clothe/:id/review/new', async (req, res) => {
 
     await shop.addReview(user, title, review, clotheId, reviewId);
 
-    // IMPORTANTE: devolver los datos actualizados para pintar la tarjeta sin recargar
+    
+    //return the new data 
     if (wantsJson) {
       return res.json({
         ok: true,

@@ -291,64 +291,56 @@ router.post('/clothe/:id/review/:idReview/delete', async (req, res) => {
 })
 
 router.post('/clothe/:id/review/new', async (req, res) => {
-    try {
-        const { user, title, review, reviewId, formSource } = req.body;
-        const clotheId = req.params.id;
+  try {
+    const { user, title, review, reviewId } = req.body;
+    const clotheId = req.params.id;
 
-        
-        //Choose where to come back if it fails
-        let backUrl = `/clothe/${clotheId}`;
-        if (formSource === 'edit_review' && reviewId) {
-            backUrl = `/clothe/${clotheId}/review/${reviewId}/edit`;
-        }
+    const wantsJson = req.headers.accept?.includes("application/json");
 
-        // VALIDATIONS
-        if (!user || !title || !review) {
-            return res.status(400).render('error', {
-                mensaje: 'Todos los campos de la reseña son obligatorios (usuario, título y texto).',
-                urlBoton: backUrl,
-                textoBoton: 'Volver al formulario'
-            });
-        }
-
-        if (user.length < 3 || user.length > 50) {
-            return res.status(400).render('error', {
-                mensaje: 'El nombre de usuario debe tener entre 3 y 50 caracteres.',
-                urlBoton: backUrl,
-                textoBoton: 'Corregir usuario'
-            });
-        }
-
-        if (title.length < 3 || title.length > 100) {
-            return res.status(400).render('error', {
-                mensaje: 'El título debe tener entre 3 y 100 caracteres.',
-                urlBoton: backUrl,
-                textoBoton: 'Corregir título'
-            });
-        }
-
-        if (review.length < 10 || review.length > 500) {
-            return res.status(400).render('error', {
-                mensaje: 'La reseña debe tener entre 10 y 500 caracteres.',
-                urlBoton: backUrl,
-                textoBoton: 'Corregir reseña'
-            });
-        }
-
-        //If everythings ok we create/change the review
-        await shop.addReview(user, title, review, clotheId, reviewId);
-
-        console.log('Review añadida/actualizada, usuario:', user, 'titulo:', title);
-        return res.redirect(`/clothe/${clotheId}`);
-
-    } catch (err) {
-        console.error('Error al guardar la reseña:', err);
-        return res.status(500).render('error', {
-            mensaje: 'Ha ocurrido un error al guardar la reseña. Inténtalo de nuevo más tarde.',
-            urlBoton: '/clothe/' + req.params.id,
-            textoBoton: 'Volver al producto'
-        });
+    // VALIDACIONES (igual que antes)
+    if (!user || !title || !review) {
+      const msg = 'Todos los campos de la reseña son obligatorios (usuario, título y texto).';
+      return wantsJson ? res.status(400).json({ ok: false, message: msg }) : res.status(400).render("error", {});
     }
+
+    if (user.length < 3 || user.length > 50) {
+      const msg = 'El nombre de usuario debe tener entre 3 y 50 caracteres.';
+      return wantsJson ? res.status(400).json({ ok: false, message: msg }) : res.status(400).render("error", {});
+    }
+
+    if (title.length < 3 || title.length > 100) {
+      const msg = 'El título debe tener entre 3 y 100 caracteres.';
+      return wantsJson ? res.status(400).json({ ok: false, message: msg }) : res.status(400).render("error", {});
+    }
+
+    if (review.length < 10 || review.length > 500) {
+      const msg = 'La reseña debe tener entre 10 y 500 caracteres.';
+      return wantsJson ? res.status(400).json({ ok: false, message: msg }) : res.status(400).render("error", {});
+    }
+
+    await shop.addReview(user, title, review, clotheId, reviewId);
+
+    // IMPORTANTE: devolver los datos actualizados para pintar la tarjeta sin recargar
+    if (wantsJson) {
+      return res.json({
+        ok: true,
+        review: {
+          id: reviewId ? Number(reviewId) : null,
+          user,
+          title,
+          review
+        }
+      });
+    }
+
+    return res.redirect(`/clothe/${clotheId}`);
+
+  } catch (err) {
+    console.error(err);
+    const wantsJson = req.headers.accept?.includes("application/json");
+    if (wantsJson) return res.status(500).json({ ok: false, message: "Error al guardar la reseña." });
+    return res.status(500).render('error', {});
+  }
 });
 
 router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {

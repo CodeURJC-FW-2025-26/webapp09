@@ -359,5 +359,20 @@ router.get('/clothe/:id/review/:idReview/edit', async (req,res) => {
 })
 
 router.get('/validateName', async (req,res) => {
-    return res.json({ exists: false });
-})
+    const name = req.query.name;
+
+    if (!name) {
+        return res.json({ exists: false });
+    }
+
+    const clothes = await shop.getClothes();
+    let exists = false;
+
+    for (let i = 0; i < clothes.length; i++) {
+        if (clothes[i].name === name) {
+            exists = true;
+        }
+    }
+
+    res.json({ exists });
+});

@@ -34,6 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
         if (error) error.textContent = "";
     }
 
+    name.addEventListener("input", async () => {
+        const value = name.value.trim();
+
+        if (value === "") {
+            setInvalid(name, "error-name", "El nombre es obligatorio.");
+            return;
+        }
+
+        const firstChar = value.charAt(0);
+        if (firstChar !== firstChar.toUpperCase()) {
+            setInvalid(name, "error-name", "El nombre debe empezar por una letra mayúscula.");
+            return;
+        }
+
+        const response = await fetch("/validateName?name=" + encodeURIComponent(value));
+        const data = await response.json();
+
+        if (data.exists) {
+            setInvalid(name, "error-name", "Ya existe una prenda con ese nombre.");
+            return;
+        }
+
+        setValid(name, "error-name");
+    });
+
     function validateClient() {
         let valid = true;
 

@@ -1,4 +1,3 @@
-// infinite scrolling
 const PER_PAGE = 6;
 
 let loadMoreCount = 1;
@@ -7,16 +6,17 @@ let noMoreClothes = false;
 
 const spinner = document.getElementById("indexSpinner");
 
+// load the html
 window.addEventListener("DOMContentLoaded", () => {
-    if (window.location.pathname === "/") {
-        window.addEventListener("scroll", onScrollLoad);
+    if (window.location.pathname === "/") {                 // you are in the main page
+        window.addEventListener("scroll", onScrollLoad);    // when you scroll, onScrollLoad is executed
     }
 })
 
 async function onScrollLoad() {
-    if (loading || noMoreClothes) return;        // if it's loading, doesn't do anything
+    if (loading || noMoreClothes) return;        // if it's loading or there aren't more clothes, doesn't do anything
 
-    const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200; // bottom it's true if it's near the bottom of the page
+    const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight; // to know if user's near the bottom of the page. If it's near, bottom = true
 
     if (bottom) {
         loading = true;
@@ -26,25 +26,27 @@ async function onScrollLoad() {
 }
 
 async function loadMoreClothes() {
-    spinner.classList.remove("d-none");
+    spinner.classList.toggle("d-none");
 
     const from = loadMoreCount * PER_PAGE;
     const to = from + PER_PAGE;
 
     const params = new URLSearchParams(window.location.search);
-    const search = params.get("search") || "";      // if it's false, "" (OR)
+    const search = params.get("search") || "";
     const category = params.get("category") || "";
 
     const response = await fetch(`/loadMoreClothes?from=${from}&to=${to}&search=${search}&category=${category}`);
-    const html = await response.text();
+    const data = await response.text();
 
-    if (html.trim() === "") {
+    // if data is empty = no more clothes, so the scroll stops
+    if (data.trim() === "") {
         noMoreClothes = true;
         window.removeEventListener("scroll", onScrollLoad);
     } else {
-        document.getElementById("clothesContainer").innerHTML += html;
+        const clothesContainer = document.getElementById("clothesContainer");
+        clothesContainer.innerHTML += data;
         loadMoreCount++;
     }
 
-    spinner.classList.add("d-none");
+    spinner.classList.toggle("d-none");
 }

@@ -352,11 +352,15 @@ https://www.youtube.com/watch?v=Hq-r6cWzuOs
   - `README.md`
 
 -Ivo Hagemann Martínez: I was the responsible to adapt the delete review and delete clothe function into
+  
   These are some commits:
+  
     - 'eliminación de reseñas por ajax': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/f331230
     - "spinner añadido al eliminar, arreglo de bugs visuales' : https://github.com/CodeURJC-FW-2025-26
+  
   Files i contributed:
+  
     - router js"
     - clothe_detail. html
     - confirm delete.js"
-  - confirm_delete.html"
+    - confirm_delete.html"

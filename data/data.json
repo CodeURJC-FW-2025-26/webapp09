@@ -210,5 +210,19 @@
       { "id": 1, "user": "axelblaze2002", "review": "son tremendos :D" },
       { "id": 2, "user": "Raulitopicapiedra", "review": "están muy guapos. Muy recomendaados" }
     ]
+  },
+  {
+    "name": "Camiseta visitante Real Madrid 2025-26",
+    "description": "Camiseta visitante del Real Madrid para la temporada 2025-26.",
+    "price": 104.99,
+    "size": "L",
+    "category": "t-shirt",
+    "imageFilename": "01.jpg",
+    "reviewsCount": 3,
+    "reviews": [
+      { "id": 1, "user": "lucaslaurez", "review": "me gustó :D" },
+      { "id": 2, "user": "mbappe_club_de_fans", "review": "le queda genial !!!" },
+      { "id": 3, "user": "Florentino Pérez", "review": "¿Qué hacéis vendiendo esto ilegalmente? DENUNCIADOS" }
+    ]
   }
 ]

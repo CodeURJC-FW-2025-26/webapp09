@@ -301,13 +301,14 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
   - `main_page.js`: This file handles the infinite scrolling functionality on the main page of the application.
 
-  - `form_validation.js`: This file manages client and server-side validation for the product creation and editing forms.
+  - `form_validation.js`: This file allows the create and edit form to be submitted via AJAX. It displays validation errors below each field using Bootstrap, and shows an error modal when the form submission fails. It also has real-time validation.
+  - `confirm_delete.js`: This file allows you to delete detail pages and reviews using AJAX. It uses a spinner to indicate loading.
 
-  - `confirm_delete.js`: This file handles the client for deleting a product using an asynchronous request.
+  - `image_form.js`: This file handles image preview functionality and allows the user to remove the selected image.
 
-  - `image_form.js`: This file handles the client for image management in the product creation and editing forms.
+  - `edit.js`: This file allows editing a review using AJAX. While editing, you can cancel the changes to return to the original content.
 
-  - `edit.js`: This file enables inline editing of user reviews of the shop and submits the changes with AJAX without reloading the page.
+  - `add_review.js`: This file lets you submit a review with AJAX and displays it on the page immediately without reloading.
 
 ## Demonstration video
 

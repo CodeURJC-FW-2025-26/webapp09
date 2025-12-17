@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 async function onScrollLoad() {
     if (loading || noMoreClothes) return;        // if it's loading or there aren't more clothes, doesn't do anything
 
-    const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight -200; // to know if user's near the bottom of the page. If it's near, bottom = true
+    const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200; // to know if user's near the bottom of the page. If it's near, bottom = true
 
     if (bottom) {
         loading = true;

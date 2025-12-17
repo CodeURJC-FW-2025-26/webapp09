@@ -335,3 +335,18 @@ https://www.youtube.com/watch?v=Hq-r6cWzuOs
   - `index.html`
   - `new_clothe_form.html`
   - `README.md`
+    
+-Sergio Guindal Gomez: I’ve been in charge of applying dynamic images to the 'create_new_clothe' form and fixing some issues
+
+  These are my 3 most important commits:
+
+  - 'Formulario con imagen': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/5fa4d9c247760142c6cc37244e1866daae109485
+  - 'arreglar el eliminar opinion': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/8bf580dc09e687a1f26e43493c2236f744a8c405
+  - 'añadir reseña solucion': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/fb02879c30dd98c3964c2995edd2e0cdc8fcee0f
+ 
+  Files I contributed:
+
+  - `‎image_form.js`
+  - `router.js´
+  - `new_clothe_form.html`
+  - `README.md`

@@ -249,7 +249,7 @@ Install Node.js and MongoDB if you don't have them installed. Install Node.js in
 $ npm install
 
 Then, run the application:
-$ node src/app.js
+$ node src/app.js (also, you can run it with $ npn start and $ npm run start)
 
 You should read a message like this:
 Web ready in http://localhost:3000/

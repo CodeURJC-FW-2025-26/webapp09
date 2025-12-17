@@ -312,7 +312,7 @@ Open your browser and go to `http://localhost:3000/`. The app should be running 
 
 ## Demonstration video
 
-
+https://www.youtube.com/watch?v=Hq-r6cWzuOs
 
 ## Member participation
 

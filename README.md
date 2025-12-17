@@ -365,7 +365,7 @@ https://www.youtube.com/watch?v=Hq-r6cWzuOs
     - confirm delete.js"
     - confirm_delete.html"
 
-- Javier Méndez Hernández:
+- Javier Méndez Hernández: I have created the files edit.js, in which I have implemented review editing with AJAX, and add_review.js, in which I have implemented review creation with AJAX.
 
   These are my most important commits:
   - 'Implementado la adición dinamica por AJAX de las reseñas': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/3bebe03e5b518b837c0539828d4f998c2ba523f5

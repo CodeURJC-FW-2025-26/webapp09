@@ -364,3 +364,18 @@ https://www.youtube.com/watch?v=Hq-r6cWzuOs
     - clothe_detail. html
     - confirm delete.js"
     - confirm_delete.html"
+
+- Javier Méndez Hernández:
+
+  These are my most important commits:
+  - 'Implementado la adición dinamica por AJAX de las reseñas': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/3bebe03e5b518b837c0539828d4f998c2ba523f5
+  - 'Impementacion de formulario dinamico en la edicion de reseñas (arreglado)': https://github.com/CodeURJC-FW-2025-26/webapp09/commit/3c4ddb2b19e3ec062bbc76ebea00296f2fdf621b
+ 
+  Files I contributed:
+
+  - `router.js`
+  - `confirm_delete.js`
+  - `edit.js`
+  - `product_detail.html`
+  - `add_review.js`
+  - `shop.js`
